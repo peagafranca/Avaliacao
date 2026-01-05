@@ -1,3 +1,12 @@
+function adicionarTarefa() {
+    let mensagem = "Tarefa adicionada com sucesso";
+    document.getElementById("mensagem").textContent = mensagem;
+
+    let inputTarefa = document.getElementById("inputTarefa")
+
+
+}
+
 //Primeiro Total Obtido gerado por Gemini e adaptado, procurar entender cada linha
 // Selecionamos todos os radios que fazem parte da pontuação
 const radios = document.querySelectorAll('.score-radio1');
