@@ -1,0 +1,318 @@
+* {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+}
+
+.titulo {
+    background-color: royalblue;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5%;
+
+}
+
+/* Cabeçalho*/
+/* Cabeçalho*/
+/* Cabeçalho*/
+header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(135deg, #332f7d 0%, #2b52bd 100%);
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-size: 6px;
+}
+
+img {
+    width: 5vh;
+}
+
+.perfil-link {
+    margin-left: auto; 
+    padding-right: 10px;
+}
+
+.perfil-link a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.perfil-link a:hover {
+    text-decoration: underline;
+}
+
+/*Dados Servidor*/
+/*Dados Servidor*/
+/*Dados Servidor*/
+
+.s-dados, .s-nivel, .s-quesitos, .s-infoc, .s-tabela {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    font-size: 18px;
+}
+
+.preenchimento-dados, .texto-nivel, .infoc, .tabela{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #dbeafe;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 30px 200px;
+  margin: 20px 0;
+  width: 80%;
+  text-align: center;
+}
+
+.subtitulo  {
+    font-size: 18px;
+    margin-bottom: 10px;
+    background-color: #eff6ff;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.campo-texto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.campo-texto label {
+    text-align: left;
+    width: 100px;
+}
+
+.campo-texto input {
+    padding: 5px;
+    border: 1px solid royalblue;
+    border-radius: 4px;
+    justify-content: left;
+    width: 25vw;
+}
+
+#matriculaservidor {
+  width: 7vw;
+  text-align: center;
+}
+#nomeservidor {
+  width: 30vw;
+  
+}
+#dataexercicioservidor {
+  width: 8vw;
+  text-align: center;
+}
+#data-exercicio label {
+  width: auto;
+}
+
+/* Perguntas */
+/* Perguntas */
+/* Perguntas */
+
+.quesito1, .quesito2, .quesito3, .quesito4, .quesito5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    background-color: #dbeafe;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+/*Frases das perguntas*/
+.pergunta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+     background-color: #eff6ff;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     padding: 20px;
+     border-radius: 5px;
+     width: 80%;
+     margin: 5px 0 ;
+
+}
+
+.p-pergunta{
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Botões Radio */
+
+.pergunta input[type="radio"],
+.apto-inapto input[type="radio"],
+.concordo-discordo input[type="radio"] {
+  display: none;
+}
+
+.pergunta label, 
+.apto-inapto label, 
+.concordo-discordo label {
+  display: inline-block;
+  padding: 10px 40px;
+  background-color: whitesmoke;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  user-select: none;
+}
+
+/* Cores de Seleção dos botões Radio */
+input[type="radio"]:checked + label {
+  background-color: green;
+  color: white;
+  border-color: green;
+  transform: translateY(-1px);
+}
+
+/* Efeito de Hover Geral (para todos os botões) */
+.pergunta label:hover, 
+.apto-inapto label:hover, 
+.concordo-discordo label:hover {
+  background-color: #e0e0e0; /* Um cinza um pouco mais escuro que o whitesmoke */
+  border-color: #bbb;       /* Escurece a borda levemente */
+  transform: translateY(-2px); /* Faz o botão "subir" um pouquinho */
+  transition: all 0.2s ease;   /* Deixa o movimento suave */
+}
+
+#inapto:checked + label, #discordo:checked + label {
+  background-color: red;
+  border-color: red;
+}
+
+.total-obtido {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+    align-items: center;
+    background-color: royalblue;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+}
+
+/* Tabela de Resumo da Avaliação*/
+/* Tabela de Resumo da Avaliação*/
+/* Tabela de Resumo da Avaliação*/
+
+.pontuacao{
+  border-collapse: collapse;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  background-color: #eff6ff;
+}
+
+.pontuacao thead th {
+    background-color: royalblue;
+    color: white;
+    padding: 12px 15px;
+    border: 1px solid #3b62a7;
+}
+
+.pontuacao td {
+    padding: 10px 15px;
+    border: 1px solid #D9D9D9;
+}
+
+.pontuacao tbody tr:hover {
+    background-color: #E9E9E9;
+}
+
+.pontuacao tbody tr:nth-last-child(-n+2) td {
+    background-color: #e4edff;
+    font-weight: bold;
+}
+
+
+/* Informações Complementares */
+/* Informações Complementares */
+/* Informações Complementares */
+
+textarea {
+    height: 100px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+/* Botão de Enviar*/
+
+button {
+  background: linear-gradient(135deg, #1a7ba1 0%, #1a5aa2 100%);
+  color: white;
+
+  padding: 15px 35px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(26, 90, 162, 0.3);
+  
+ 
+  margin: 20px auto;
+  margin-bottom: 200px;
+}
+
+/* Efeito ao passar o mouse (Hover) */
+.botao:hover {
+  background: linear-gradient(135deg, #1a5aa2 0%, #1a7ba1 100%);
+  box-shadow: 0 6px 20px rgba(26, 90, 162, 0.4);
+}
+
+/* Efeito ao clicar (Active) */
+.botao:active {
+  transform: translateY(-1px); /* O botão desce um pouco ao clicar */
+}

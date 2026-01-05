@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Avaliação de Estágio Probatório</title>
+</head>
+
+<body>
+<header>
+    <!-- Cabeçalho-->
+     <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Bras%C3%A3o_de_Nova_Igua%C3%A7u.svg" alt="Brasão da Cidade de Nova Iguaçu">
+                
+    <h1 id="cabecalho-principal">PREFEITURA DA CIDADE DE VELHO SERTÃO <br>
+                SECRETARIA MUNICIPAL DE ADMINISTRAÇÃO <br>
+                COMISSÃO DE AVALIAÇÃO DE DESEMPENHO DO SERVIDOR MUNICIPAL EM ESTÁGIO PROBATÓRIO</h1>
+    <nav class="perfil-link">
+        <a href="#">Meu Perfil</a>
+    </nav>
+</header> 
+
+<main>       
+    <div class="s-dados">
+        <div class="preenchimento-dados">
+            <div class="titulo">
+                <p class="titulo-comum">
+                    Dados de identificação do servidor em Estágio Probatório
+                </p>
+            </div>
+
+            <div class="campo-texto">
+                <label for="matriculaservidor">Matrícula: </label>
+                <input type="text" name="matriculaservidor" id="matriculaservidor" placeholder="00/123456-7">
+            </div>
+
+            <div class="campo-texto">
+                    <label for="nomeservidor">Nome: </label>
+                    <input type="text" id="nomeservidor" name="nomeservidor">
+            </div>
+
+            <div class="campo-texto">
+                    <label for="cargoservidor">Cargo: </label>
+                    <input type="text" name="cargoservidor" id="cargoservidor">
+            </div>
+
+            <div class="campo-texto">
+                    <label for="secretariaservidor">Secretaria: </label>
+                    <input type="text" name="secretaria" id="secretariaservidor">
+            </div>  
+
+            <div class="campo-texto">
+                    <label for="lotacaoservidor">Lotação: </label>
+                    <input type="text" name="lotacao" id="lotacaoservidor">
+            </div>   
+                    
+            <div class="campo-texto" id="data-exercicio">        
+                    <label for="dataexercicioservidor">Data de entrada em exercício: </label>
+                    <input type="date" name="dataexercicio" id="dataexercicioservidor">
+            </div>
+        </div>  
+    </div>    
+
+        <!--Explicação das notas dos quesitos-->
+    <div class="s-nivel">
+        <div class="texto-nivel">
+            <div class="titulo">
+                <p class="titulo-comum">
+                    Níveis e critérios de avaliação
+                </p>
+            </div>
+
+            <div class="nivel-texto">    
+                <div class="subtitulo">
+                    <p class="subtitulo-comum">
+                        A avaliação de desempenho do servidor em estágio probatório será realizada mediante a atribuição de níveis de desempenho, conforme os critérios abaixo:
+                    </p>
+                </div>
+
+                <div class="subtitulo">
+                    <p>
+                        Será atribuído pontuação (nível 1) <br> quando o desempenho do servidor está muito abaixo do nível desejado para o cargo.
+                    </p>
+                </div>  
+
+                <div class="subtitulo">
+                    <p>
+                        Será atribuído pontuação (nível 3) <br> quando o desempenho do servidor aproxima-se do nível desejado.
+                    </p>
+                </div>
+
+                <div class="subtitulo">
+                    <p>
+                        Será atribuído pontuação (nível 5) <br> quando o desempenho do servidor atende às expectativas para o cargo que ocupa.
+                    </p>
+                </div>
+
+                <div class="subtitulo">
+                    <p>
+                        Será atribuído pontuação (nível 7) <br> quando o desempenho do servidor supera a exigência do seu cargo, demonstrando excelente qualidade de trabalho.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+        <div class="s-quesitos">
+            <div class="quesito1">
+                <div class="titulo">
+                    <p class="titulo-comum">
+                        1º Quesito – ASSIDUIDADE <br>(considere a freqüência, comparecimento e constância do servidor no local de trabalho)
+                    </p>
+                </div>
+                    <div class="pergunta">
+                        <p class="p-pergunta">
+                            1 - Tem presença permanente no local de trabalho, evidenciando a identificação com o trabalho e com a Instituição:
+                        </p>
+                            <div class="alternativas">  
+                                <input type="radio" value="1" name="q1p1" id="q1p1nota1">
+                                <label for="q1p1nota1">1</label>
+                                <input type="radio" value="3" name="q1p1" id="q1p1nota3">
+                                <label for="q1p1nota3">3</label>
+                                <input type="radio" value="5" name="q1p1" id="q1p1nota5">
+                                <label for="q1p1nota5">5</label>
+                                <input type="radio" value="7" name="q1p1" id="q1p1nota7">
+                                <label for="q1p1nota7">7</label>
+                            </div>  
+                    </div>
+
+                    <div class="pergunta">
+                        <p class="p-pergunta">
+                            2 – Comparece regularmente ao trabalho nos limites do horário de 9h às 17h diariamente, ou outro horário delimitado pela chefia:
+                        </p>
+                            <div class="alternativas">
+                                <input type="radio" name="q1p2" id="q1p2nota1" value="1">
+                                <label for="q1p2nota1">1</label>
+                                <input type="radio" name="q1p2" id="q1p2nota3" value="3">
+                                <label for="q1p2nota3">3</label>
+                                <input type="radio" name="q1p2" id="q1p2nota5" value="5">
+                                <label for="q1p2nota5">5</label>
+                                <input type="radio" name="q1p2" id="q1p2nota7" value="7">
+                                <label for="q1p2nota7">7</label>
+                            </div>
+                    </div>    
+                    <div class="pergunta">
+                        <p class="p-pergunta">
+                            3 – É pontual, permanece no local de trabalho, não se ausentando desnecessariamente:
+                        </p>
+                            <div class="alternativas">
+                                <input type="radio" name="q1p3" id="q1p3nota1" value="1">
+                                <label for="q1p3nota1">1</label>
+                                <input type="radio" name="q1p3" id="q1p3nota3" value="3">
+                                <label for="q1p3nota3">3</label>
+                                <input type="radio" name="q1p3" id="q1p3nota5" value="5">
+                                <label for="q1p3nota5">5</label>
+                                <input type="radio" name="q1p3" id="q1p3nota7" value="7">
+                                <label for="q1p3nota7">7</label>
+                            </div>
+                    </div>    
+                    <div class="pergunta">
+                        <p class="p-pergunta">
+                            4 – Dedica-se à execução das tarefas, evitando interrupções e interferências:
+                        </p>
+                            <div class="alternativas">
+                                <input type="radio" name="q1p4" id="q1p4nota1" value="1">
+                                <label for="q1p4nota1">1</label>
+                                <input type="radio" name="q1p4" id="q1p4nota3" value="3">
+                                <label for="q1p4nota3">3</label>
+                                <input type="radio" name="q1p4" id="q1p4nota5" value="5">
+                                <label for="q1p4nota5">5</label>
+                                <input type="radio" name="q1p4" id="q1p4nota7" value="7">
+                                <label for="q1p4nota7">7</label>
+                            </div>
+                    </div>
+                        <div class="total-obtido">
+                            <p class="p-total-obtido">
+                                TOTAL OBTIDO: XX%
+                            </p>
+                        </div>   
+            </div> 
+
+            <div class="quesito2">
+                <div class="titulo">
+                    <p class="titulo-comum">
+                        2º Quesito – DISCIPLINA <br>(considere o cumprimento das normas legais e regulamentares, horário de trabalho, normas de segurança e higiene no trabalho, normas específicas do setor, etc.)
+                    </p>
+                </div>
+
+                    <div class="pergunta">
+                        <p class="p-pergunta">
+                            1. Cumpre o horário de trabalho. Informa, de imediato, imprevistos que impeçam o seu comparecimento ou cumprimento do horário.
+                        </p>
+                            <div class="alternativas">
+                                <input type="radio" value="1" name="q2p1" id="q2p1nota1">
+                                <label for="q2p1nota1">1</label>
+                                <input type="radio" value="3" name="q2p1" id="q2p1nota3">
+                                <label for="q2p1nota3">3</label>
+                                <input type="radio" value="5" name="q2p1" id="q2p1nota5">
+                                <label for="q2p1nota5">5</label>
+                                <input type="radio" value="7" name="q2p1" id="q2p1nota7">
+                                <label for="q2p1nota7">7</label>
+                            </div>
+                    </div>
+                    
+                    <div class="pergunta">
+                        <p class="p-pergunta">
+                            2. Mantém comportamento e aparência pessoal condizentes ao local de trabalho, e traja-se adequadamente.
+                        </p>
+                            <div class="alternativas">
+                                <input type="radio" value="1" name="q2p2" id="q2p2nota1">
+                                <label for="q2p2nota1">1</label>
+                                <input type="radio" value="3" name="q2p2" id="q2p2nota3">
+                                <label for="q2p2nota3">3</label>
+                                <input type="radio" value="5" name="q2p2" id="q2p2nota5">
+                                <label for="q2p2nota5">5</label>
+                                <input type="radio" value="7" name="q2p2" id="q2p2nota7">
+                                <label for="q2p2nota7">7</label>
+                            </div>
+                    </div>
+
+                    <div class="pergunta">
+                        <p class="p-pergunta">
+                            3. Demonstra zelo e segurança no exercício do cargo, fazendo uso adequado de materiais/equipamentos.
+                        </p>
+                            <div class="alternativas">
+                                <input type="radio" value="1" name="q2p3" id="q2p3nota1">
+                                <label for="q2p3nota1">1</label>
+                                <input type="radio" value="3" name="q2p3" id="q2p3nota3">
+                                <label for="q2p3nota3">3</label>
+                                <input type="radio" value="5" name="q2p3" id="q2p3nota5">
+                                <label for="q2p3nota5">5</label>
+                                <input type="radio" value="7" name="q2p3" id="q2p3nota7">
+                                <label for="q2p3nota7">7</label>
+                            </div>
+                    </div>
+
+                    <div class="pergunta">
+                        <p class="p-pergunta">
+                            4. Sabe fazer e receber críticas e aceitar mudanças ou inovações, apresentando habilidade de relacionamento com os colegas e superiores, tornando fácil sua integração ao grupo para realização do trabalho.
+                        </p>
+                            <div class="alternativas">
+                                <input type="radio" value="1" name="q2p4" id="q2p4nota1">
+                                <label for="q2p4nota1">1</label>
+                                <input type="radio" value="3" name="q2p4" id="q2p4nota3">
+                                <label for="q2p4nota3">3</label>
+                                <input type="radio" value="5" name="q2p4" id="q2p4nota5">
+                                <label for="q2p4nota5">5</label>
+                                <input type="radio" value="7" name="q2p4" id="q2p4nota7">
+                                <label for="q2p4nota7">7</label>
+                            </div>
+                    </div>
+
+                    <div class="pergunta">
+                        <p class="p-pergunta">
+                            5. Não envia comentários comprometedores ao conceito do Órgão, imagem dos servidores ou prejudiciais ao ambiente de trabalho.
+                        </p>
+                            <div class="alternativas">
+                                <input type="radio" value="1" name="q2p5" id="q2p5nota1">
+                                <label for="q2p5nota1">1</label>
+                                <input type="radio" value="3" name="q2p5" id="q2p5nota3">
+                                <label for="q2p5nota3">3</label>
+                                <input type="radio" value="5" name="q2p5" id="q2p5nota5">
+                                <label for="q2p5nota5">5</label>
+                                <input type="radio" value="7" name="q2p5" id="q2p5nota7">
+                                <label for="q2p5nota7">7</label>
+                            </div>
+                    </div>
+
+                    <div class="pergunta">
+                        <p class="p-pergunta">
+                            6. Mantém a própria situação de vida pessoal sob controle, de forma que não interfira no trabalho.
+                        </p>
+                            <div class="alternativas">
+                                <input type="radio" value="1" name="q2p6" id="q2p6nota1">
+                                <label for="q2p6nota1">1</label>
+                                <input type="radio" value="3" name="q2p6" id="q2p6nota3">
+                                <label for="q2p6nota3">3</label>
+                                <input type="radio" value="5" name="q2p6" id="q2p6nota5">
+                                <label for="q2p6nota5">5</label>
+                                <input type="radio" value="7" name="q2p6" id="q2p6nota7">
+                                <label for="q2p6nota7">7</label>
+                            </div>
+                    </div>   
+                        <div class="total-obtido">
+                            <p class="p-total-obtido">
+                                TOTAL OBTIDO: XX%
+                            </p>
+                        </div>   
+            </div>
+                                        
+            <div class="quesito3">
+                <div class="titulo">
+                    <p class="titulo-comum">
+                        3º Quesito – CAPACIDADE DE INICIATIVA <br>(considere a capacidade de agir adequadamente independente de supervisão, disponibilidade em conhecer o trabalho dos setor, aperfeiçoá-lo e resolver situações inesperadas)
+                    </p>
+                </div>
+
+                    <div class="pergunta">
+                        <p class="p-pergunta">
+                            1. Procura conhecer o trabalho do seu setor. Coopera e participa efetivamente dos trabalhos em equipe, revelando consciência de grupo.
+                        </p>
+                            <div class="alternativas">
+                                <input type="radio" value="1" name="q3p1" id="q3p1nota1">
+                                <label for="q3p1nota1">1</label>
+                                <input type="radio" value="3" name="q3p1" id="q3p1nota3">
+                                <label for="q3p1nota3">3</label>
+                                <input type="radio" value="5" name="q3p1" id="q3p1nota5">
+                                <label for="q3p1nota5">5</label>
+                                <input type="radio" value="7" name="q3p1" id="q3p1nota7">
+                                <label for="q3p1nota7">7</label>
+                            </div>
+                    </div>
+
+                    <div class="pergunta">
+                        <p class="p-pergunta">
+                            2. É criativo. Faz sugestões e críticas sugestivas.
+                        </p>
+                            <div class="alternativas">
+                                <input type="radio" value="1" name="q3p2" id="q3p2nota1">
+                                <label for="q3p2nota1">1</label>
+                                <input type="radio" value="3" name="q3p2" id="q3p2nota3">
+                                <label for="q3p2nota3">3</label>
+                                <input type="radio" value="5" name="q3p2" id="q3p2nota5">
+                                <label for="q3p2nota5">5</label>
+                                <input type="radio" value="7" name="q3p2" id="q3p2nota7">
+                                <label for="q3p2nota7">7</label> 
+                            </div>
+                    </div>
+
+                    <div class="pergunta">
+                         <p class="p-pergunta">
+                            3. Busca orientação para solucionar problemas do dia a dia e resolver situações embaraçosas.
+                        </p>
+                            <div class="alternativas">
+                                <input type="radio" value="1" name="q3p3" id="q3p3nota1">
+                                <label for="q3p3nota1">1</label>
+                                <input type="radio" value="3" name="q3p3" id="q3p3nota3">
+                                <label for="q3p3nota3">3</label>
+                                <input type="radio" value="5" name="q3p3" id="q3p3nota5">
+                                <label for="q3p3nota5">5</label>
+                                <input type="radio" value="7" name="q3p3" id="q3p3nota7">
+                                <label for="q3p3nota7">7</label>
+                            </div>
+                    </div>
+
+                    <div class="pergunta">
+                        <p class="p-pergunta">4. Encaminha corretamente os assuntos que fogem ao seu poder de decisão.</p>
+                            <div class="alternativas">
+                                <input type="radio" value="1" name="q3p4" id="q3p4nota1">
+                                <label for="q3p4nota1">1</label>
+                                <input type="radio" value="3" name="q3p4" id="q3p4nota3">
+                                <label for="q3p4nota3">3</label>
+                                <input type="radio" value="5" name="q3p4" id="q3p4nota5">
+                                <label for="q3p4nota5">5</label>
+                                <input type="radio" value="7" name="q3p4" id="q3p4nota7">
+                                <label for="q3p4nota7">7</label>
+                            </div>
+                    </div>
+                    
+                    <div class="pergunta">
+                        <p class="p-pergunta">5. Procura atualizar-se, conhecer a legislação profissional, instruções e normas de trabalho.</p>
+                            <div class="alternativas">
+                                <input type="radio" value="1" name="q3p5" id="q3p5nota1">
+                                <label for="q3p5nota1">1</label>
+                                <input type="radio" value="3" name="q3p5" id="q3p5nota3">
+                                <label for="q3p5nota3">3</label>
+                                <input type="radio" value="5" name="q3p5" id="q3p5nota5">
+                                <label for="q3p5nota5">5</label>
+                                <input type="radio" value="7" name="q3p5" id="q3p5nota7">
+                                <label for="q3p5nota7">7</label>
+                            </div>
+                    </div>
+                        <div class="total-obtido">
+                            <p class="p-total-obtido">
+                                TOTAL OBTIDO: XX%
+                            </p>
+                        </div>   
+            </div>                      
+            <div class="quesito4">
+                <div class="titulo">
+                    <p class="titulo-comum">
+                        4º Quesito – PRODUTIVIDADE <br> (considere o volume e a quantidade de trabalho realizado, relacionado com o tempo para executá-lo, a complexidade do mesmo e as condições em que é desenvolvido)
+                    </p>
+                </div>
+
+                    <div class="pergunta">
+                        <p class="p-pergunta">
+                            1. Cumpre as tarefas corretamente, com boa apresentação e no prazo previsto.
+                        </p>
+                            <div class="alternativas">
+                                <input type="radio" value="1" name="q4p1" id="q4p1nota1">
+                                <label for="q4p1nota1">1</label>
+                                <input type="radio" value="3" name="q4p1" id="q4p1nota3">
+                                <label for="q4p1nota3">3</label>
+                                <input type="radio" value="5" name="q4p1" id="q4p1nota5">
+                                <label for="q4p1nota5">5</label>
+                                <input type="radio" value="7" name="q4p1" id="q4p1nota7">
+                                <label for="q4p1nota7">7</label>
+                            </div>
+                    </div>
+                    
+                    <div class="pergunta">
+                        <p class="p-pergunta">
+                            2. Assimila ensinamentos e faz transferências de aprendizagem.
+                        </p>
+                            <div class="alternativas">
+                                <input type="radio" value="1" name="q4p2" id="q4p2nota1">
+                                <label for="q4p2nota1">1</label>
+                                <input type="radio" value="3" name="q4p2" id="q4p2nota3">
+                                <label for="q4p2nota3">3</label>
+                                <input type="radio" value="5" name="q4p2" id="q4p2nota5">
+                                <label for="q4p2nota5">5</label>
+                                <input type="radio" value="7" name="q4p2" id="q4p2nota7">
+                                <label for="q4p2nota7">7</label>
+                            </div>
+                    </div>
+
+                    <div class="pergunta">
+                        <p class="p-pergunta">
+                            3. É capaz de se expressar verbalmente de maneira clara e precisa.
+                        </p>
+                            <div class="alternativas">
+                                <input type="radio" value="1" name="q4p3" id="q4p3nota1">
+                                <label for="q4p3nota1">1</label>
+                                <input type="radio" value="3" name="q4p3" id="q4p3nota3">
+                                <label for="q4p3nota3">3</label>
+                                <input type="radio" value="5" name="q4p3" id="q4p3nota5">
+                                <label for="q4p3nota5">5</label>
+                                <input type="radio" value="7" name="q4p3" id="q4p3nota7">
+                                <label for="q4p3nota7">7</label>
+                            </div>
+                    </div>
+
+                    <div class="pergunta">
+                        <p class="p-pergunta">
+                            4. Apresenta ritmo de trabalho produtivo. Demonstra eficiência, dispondo sempre de recursos para a execução do trabalho, mesmo em situações excepcionais.
+                        </p>
+                            <div class="alternativas">
+                                <input type="radio" value="1" name="q4p4" id="q4p4nota1">
+                                <label for="q4p4nota1">1</label>
+                                <input type="radio" value="3" name="q4p4" id="q4p4nota3">
+                                <label for="q4p4nota3">3</label>
+                                <input type="radio" value="5" name="q4p4" id="q4p4nota5">
+                                <label for="q4p4nota5">5</label>
+                                <input type="radio" value="7" name="q4p4" id="q4p4nota7">
+                                <label for="q4p4nota7">7</label>
+                            </div>
+                    </div>
+
+                    <div class="pergunta">
+                        <p class="p-pergunta">
+                            5. Organiza o tempo na execução, observando as prioridades.
+                        </p>
+                            <div class="alternativas">
+                                <input type="radio" value="1" name="q4p5" id="q4p5nota1">
+                                <label for="q4p5nota1">1</label>
+                                <input type="radio" value="3" name="q4p5" id="q4p5nota3">
+                                <label for="q4p5nota3">3</label>
+                                <input type="radio" value="5" name="q4p5" id="q4p5nota5">
+                                <label for="q4p5nota5">5</label>
+                                <input type="radio" value="7" name="q4p5" id="q4p5nota7">
+                                <label for="q4p5nota7">7</label>
+                            </div>
+                    </div>
+
+                    <div class="pergunta">
+                        <p class="p-pergunta">
+                            6. Racionaliza o tempo na execução das tarefas, aproveitando eventual disponibilidade de forma producente.
+                        </p>
+                            <div class="alternativas">
+                                <input type="radio" value="1" name="q4p6" id="q4p6nota1">
+                                <label for="q4p6nota1">1</label>
+                                <input type="radio" value="3" name="q4p6" id="q4p6nota3">
+                                <label for="q4p6nota3">3</label>
+                                <input type="radio" value="5" name="q4p6" id="q4p6nota5">
+                                <label for="q4p6nota5">5</label>
+                                <input type="radio" value="7" name="q4p6" id="q4p6nota7">
+                                <label for="q4p6nota7">7</label>
+                            </div>
+                    </div>   
+                        <div class="total-obtido">
+                            <p class="p-total-obtido">
+                                TOTAL OBTIDO: XX%
+                            </p>
+                        </div>   
+            </div>
+            <div class="quesito5">
+                <div class="titulo">
+                    <p class="titulo-comum">
+                        5º Quesito – RESPONSABILIDADE <br> (considere a ética profissional, a conduta moral e o grau de compromisso do servidor em relação ao seu trabalho na Instituição/Setor.)
+                    </p>
+                </div>
+                    <div class="pergunta">
+                        <p class="p-pergunta">
+                            1. Age com discrição no exercício do cargo, demonstrando firmeza e coerência de atitudes.
+                        </p>
+                            <div class="alternativas">
+                                <input type="radio" value="1" name="q5p1" id="q5p1nota1">
+                                <label for="q5p1nota1">1</label>
+                                <input type="radio" value="3" name="q5p1" id="q5p1nota3">
+                                <label for="q5p1nota3">3</label>
+                                <input type="radio" value="5" name="q5p1" id="q5p1nota5">
+                                <label for="q5p1nota5">5</label>
+                                <input type="radio" value="7" name="q5p1" id="q5p1nota7">
+                                <label for="q5p1nota7">7</label>
+                            </div>
+                    </div>
+                    
+                    <div class="pergunta">
+                        <p class="p-pergunta">
+                            2. Zela pelo patrimônio da Instituição. Evita desperdício de material e gastos desnecessários.
+                        </p>
+                            <div class="alternativas">
+                                <input type="radio" value="1" name="q5p2" id="q5p2nota1">
+                                <label for="q5p2nota1">1</label>
+                                <input type="radio" value="3" name="q5p2" id="q5p2nota3">
+                                <label for="q5p2nota3">3</label>
+                                <input type="radio" value="5" name="q5p2" id="q5p2nota5">
+                                <label for="q5p2nota5">5</label>
+                                <input type="radio" value="7" name="q5p2" id="q5p2nota7">
+                                <label for="q5p2nota7">7</label>
+                            </div>
+                    </div>
+
+                    <div class="pergunta">
+                        <p class="p-pergunta">
+                            3. Mostra-se compromissado com seu trabalho, assumindo as responsabilidades que lhe são atribuídas, demonstrando cautela e prudência ao lidar com o público, enfrentando situações delicadas com sensibilidade.
+                        </p>
+                            <div class="alternativas">
+                                <input type="radio" value="1" name="q5p3" id="q5p3nota1">
+                                <label for="q5p3nota1">1</label>
+                                <input type="radio" value="3" name="q5p3" id="q5p3nota3">
+                                <label for="q5p3nota3">3</label>
+                                <input type="radio" value="5" name="q5p3" id="q5p3nota5">
+                                <label for="q5p3nota5">5</label>
+                                <input type="radio" value="7" name="q5p3" id="q5p3nota7">
+                                <label for="q5p3nota7">7</label>
+                            </div>
+                    </div>
+
+                    <div class="pergunta">
+                        <p class="p-pergunta">
+                            4. Seu trabalho inspira confiança. É resoluto / decidido.
+                        </p>
+                            <div class="alternativas">
+                                <input type="radio" value="1" name="q5p4" id="q5p4nota1">
+                                <label for="q5p4nota1">1</label>
+                                <input type="radio" value="3" name="q5p4" id="q5p4nota3">
+                                <label for="q5p4nota3">3</label>
+                                <input type="radio" value="5" name="q5p4" id="q5p4nota5">
+                                <label for="q5p4nota5">5</label>
+                                <input type="radio" value="7" name="q5p4" id="q5p4nota7">
+                                <label for="q5p4nota7">7</label>
+                            </div>
+                    </div>
+
+                    <div class="pergunta">
+                        <p class="p-pergunta">
+                            5. Cumpre a legislação vigente, as normas específicas do setor e assume as obrigações de trabalho.
+                        </p>
+                            <div class="alternativas">
+                                <input type="radio" value="1" name="q5p5" id="q5p5nota1">
+                                <label for="q5p5nota1">1</label>
+                                <input type="radio" value="3" name="q5p5" id="q5p5nota3">
+                                <label for="q5p5nota3">3</label>
+                                <input type="radio" value="5" name="q5p5" id="q5p5nota5">
+                                <label for="q5p5nota5">5</label>
+                                <input type="radio" value="7" name="q5p5" id="q5p5nota7">
+                                <label for="q5p5nota7">7</label>
+                            </div>
+                    </div>
+                        <div class="total-obtido">
+                            <p class="p-total-obtido">
+                                TOTAL OBTIDO: XX%
+                            </p>
+                        </div>   
+            </div> <!-- DIV do quesito 5-->
+        </div> <!-- Container dos S-Quesitos-->
+        
+        <!--Resumo da Avaliação por quesitos, tabela com o cálculo da pontuação-->
+        <div class="s-tabela">
+            <div class="tabela">
+                <div class="titulo">
+                    <p class="titulo-comum">
+                        Resumo da avaliação por quesitos
+                    </p>
+                </div>
+
+                <table class="pontuacao">
+                    <thead>
+                        <tr>
+                            <th>Fatores da Avaliação</th><th>Pesos</th><th>Pontos obtidos</th><th>TOTAL</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Assiduidade</td> <td>4</td> <td>XX</td> <td>XXX</td>
+                        </tr>
+                        <tr>
+                            <td>Disciplina</td> <td>4</td> <td>XX</td> <td>XXX</td>
+                        </tr>
+                        <tr>
+                            <td>Capacidade de Iniciativa</td> <td>2</td> <td>XX</td> <td>XXX</td>
+                        </tr>
+                        <tr>
+                            <td>Produtividade</td> <td>5</td> <td>XX</td> <td>XXX</td>
+                        </tr>
+                        <tr>
+                            <td>Responsabilidade</td> <td>5</td> <td>XX</td> <td>XXX</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Total Geral de Pontos</td> <td>XXX</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Percentual Total Alcançado</td> <td>XXX%</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                    </tfoot>
+                </table>
+                
+                <!--Resultado (Apto, Apto com restrições ou inapto)-->
+                
+                <div class="apto-inapto">
+                    <br><p><strong>Conclusão da X° avaliação - O servidor até o momento é considerado:</strong></p><br>
+                            <input type="radio" name="aptoouinapto" id="apto" value="apto">
+                            <label for="apto">Apto</label>
+                            <input type="radio" name="aptoouinapto" id="aptocomrestricoes" value="aptocomrestricoes">
+                            <label for="aptocomrestricoes">Apto com restrições</label>
+                            <input type="radio" name="aptoouinapto" id="inapto" value="inapto">
+                            <label for="inapto">Inapto</label>
+                    </div>
+            </div>
+        </div>   
+
+        <!--Informações Complementares-->
+        <div class="s-infoc">
+            <div class="infoc">
+                <div class="titulo">
+                    <p class="titulo-comum">
+                        Informações Complementares
+                    </p>
+                </div>
+
+                <div class="p-infoc">
+                    <p> 
+                        Com base nos fatores abordados pela avaliação, comente sobre aquele(s) que você considera importante(s), visando esclarecer e/ou acrescentar algum aspecto acerca do desenvolvimento do servidor:
+                    </p>
+                    <textarea name="info1" id="info1" placeholder="Caso tenha informações complementares, digite aqui..."></textarea>
+                </div>
+                
+                <div class="p-infoc">
+                    <p>
+                        Indique, se necessário, sugestões para melhor adaptação e/ou melhoria de desempenho do servidor:
+                    </p>
+                    <textarea name="info1" id="info1" placeholder="Caso tenha informações complementares, digite aqui..."></textarea>
+                </div>
+                
+                <div class="p-infoc">
+                    <p> 
+                        Este espaço está reservado para sugestões que possam favorecer o aperfeiçoamento desta avaliação:
+                    </p>
+                    <textarea name="info1" id="info1" placeholder="Caso tenha informações complementares, digite aqui..."></textarea>
+                </div>
+            </div>
+        </div> <!--DIV do S-infoc, Informações Complementares-->
+        
+        <button class="botao" onclick="alert('Avaliação enviada!')">Enviar Avaliação</button>
+
+        <p>Só quero testar de consegui fazer o push certinho</p>
+        <br>
+</main> 
+<script src="script.js"></script>
+</body>
+</html>
