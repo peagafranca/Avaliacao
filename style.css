@@ -1,5 +1,5 @@
 * { 
-  border: solid 2px black;
+
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,6 +10,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f4f7f6;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 main {
@@ -17,6 +19,7 @@ main {
   flex-direction: column;
   width: 100vw;
   margin: 0;
+  padding: 0;
 }
 
 /* Cabeçalho*/
@@ -24,7 +27,7 @@ main {
 /* Cabeçalho*/
 header {
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
   align-items: center;
   gap: 1rem;
   background: linear-gradient(135deg, #332f7d 0%, #2b52bd 100%);
@@ -34,6 +37,9 @@ header {
   top: 0;
   z-index: 1000;
   font-size: 0.35rem;
+        width: 100%;
+        margin: 0;
+        
 }
 
 img {
@@ -65,14 +71,17 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
 }
 
 .s-quesitos {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  margin: 0;
 }
 
 .titulo {
@@ -89,20 +98,20 @@ img {
     font-weight: bold;
 }
 
-.preenchimento-dados, .texto-nivel, .infoc, .tabela{
+.preenchimento-dados, .bloco-nivel, .infoc, .tabela{
   display: flex;
   flex-direction: column;
+            padding: 1rem 5rem;
+            margin: 1rem 0;
+            width: 60%;
   gap: 0.7rem;
   background-color: #dbeafe;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 1rem 10rem;
-  margin: 1rem 0;
-  width: 80%;
   text-align: center;
 }
 
-.subtitulo  {
+.texto-nivel p  {
     font-size: 1rem;
     margin-bottom: 1rem;
     background-color: #eff6ff;
@@ -153,13 +162,13 @@ img {
 .quesito1, .quesito2, .quesito3, .quesito4, .quesito5 {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
     background-color: #dbeafe;
-    padding: 1rem;
+            padding: 1rem 5rem;
+            margin: 1rem 0;
+            width: 80%;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
 
 }
 
@@ -176,13 +185,9 @@ img {
      padding: 1rem;
 }
 
-
-
 .p-pergunta{
   width: 60%;    
 }
-
-
 
 .alternativas {
   margin-left: auto;
@@ -350,3 +355,146 @@ button {
 /*Pra colocar responsivo*/
 /*Pra colocar responsivo*/
 
+@media (max-width: 1200px) {
+
+ 
+
+  header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #332f7d 0%, #2b52bd 100%);
+  color: white;
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+      font-size: 0.28rem;
+      width: 100%;
+      box-sizing: border-box;
+}
+
+img {
+  width: 2.5rem;
+}
+
+.preenchimento-dados, .bloco-nivel, .infoc, .tabela{
+  display: flex;
+  flex-direction: column;
+            padding: 0.6rem;
+            margin: 0.5rem 0;
+            width: 100%;
+            font-size: 0.9rem;
+            gap: 0.4rem;
+  background-color: #dbeafe;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.sera-atribuido p {
+  font-size: 0.9rem;
+}
+
+.campo-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+}
+
+.campo-texto label {
+    text-align: left;
+    width: 3.5rem;
+}
+
+.campo-texto input {
+    padding: 0.3rem;
+    border: 1px solid royalblue;
+    border-radius: 4px;
+    justify-content: left;
+    width: 80%;
+}
+
+#matriculaservidor {
+  width: 40%;
+  text-align: center;
+}
+#nomeservidor {
+  width: 100%;
+  
+}
+#dataexercicioservidor {
+  width: 50%;
+  text-align: center;
+}
+#data-exercicio label {
+  width: auto;
+}
+
+.quesito1, .quesito2, .quesito3, .quesito4, .quesito5 {
+    display: flex;
+    flex-direction: column;
+    background-color: #dbeafe;
+            padding: 0 1rem;
+            margin: 0;
+            width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+
+}
+
+/*Frases das perguntas*/
+.caixa-pergunta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     background-color: #eff6ff;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     border-radius: 5px;
+     width: 100%;
+     height: auto;
+     margin: 0.5rem 0 ;
+     padding: 1rem;
+     text-align: center;
+     font-size: 0.9rem;
+}
+
+.p-pergunta{
+  width: 100%;    
+}
+
+.alternativas {
+  width: 100%;
+}
+
+.apto-inapto {
+    display: flex;
+    flex-direction: column;
+    background-color: #eff6ff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0 2.5rem 2.0rem 2.5rem  ;
+    border-radius: 5px;
+    
+}
+
+.total-obtido {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+    align-items: center;
+    background-color: royalblue;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 60%;
+}
+
+}
