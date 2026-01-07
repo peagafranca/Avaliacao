@@ -1,15 +1,78 @@
-* {
-    border: solid 2px black;
+* { 
+  border: solid 2px black;
   margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
   margin: 0;
   padding: 0;
-    background-color: #f4f7f6;
+  background-color: #f4f7f6;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  margin: 0;
+}
+
+/* Cabeçalho*/
+/* Cabeçalho*/
+/* Cabeçalho*/
+header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, #332f7d 0%, #2b52bd 100%);
+  color: white;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-size: 0.35rem;
+}
+
+img {
+  width: 3rem;
+}
+
+.perfil-link {
+  margin-left: auto; 
+  padding-right: 1rem;
+}
+
+.perfil-link a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+
+.perfil-link a:hover {
+  text-decoration: underline;
+}
+
+/*Dados Servidor*/
+/*Dados Servidor*/
+/*Dados Servidor*/
+
+.s-dados, .s-nivel, .s-infoc, .s-tabela {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.s-quesitos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
 }
 
 .titulo {
@@ -24,67 +87,6 @@ body {
     width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-weight: bold;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    margin: 0;
-
-}
-
-#container {
-  margin: 0;
-}
-
-/* Cabeçalho*/
-/* Cabeçalho*/
-/* Cabeçalho*/
-header {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    gap: 1rem;
-    background: linear-gradient(135deg, #332f7d 0%, #2b52bd 100%);
-    color: white;
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    font-size: 0.35rem;
-}
-
-img {
-    width: 3rem;
-}
-
-.perfil-link {
-    margin-left: auto; 
-    padding-right: 1rem;
-}
-
-.perfil-link a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-family: sans-serif;
-    font-size: 1rem;
-}
-
-.perfil-link a:hover {
-    text-decoration: underline;
-}
-
-/*Dados Servidor*/
-/*Dados Servidor*/
-/*Dados Servidor*/
-
-.s-dados, .s-nivel, .s-quesitos, .s-infoc, .s-tabela {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1rem;
 }
 
 .preenchimento-dados, .texto-nivel, .infoc, .tabela{
@@ -152,34 +154,39 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80vw;
+    justify-content: center;
+    align-content: center;
     background-color: #dbeafe;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 1rem 0;
+
 }
 
 /*Frases das perguntas*/
-.pergunta {
+.caixa-pergunta {
     display: flex;
     align-items: center;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
      background-color: #eff6ff;
      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-     padding: 1rem;
      border-radius: 5px;
-     width: 80%;
+     width: 100%;
+     height: auto;
      margin: 0.5rem 0 ;
-
+     padding: 1rem;
 }
 
+
+
 .p-pergunta{
-    flex-basis: 70%;
-    text-align: left;
-    margin-bottom: 1rem;
+  width: 60%;    
+}
+
+
+
+.alternativas {
+  margin-left: auto;
+  align-items: center;
 }
 
 /* Botões Radio */
@@ -193,13 +200,13 @@ img {
     
 }
 
-.pergunta input[type="radio"],
+.caixa-pergunta input[type="radio"],
 .apto-inapto input[type="radio"],
 .concordo-discordo input[type="radio"] {
   display: none;
 }
 
-.pergunta label, 
+.caixa-pergunta label, 
 .apto-inapto label, 
 .concordo-discordo label {
   display: inline-block;
@@ -221,7 +228,7 @@ input[type="radio"]:checked + label {
 }
 
 /* Efeito de Hover Geral (para todos os botões) */
-.pergunta label:hover, 
+.caixa-pergunta label:hover, 
 .apto-inapto label:hover, 
 .concordo-discordo label:hover {
   background-color: #e0e0e0; /* Um cinza um pouco mais escuro que o whitesmoke */
@@ -337,3 +344,9 @@ button {
 .botao:active {
   transform: translateY(-1px); /* O botão desce um pouco ao clicar */
 }
+
+
+/*Pra colocar responsivo*/
+/*Pra colocar responsivo*/
+/*Pra colocar responsivo*/
+
