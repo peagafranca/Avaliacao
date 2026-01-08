@@ -89,16 +89,13 @@ main {
   flex-grow: 1;
   width: 100%;
   margin: 0;
-  padding: 20px;
+  padding: 0;
   overflow-y: auto;
   scroll-behavior: smooth;
   height: 100%;
   overflow: hidden;
   overflow-y: auto;
   scroll-behavior: smooth;
-
-
-  
 }
 
 /* Cabeçalho*/
@@ -119,7 +116,6 @@ header {
         width: 100%;
         margin: 0;
 }
-
 
 img {
   width: 3rem;
@@ -171,12 +167,12 @@ img {
 .titulo {
     background-color: royalblue;
     color: white;
-    font-size: 1rem;
+    font-size: 1.3rem;
     padding: 1rem;
     text-align: center;
     border-radius: 5px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-weight: bold;
@@ -185,19 +181,30 @@ img {
 .preenchimento-dados, .bloco-nivel, .infoc, .tabela{
   display: flex;
   flex-direction: column;
-            padding: 1rem 5rem;
-            margin: 1rem 0;
+            padding: 0.5rem 3rem;
+            margin: 0.4rem 0;
             width: 60%;
-  gap: 0.7rem;
   background-color: #dbeafe;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
+.div-preenchimento {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+    font-size: 1rem;
+    background-color: #eff6ff;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .texto-nivel p  {
     font-size: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 2px;
     background-color: #eff6ff;
     border-radius: 5px;
     padding: 1rem;
@@ -248,14 +255,13 @@ img {
     display: flex;
     flex-direction: column;
     background-color: #dbeafe;
-            padding: 1rem 5rem;
-            margin: 1rem 0;
+            padding: 0.4rem 3rem;
+            margin: 0.5rem 0;
             width: 80%;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     align-items: center;
         scroll-margin-top: 100px;
-
 }
 
 /*Frases das perguntas*/
@@ -267,7 +273,7 @@ img {
      border-radius: 5px;
      width: 100%;
      height: auto;
-     margin: 0.5rem 0 ;
+     margin: 1px 0 ;
      padding: 1rem;
 }
 
@@ -290,6 +296,7 @@ img {
     padding: 1rem;
     padding-bottom: 2rem;
     border-radius: 5px;
+    margin-top: 0.5rem;
     
 }
 
@@ -337,22 +344,18 @@ input[type="radio"]:checked + label {
 
 .total-obtido {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-    align-items: center;
     background-color: royalblue;
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
-    padding: 1rem;
-    text-align: center;
+    padding: 0.5rem;
     border-radius: 5px;
-    margin-top: 2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-top: 0.3rem;
     width: 50%;
+    justify-content: center;
 }
+
 
 /* Tabela de Resumo da Avaliação*/
 /* Tabela de Resumo da Avaliação*/
@@ -391,6 +394,23 @@ input[type="radio"]:checked + label {
 /* Informações Complementares */
 /* Informações Complementares */
 /* Informações Complementares */
+
+.div-infoc{
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+    font-size: 1rem;
+    background-color: #eff6ff;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.p-infoc p {
+  padding: 0.5rem;
+
+}
 
 textarea {
     height: 100px;
@@ -469,10 +489,14 @@ main {
   padding: 0;
 }
 
+.titulo{
+  font-size: 1rem;
+}
+
 .preenchimento-dados, .bloco-nivel, .infoc, .tabela{
   display: flex;
   flex-direction: column;
-            padding: 0.6rem;
+            padding: 0.5rem;
             margin: 0.5rem 0;
             width: 100%;
             font-size: 1rem;
@@ -527,8 +551,8 @@ main {
     display: flex;
     flex-direction: column;
     background-color: #dbeafe;
-            padding: 0 1rem;
-            margin: 0;
+            padding: 0 0.2rem;
+            margin: 0.4rem;
             width: 100%;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -541,11 +565,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-     background-color: #eff6ff;
-     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-     border-radius: 5px;
-     width: 100%;
-     margin: 0.5rem 0 ;
      text-align: center;
      font-size: 0.9rem;
 }
@@ -570,6 +589,8 @@ main {
   font-weight: bold;
   user-select: none;
 }
+
+
 
 /* Tabela de Resumo da Avaliação*/
 /* Tabela de Resumo da Avaliação*/
@@ -611,20 +632,10 @@ main {
 }
 
 .total-obtido {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-    align-items: center;
-    background-color: royalblue;
-    color: white;
     font-size: 1rem;
-    font-weight: bold;
-    padding: 1rem;
-    text-align: center;
-    border-radius: 5px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     width: 60%;
 }
 
