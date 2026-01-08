@@ -1,5 +1,5 @@
 * { 
-    border: 2px solid black;
+    
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -27,12 +27,10 @@ body {
 .sidebar {
   display: flex;
   flex-direction: column;
-  width: 300px;
-  height: auto;
-  background-color: royalblue;
+  max-width: 300px;
+  background-color: rgb(26, 49, 117);
   color: white;
-  flex-shrink: 0;
-    border-right: 1px solid #e0e0e0;
+    flex-shrink: 0;
     transition: all 0.3s;
     overflow-y: auto;
 }
@@ -42,15 +40,16 @@ body {
   color: white;
   display: flex;
   align-items: center;
+  text-align: center;
   font-weight: bold;
-  font-size: 1.1rem;
-  width: 100%;
-  padding: 2rem;
+  font-size: 1rem;
+  width: auto;
+  padding: 1rem;
 }
 
 .sidebar-nav {
   flex-grow: 1;
-  padding: 2rem;
+  padding: 0.5rem;
 }
 .sidebar ul {
   list-style: none;
@@ -59,13 +58,13 @@ body {
 }
 
 .sidebar-nav li a {
-  padding: 12px 20px;
+  padding: 0.8rem 1rem;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 1rem;
   color: white;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 100;
   transition: 0.2s;
   border-left: 4px solid transparent; /* Para o efeito de destaque */
 }
@@ -81,7 +80,6 @@ body {
 .content {
   flex-grow: 1; /* Faz o conteúdo ocupar o restante da tela */
   background-color: #f4f7f6; /* Cor de fundo suave */
-  padding: 40px;
   overflow-y: auto; /* Adiciona scroll apenas no conteúdo se necessário */
 }
 
@@ -120,8 +118,8 @@ header {
   font-size: 0.35rem;
         width: 100%;
         margin: 0;
-        
 }
+
 
 img {
   width: 3rem;
@@ -193,17 +191,18 @@ img {
   gap: 0.7rem;
   background-color: #dbeafe;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 .texto-nivel p  {
     font-size: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     background-color: #eff6ff;
     border-radius: 5px;
     padding: 1rem;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .campo-texto {
@@ -245,7 +244,7 @@ img {
 /* Perguntas */
 /* Perguntas */
 
-.quesito1, .quesito2, .quesito3, .quesito4, .quesito5 {
+.quesito{
     display: flex;
     flex-direction: column;
     background-color: #dbeafe;
@@ -446,8 +445,6 @@ button {
 
 @media (max-width: 1200px) {
 
- 
-
   header {
   display: flex;
   justify-content: left;
@@ -466,6 +463,10 @@ button {
 
 img {
   width: 2.5rem;
+}
+
+main {
+  padding: 0;
 }
 
 .preenchimento-dados, .bloco-nivel, .infoc, .tabela{
@@ -494,7 +495,7 @@ img {
 
 .campo-texto label {
     text-align: left;
-    width: 3.5rem;
+    width: auto;
 }
 
 .campo-texto input {
@@ -503,6 +504,7 @@ img {
     border-radius: 4px;
     justify-content: left;
     width: 80%;
+    font-size: 1.2rem;
 }
 
 #matriculaservidor {
@@ -521,7 +523,7 @@ img {
   width: auto;
 }
 
-.quesito1, .quesito2, .quesito3, .quesito4, .quesito5 {
+.quesito {
     display: flex;
     flex-direction: column;
     background-color: #dbeafe;
@@ -543,9 +545,7 @@ img {
      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
      border-radius: 5px;
      width: 100%;
-     height: auto;
      margin: 0.5rem 0 ;
-     padding: 1rem;
      text-align: center;
      font-size: 0.9rem;
 }
@@ -555,7 +555,49 @@ img {
 }
 
 .alternativas {
-  width: 100%;
+  margin: 0;
+}
+
+.caixa-pergunta label, 
+.apto-inapto label, 
+.concordo-discordo label {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background-color: whitesmoke;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  user-select: none;
+}
+
+/* Tabela de Resumo da Avaliação*/
+/* Tabela de Resumo da Avaliação*/
+/* Tabela de Resumo da Avaliação*/
+
+.pontuacao{
+  font-size: 0.9rem;
+}
+
+.pontuacao thead th {
+    background-color: royalblue;
+    color: white;
+    padding: 0.2rem;
+    border: 1px solid #3b62a7;
+}
+
+.pontuacao td {
+    padding: 0.3rem;
+    border: 1px solid #D9D9D9;
+}
+
+.pontuacao tbody tr:hover {
+    background-color: #E9E9E9;
+}
+
+.pontuacao tbody tr:nth-last-child(-n+2) td {
+    background-color: #e4edff;
+    font-weight: bold;
 }
 
 .apto-inapto {
@@ -597,6 +639,9 @@ img {
   .content {
     width: 100%;    /* Garante que o formulário use a tela toda */
     padding: 20px;  /* Reduz um pouco o respiro em telas menores */
+  }
+  .perfil-link {
+    display: none;
   }
   
 }
