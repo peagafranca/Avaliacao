@@ -1,9 +1,13 @@
 * { 
-
+    border: 2px solid black;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -14,12 +18,89 @@ body {
   overflow-x: hidden;
 }
 
+#container-geral {
+  display: flex;
+  height: 100vh;
+  
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: auto;
+  background-color: royalblue;
+  color: white;
+  flex-shrink: 0;
+    border-right: 1px solid #e0e0e0;
+    transition: all 0.3s;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+  background-color: #1a438e; /* Azul combinando com o seu Header */
+  color: white;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  width: 100%;
+  padding: 2rem;
+}
+
+.sidebar-nav {
+  flex-grow: 1;
+  padding: 2rem;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li a {
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+  border-left: 4px solid transparent; /* Para o efeito de destaque */
+}
+
+/* Efeito Hover e Ativo */
+.sidebar-nav li a:hover, 
+.sidebar-nav li.active a {
+  background-color: #f0f4ff;
+  color: #1a438e;
+  border-left-color: #1a438e;
+}
+
+.content {
+  flex-grow: 1; /* Faz o conteúdo ocupar o restante da tela */
+  background-color: #f4f7f6; /* Cor de fundo suave */
+  padding: 40px;
+  overflow-y: auto; /* Adiciona scroll apenas no conteúdo se necessário */
+}
+
 main {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  flex-grow: 1;
+  width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 20px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+
+
+  
 }
 
 /* Cabeçalho*/
@@ -74,7 +155,12 @@ img {
   font-size: 1rem;
   padding: 0;
   margin: 0;
+  scroll-margin-top: 100px;
 }
+
+#id-dados, #id-nivel, #quesito-1, #quesito-2, #quesito-3, #quesito-4, #quesito-5, #id-tabela, #id-infoc {
+  scroll-margin-top: 120px;
+} 
 
 .s-quesitos {
   display: flex;
@@ -169,6 +255,7 @@ img {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     align-items: center;
+        scroll-margin-top: 100px;
 
 }
 
@@ -190,7 +277,9 @@ img {
 }
 
 .alternativas {
+  min-width: 350px;
   margin-left: auto;
+  margin-right: 3rem;
   align-items: center;
 }
 
@@ -385,7 +474,7 @@ img {
             padding: 0.6rem;
             margin: 0.5rem 0;
             width: 100%;
-            font-size: 0.9rem;
+            font-size: 1rem;
             gap: 0.4rem;
   background-color: #dbeafe;
   border-radius: 5px;
@@ -497,4 +586,17 @@ img {
     width: 60%;
 }
 
+.sidebar {
+    display: none; /* Esconde a sidebar completamente */
+  }
+
+  .main-container {
+    display: block; /* Remove o 'flex' para o conteúdo fluir normalmente */
+  }
+
+  .content {
+    width: 100%;    /* Garante que o formulário use a tela toda */
+    padding: 20px;  /* Reduz um pouco o respiro em telas menores */
+  }
+  
 }
