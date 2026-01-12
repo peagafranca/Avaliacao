@@ -1,5 +1,5 @@
 * { 
-    
+
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -138,7 +138,7 @@ img {
 /*Dados Servidor*/
 /*Dados Servidor*/
 
-.s-dados, .s-nivel, .s-infoc, .s-tabela {
+.s-dados, .s-nivel, .s-infoc, .s-tabela, .s-avaliador {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -148,7 +148,7 @@ img {
   scroll-margin-top: 100px;
 }
 
-#id-dados, #id-nivel, #quesito-1, #quesito-2, #quesito-3, #quesito-4, #quesito-5, #id-tabela, #id-infoc {
+#id-dados, #id-nivel, #quesito-1, #quesito-2, #quesito-3, #quesito-4, #quesito-5, #id-tabela, #id-infoc, #id-avaliador {
   scroll-margin-top: 120px;
 } 
 
@@ -174,7 +174,7 @@ img {
     font-weight: bold;
 }
 
-.preenchimento-dados, .bloco-nivel, .infoc, .tabela{
+.preenchimento-dados, .bloco-nivel, .infoc, .tabela, .preenchimento-avaliador{
   display: flex;
   flex-direction: column;
             padding: 0.5rem 3rem;
@@ -186,9 +186,10 @@ img {
   text-align: center;
 }
 
-.div-preenchimento {
+.div-preenchimento{
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 0.4rem;
     font-size: 1rem;
     background-color: #eff6ff;
@@ -197,6 +198,23 @@ img {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+.campo-avaliacao {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 5rem;
+    background-color: #eff6ff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0 1rem 0;
+    padding: 1rem;
+    border: 1 solid royalblue;
+
+
+}
+
+
 
 .texto-nivel p  {
     font-size: 1rem;
@@ -225,23 +243,48 @@ img {
     border-radius: 4px;
     justify-content: left;
     width: 25vw;
+    font-size: 0.9rem;
+    
 }
 
-#matriculaservidor {
-  width: 7vw;
+.campo-texto select {
+    padding: 0.3rem;
+    border: 1px solid royalblue; /* Cor azul das suas bordas */
+    border-radius: 4px;       /* Arredondamento igual aos inputs */
+    background-color: white;
+    font-size: 0.9rem;
+    font-weight: bolder;
+    cursor: pointer;
+    text-align: center;
+    padding-right: 0.7rem; /* Espaço para a seta não cobrir o número */
+    
+}
+
+#matriculaservidor, #matricula-chefeimediato {
+  width: 10vw;
   text-align: center;
 }
-#nomeservidor {
+#nomeservidor, #nomechefeimediato {
   width: 30vw;
   
 }
-#dataexercicioservidor {
-  width: 8vw;
+#dataexercicioservidor, #dataavaliacao {
+  width: 12vw;
   text-align: center;
 }
 #data-exercicio label {
   width: auto;
 }
+
+#data-avaliacao label {
+  width: auto;
+}
+
+/* Seleciona o container e o select dentro dele */
+
+
+
+
 
 /* Perguntas */
 /* Perguntas */
@@ -334,8 +377,16 @@ input[type="radio"]:checked + label {
 }
 
 #inapto:checked + label, #discordo:checked + label {
-  background-color: red;
-  border-color: red;
+    background-color: #dc3545; /* Vermelho */
+    color: white;
+    border-color: #a71d2a;
+}
+
+/* Quando o rádio está desabilitado, o "botão" (label) fica opaco */
+input[type="radio"]:disabled + label {
+    opacity: 0.4;
+    cursor: not-allowed;
+    filter: grayscale(1);
 }
 
 .total-obtido {
@@ -489,7 +540,7 @@ main {
   font-size: 1rem;
 }
 
-.preenchimento-dados, .bloco-nivel, .infoc, .tabela{
+.preenchimento-dados, .bloco-nivel, .infoc, .tabela, .preenchimento-avaliador {
   display: flex;
   flex-direction: column;
             padding: 0.5rem;
@@ -651,4 +702,38 @@ main {
     display: none;
   }
   
+}
+
+
+@media print {
+    /* 1. Esconde botões, mensagens e elementos de navegação */
+    .div-botao, .instrucoes, header, footer {
+        display: none !important;
+    }
+
+    /* 2. Garante que o fundo da página seja branco e o texto preto */
+    body {
+        background: white !important;
+        color: black !important;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 3. Mantém as cores de fundo (como o azul dos títulos) */
+    .titulo-secao, th {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* 4. Remove bordas de foco e sombras */
+    input, select, textarea {
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+        appearance: none;
+    }
+
+    /* 5. Força quebra de página se o formulário for muito longo */
+    .campo-avaliacao {
+        page-break-inside: avoid;
+    }
 }

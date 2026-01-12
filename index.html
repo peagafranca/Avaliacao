@@ -34,6 +34,7 @@
                 <li><a href="#quesito-4">4° Quesito - Produtividade</a></li>
                 <li><a href="#quesito-5">5° Quesito - Responsabilidade</a></li>
                 <li><a href="#id-tabela">Resumo da Avaliação</a></li>
+                <li><a href="#id-avaliador">Chefe Imediato</a></li>
                 <li><a href="#id-infoc">Informações Complementares</a></li>
                 
                 
@@ -79,9 +80,36 @@
                             
                     <div class="campo-texto" id="data-exercicio">        
                             <label for="dataexercicioservidor">Data de entrada em exercício: </label>
-                            <input type="date" name="dataexercicio" id="dataexercicioservidor">
+                            <input type="date" name="dataexercicioservidor" id="dataexercicioservidor">
                     </div>
                 </div>
+                
+                <div class="campo-avaliacao">
+                    <div class="campo-texto" id="div-avaliacao">
+                        <label for="avaliacao-num">Avaliação: </label>
+                        <select name="avaliacao-num" id="avaliacao-num"> 
+                            
+                            <option value="" disabled selected hidden>Selecione...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div> 
+
+                    <div class="campo-texto" id="data-avaliacao">
+                        <label for="dataavaliacao">Data da avaliação: </label>
+                        <input type="date" name="dataavaliacao" id="dataavaliacao">  
+                    </div>
+                </div>
+                
             </div>  
         </div>    
 
@@ -679,9 +707,36 @@
                                 <label for="aptocomrestricoes">Apto com restrições</label>
                                 <input type="radio" name="aptoouinapto" id="inapto" value="inapto">
                                 <label for="inapto">Inapto</label>
-                        </div>
+                    </div>
                 </div>
-            </div>   
+            </div>  
+            
+                  <div class="s-avaliador" id="id-avaliador">
+            <div class="preenchimento-avaliador">
+                <div class="titulo">
+                    <p class="titulo-comum">
+                        Dados do Avaliador (Chefe Imediato)
+                    </p>
+                </div>
+
+                <div class="div-preenchimento">
+                    <div class="campo-texto">
+                        <label for="matricula-chefeimediato">Matrícula: </label>
+                        <input type="text" name="matricula-chefeimediato" id="matricula-chefeimediato" placeholder="00/123456-7">
+                    </div>
+
+                    <div class="campo-texto">
+                            <label for="nomechefeimediato">Nome: </label>
+                            <input type="text" id="nomechefeimediato" name="nomechefeimediato">
+                    </div>
+
+                    <div class="campo-texto">
+                            <label for="cargoservidor">Cargo: </label>
+                            <input type="text" name="cargoservidor" id="cargoservidor">
+                    </div>
+                </div>
+            </div>  
+        </div>    
 
             <!--Informações Complementares-->
             <div class="s-infoc" id="id-infoc">
@@ -716,7 +771,7 @@
                 </div>
             </div> <!--DIV do S-infoc, Informações Complementares-->
             <div class="div-botao">
-                <button class="botao" onclick="alert('Avaliação enviada!')">Enviar Avaliação</button>
+                <button class="botao" onclick="prepararImpressao()">Imprimir Avaliação</button>
                     <p id="mensagem"></p>
             </div>
     </div> <!--Container Geral-->

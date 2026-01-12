@@ -54,6 +54,80 @@ function atualizarResumoFinal() {
     const totalGeral = Object.values(resultadosGlobais).reduce((a, b) => a + b, 0);
     const percentualGeral = (totalGeral / VALOR_MAXIMOGERAL) * 100;
 
-    document.getElementById('total-geralpontos').innerText = totalGeral;
+    document.getElementById('total-geralpontos').innerText = totalGeral.toFixed(0);
     document.getElementById('percentual-total').innerText = `${percentualGeral.toFixed(0)}%`;
+
+    const radioApto = document.getElementById('apto');
+    const radioRestrito = document.getElementById('aptocomrestricoes');
+    const radioInapto = document.getElementById('inapto');
+
+    if (percentualGeral > 0) {
+        if (percentualGeral < 70) {
+            // ABAIXO DE 70%: Força Inapto (Vermelho)
+            radioInapto.checked = true;
+            radioInapto.disabled = false; // Garante que ele possa ser marcado
+            radioApto.disabled = true;
+            radioRestrito.disabled = true;
+        } 
+        else {
+            // 70% OU MAIS: Libera opções de Apto
+            radioApto.disabled = false;
+            radioRestrito.disabled = false;
+            radioInapto.disabled = true; // Impede marcar Inapto se a nota é boa
+
+            if (!radioRestrito.checked) {
+                radioApto.checked = true;
+            }
+        }
+    }
+}
+
+const inputEntrada = document.getElementById('dataexercicioservidor');
+const selectAvaliacao = document.getElementById('avaliacao-num');
+const inputDataAvaliacao = document.getElementById('dataavaliacao');
+
+function calcularDataAvaliacao() {
+    const dataBaseStr = inputEntrada.value;
+    const numAvaliacao = selectAvaliacao.value;
+
+    if (!dataBaseStr || !numAvaliacao || numAvaliacao === "outro") return;
+
+    // Criamos o objeto de data baseado na entrada em exercício
+    let dataCalculada = new Date(dataBaseStr);
+    
+    // Ajuste para evitar erro de fuso horário ao criar a data
+    dataCalculada.setMinutes(dataCalculada.getMinutes() + dataCalculada.getTimezoneOffset());
+
+    if (numAvaliacao === "1") {
+        // 1ª Avaliação: +4 meses
+        dataCalculada.setMonth(dataCalculada.getMonth() + 4);
+    } else {
+        // Demais: 4 meses (da primeira) + 3 meses para cada avaliação adicional
+        // Fórmula: 4 + ((N - 1) * 3)
+        const mesesAdicionais = 4 + ((parseInt(numAvaliacao) - 1) * 3);
+        dataCalculada.setMonth(dataCalculada.getMonth() + mesesAdicionais);
+    }
+
+    // Formata de volta para YYYY-MM-DD para o input
+    const ano = dataCalculada.getFullYear();
+    const mes = String(dataCalculada.getMonth() + 1).padStart(2, '0');
+    const dia = String(dataCalculada.getDate()).padStart(2, '0');
+
+    inputDataAvaliacao.value = `${ano}-${mes}-${dia}`;
+}
+
+// Ouve as mudanças nos dois campos
+inputEntrada.addEventListener('change', calcularDataAvaliacao);
+selectAvaliacao.addEventListener('change', calcularDataAvaliacao);
+
+function prepararImpressao() {
+    // 1. Opcional: Validar se campos importantes estão vazios
+    const nome = document.querySelector('input[name="nomeservidor"]')?.value;
+    if (!nome) {
+        alert("Por favor, preencha o nome do servidor antes de imprimir.");
+        return;
+    }
+
+    // 2. Comando que abre a tela de impressão do navegador
+    window.print();
 }
