@@ -13,7 +13,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #f4f7f6;
+  background-color: #ffffff;
   width: 100%;
   overflow-x: hidden;
 }
@@ -25,19 +25,19 @@ body {
 }
 
 .sidebar {
+  position: relative;
+  height: 100%;
   display: flex;
   flex-direction: column;
   max-width: 300px;
-  background-color: rgb(26, 49, 117);
-  color: white;
+  background-color: rgb(30, 42, 77);
     flex-shrink: 0;
     transition: all 0.3s;
     overflow-y: auto;
+    padding-top: 100px;
 }
 
 .sidebar-header {
-  background-color: #1a438e; /* Azul combinando com o seu Header */
-  color: white;
   display: flex;
   align-items: center;
   text-align: center;
@@ -77,12 +77,6 @@ body {
   border-left-color: #1a438e;
 }
 
-.content {
-  flex-grow: 1; /* Faz o conteúdo ocupar o restante da tela */
-  background-color: #f4f7f6; /* Cor de fundo suave */
-  overflow-y: auto; /* Adiciona scroll apenas no conteúdo se necessário */
-}
-
 main {
   display: flex;
   flex-direction: column;
@@ -90,6 +84,7 @@ main {
   width: 100%;
   margin: 0;
   padding: 0;
+  padding-top: 100px;
   overflow-y: auto;
   scroll-behavior: smooth;
   height: 100%;
@@ -108,13 +103,14 @@ header {
   gap: 1rem;
   background: linear-gradient(135deg, #332f7d 0%, #2b52bd 100%);
   color: white;
-  padding: 1rem;
-  position: sticky;
+  padding: 0.7rem;
+  position: absolute;
   top: 0;
   z-index: 1000;
   font-size: 0.35rem;
         width: 100%;
         margin: 0;
+        
 }
 
 img {
@@ -184,7 +180,7 @@ img {
             padding: 0.5rem 3rem;
             margin: 0.4rem 0;
             width: 60%;
-  background-color: #dbeafe;
+  background-color: #ecf0f8;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -254,7 +250,7 @@ img {
 .quesito{
     display: flex;
     flex-direction: column;
-    background-color: #dbeafe;
+    background-color: #ecf0f8;
             padding: 0.4rem 3rem;
             margin: 0.5rem 0;
             width: 80%;
