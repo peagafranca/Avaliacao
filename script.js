@@ -120,14 +120,3 @@ function calcularDataAvaliacao() {
 inputEntrada.addEventListener('change', calcularDataAvaliacao);
 selectAvaliacao.addEventListener('change', calcularDataAvaliacao);
 
-function prepararImpressao() {
-    // 1. Opcional: Validar se campos importantes estão vazios
-    const nome = document.querySelector('input[name="nomeservidor"]')?.value;
-    if (!nome) {
-        alert("Por favor, preencha o nome do servidor antes de imprimir.");
-        return;
-    }
-
-    // 2. Comando que abre a tela de impressão do navegador
-    window.print();
-}
