@@ -3,10 +3,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', sans-serif;
+    
 }
 
 form {
   padding-top: 90px;
+  
 }
 
 /* Cabeçalho*/
@@ -41,23 +43,23 @@ main {
   gap: 1rem;
 }
 
+
+
 #a-dados-servidor, #a-nivel, .a-quesito, .a-tabela, .a-infoc,.a-avaliador {
   display: flex;
   flex-direction: column;
+  align-self: center;
   align-items: center;
   justify-content: center;
-  align-content: center;
-  align-self: center;
   font-size: 1rem;
   scroll-margin-top: 100px;
   background-color: rgb(208, 224, 255);
-  border-radius: 5px;
+  border-radius: 3px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: 0;
     width: 80%;
     padding-bottom: 0.5rem;
 }
-
 
 legend {
     background-color: royalblue;
@@ -65,7 +67,7 @@ legend {
     font-size: 1.2rem;
     padding: 0.7rem;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 3px;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     width: 100%;
@@ -79,83 +81,89 @@ legend {
   gap: 0.4rem;
     font-size: 1rem;
     background-color: #eff6ff;
-    border-radius: 5px;
+    border-radius: 3px;
     padding: 1rem;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 80%;
 }
-
-#matriculaservidor, #matricula-chefeimediato {
-  width: 10vw;
+.c-avaliador{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  width: 100%;
+  gap: 0.3rem;
+}
+#label-input-avaliador{
+  width: 25%;
+}
+#matricula-chefeimediato{
   text-align: center;
-}
-#nomeservidor, #nomechefeimediato {
-  width: 30vw;
-  
-}
-#dataexercicioservidor, #dataavaliacao {
-  width: 12vw;
-  text-align: center;
-}
-#data-exercicio label {
   width: auto;
 }
 
-#data-avaliacao label {
+
+.linha-label-input {
+  display: flex;
+  gap: 1rem;
+}
+.linha-label-input label {
+  display: flex;
+  flex-direction: row;
+  width: 5rem;
+  text-align: left;
+}
+.linha-label-input input, select {
+  border-radius: 3px;
+  border: 1px solid royalblue;
+  font-size: 1rem;
+  padding: 0.1rem;
+}
+
+.d-label-input{
+display: flex;
+width: 100%;
+}
+.d-label-input input, select{
+width: 50%;
+}
+
+#dataexercicioservidor, #dataavaliacao{
   width: auto;
+  text-align: center;
+  margin-left: 1rem;
+}
+#label-dataavaliacao{
+  width: auto;
+}
+
+#label-data-exercicio{
+  width: auto;
+}
+
+#input-matriculaservidor{
+  width: 10rem;
+  text-align: center;
 }
 
 .b-avaliacao {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
     background-color: #eff6ff;
-    border-radius: 5px;
+    border-radius: 3px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 0.5rem 0 1rem 0;
-    padding: 1rem;
+    margin: 0.2rem 0.3rem 0;
+    padding: 0.5rem;
     width: 80%;
+    justify-content: center;
 }
-
-.c-label-input {
+#avaliacao-num{
+  width: auto;
+  text-align: center;
+}
+#div-avaliacao{
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.c-label-input label {
-    text-align: left;
-    width: 5rem;
-}
-
-.c-label-input input {
-    padding: 0.3rem;
-    border: 1px solid royalblue;
-    border-radius: 4px;
-    justify-content: left;
-    width: 25vw;
-    font-size: 0.9rem;    
-}
-
-.c-label-input select {
-    padding: 0.3rem;
-    border: 1px solid royalblue; /* Cor azul das suas bordas */
-    border-radius: 4px;       /* Arredondamento igual aos inputs */
-    background-color: white;
-    font-size: 0.9rem;
-    font-weight: bolder;
-    cursor: pointer;
-    text-align: center;
-    padding-right: 0.7rem; /* Espaço para a seta não cobrir o número */
-}
-
-#d-matricula-nome{
-  justify-content: left;
-}
-#d-matricula {
-  display: flex;
-  gap: 1rem;
 }
 
 .c-nivel{
@@ -182,7 +190,7 @@ section{
     align-items: center;
     font-size: 1rem;
     background-color: #eff6ff;
-    border-radius: 5px;
+    border-radius: 3px;
     text-align: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 90%;
@@ -195,7 +203,7 @@ section{
      padding: 1rem;
 }
 .c-alternativas {
-  min-width: 400px;
+  min-width: 330px;
   align-items: center;
 }
 
@@ -206,18 +214,11 @@ section{
     font-size: 1.2rem;
     font-weight: bold;
     padding: 0.5rem;
-    border-radius: 5px;
+    border-radius: 3px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 0.3rem;
     width: 50%;
     justify-content: center;
-}
-
-.c-avaliador{
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding-left: 20%;
 }
 
 .c-infoc{
@@ -227,7 +228,7 @@ section{
 textarea {
     height: 100px;
     width: 100%;
-    border: none;
+    border: 1px solid royalblue;
     border-radius: 8px;
     padding: 1rem;
 }
@@ -359,14 +360,6 @@ button {
   transform: translateY(-1px); /* O botão desce um pouco ao clicar */
 }
 
-
-/*Pra colocar responsivo*/
-/*Pra colocar responsivo*/
-/*Pra colocar responsivo*/
-
-
-
-/* Tudo o que estiver aqui dentro só afetará a impressão */
-@media print {
-
+#linha-assinatura, #rotulo-carimbo{
+  display: none;
 }

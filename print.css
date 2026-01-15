@@ -1,0 +1,460 @@
+@media print {
+
+    *{
+        font-size: 0.9rem;
+        margin: 0;
+        background: white;
+        color: black;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        border-radius: 0;
+    }
+    /* Esconde o container inteiro (pergunta + textarea) se estiver vazio */
+    .ocultar-na-impressao {
+        display: none !important;
+    }
+
+    #sopratirar1, #sopratirar2{
+        display: none;
+    }
+
+    html{
+        padding: 0;
+        margin: 0;
+    }
+    body {
+        padding: 0;
+        margin: 0;
+    }
+header {
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+form {
+  padding-top: 60px;
+}
+
+main {
+  gap: 0;
+  padding: 0;
+        margin: 0;
+}
+
+legend {
+    background-color: white;
+    color: black;
+    font-size: 0.9rem;
+    padding: 0.1rem;
+    text-align: left;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    width: 100%;
+    font-weight: bold;
+}
+
+#a-dados-servidor, #a-nivel, .a-quesito, .a-tabela, .a-infoc,.a-avaliador {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: center;
+  align-self: center;
+  background-color: white;
+  color: black;
+  border: 0;
+    width: 100% !important;
+    padding: 0rem;
+    margin-top: 0.2rem;
+}
+.b-dados-servidor {
+    padding: 0;
+    gap: 0;
+}
+
+
+#d-matricula-nome{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    align-content: left;
+    flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0rem;
+  width: 100%;
+}
+#d-matricula {
+    width: 25%;
+}
+#d-nome {
+    width: 75%;
+    display: flex;
+}
+
+#matriculaservidor{
+  width: auto;
+  text-align: left;
+}
+#matriculaservidor input{
+  width: 100%;
+  text-align: center;
+}
+
+#nomeservidor label {
+  width: 100%;
+}
+#nomeservidor input {
+  width: 100%;
+}
+#dataexercicioservidor, #dataavaliacao {
+  width: 20%;
+  text-align: center;
+}
+#data-exercicio {
+  width: auto;
+}
+#data-avaliacao input {
+  width: auto;
+}
+
+.b-avaliacao {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+    background-color: white;
+    width: 80%;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0.5rem;
+}
+#div.avaliacao{
+    padding: 0;
+}
+
+.linha-label-input {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0rem;
+}
+
+.linha-label-input label {
+    text-align: left;
+    width: 5rem;
+}
+
+.linha-label-input input {
+    padding: 0.1rem;
+    border: none;
+    justify-content: left;
+    width: 50vw;
+    font-size: 0.8rem;   
+    border-radius: 0;
+}
+
+.linha-label-input select {
+    padding: 0rem;
+    border: none; /* Cor azul das suas bordas */
+    background-color: white;
+    font-size: 0.9rem;
+    font-weight: bolder;
+    cursor: pointer;
+    text-align: center;
+    padding-right: 0.2rem; /* Espaço para a seta não cobrir o número */
+}
+
+
+.b-nivel{
+    margin: 0;
+    padding: 0.1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.c-nivel{
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  justify-content: left;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.sera-atribuido {
+  padding: 0;
+  margin: 0;
+}
+.sera-atribuido br {
+        display: none;
+}
+
+    /* Adiciona um espaço após o </b> para o texto não ficar colado */
+.sera-atribuido b::after {
+    content: " ";
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0rem;
+}
+.b-pergunta{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 0.9rem;
+    background-color: white;
+    text-align: left;
+    width: 100%;
+}
+.c-pergunta {
+    display: flex;
+    align-items: left;
+     width: 75%;
+     min-height: auto;
+     padding: 0.1rem;
+}
+.c-alternativas {
+    display: inline-block;
+    min-width: auto;
+    align-items: right;
+    width: 25%;
+
+}
+
+.b-totalobtido {
+  display: flex;
+    background-color:white;
+    color:black;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0.1rem;
+    margin-top: 0.1rem;
+    width: 95%;
+    justify-content: right;
+}
+
+.c-avaliador{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 20%;
+}
+
+.c-infoc{
+  text-align: left;
+}
+
+textarea {
+    height: auto;
+    width: 100%;
+    border: none;
+    padding: 0rem;
+}
+input::placeholder, textarea::placeholder {
+    color: white;
+    opacity: 0;
+}
+
+/* Botões Radio */
+
+.b-apto-inapto {
+    background-color: #eff6ff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0rem;
+    padding-bottom: 0rem;
+    margin-top: 0.5rem;
+
+    
+}
+
+.c-alternativas label, 
+.b-apto-inapto label{
+  display: inline-block;
+  padding: 0.1rem 1rem;
+  background-color: whitesmoke;
+  border: 2px solid #ddd;
+  cursor: pointer;
+  font-weight: bold;
+  user-select: none;
+}
+
+/* Cores de Seleção dos botões Radio */
+input[type="radio"]:checked + label {
+  background-color: black !important;
+  color: white !important;
+  border-color:black !important;
+  -webkit-print-color-adjust: exact;
+  transform: translateY(0px);
+}
+
+/* Efeito de Hover Geral (para todos os botões) */
+.c-alternativas label:hover, 
+.b-apto-inapto label:hover{
+  background-color: whitesmoke;
+  border: 2px solid #ddd;
+  transform: translateY(0px); /* Faz o botão "subir" um pouquinho */
+  transition: all 0s ease;   /* Deixa o movimento suave */
+}
+
+#inapto:checked + label {
+    background-color:black; /* Vermelho */
+    color: white;
+    border-color: black;
+}
+
+/* Quando o rádio está desabilitado, o "botão" (label) fica opaco */
+input[type="radio"]:disabled + label {
+    opacity: 0.4;
+    cursor: not-allowed;
+    filter: grayscale(1);
+}
+
+/* Tabela de Resumo da Avaliação*/
+/* Tabela de Resumo da Avaliação*/
+/* Tabela de Resumo da Avaliação*/
+
+#id-tabela {
+        /* Força o início de uma nova página antes deste fieldset */
+        break-before: page;
+}
+
+.tabela-pontuacao{
+  border-collapse: collapse;
+  text-align: center;
+  background-color: white;
+}
+
+.tabela-pontuacao thead th {
+    background-color:white;
+    color:black;
+    padding: 0.3rem;
+    border: 1px solid black;
+}
+
+.tabela-pontuacao td {
+    padding: 0.1rem;
+    border: 1px solid black;
+}
+
+.tabela-pontuacao tbody tr:hover {
+    background-color:white;
+}
+
+.tabela-pontuacao tbody tr:nth-last-child(-n+2) td {
+    background-color:white;
+    font-weight: bold;
+}
+
+.a-botao {
+  display: flex;
+  flex-direction: column;
+}
+button {
+  display: none !important;
+  background: linear-gradient(135deg, #1a7ba1 0%, #1a5aa2 100%);
+  color: white;
+
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(26, 90, 162, 0.3);
+  
+ 
+  margin: 1rem auto;
+  margin-bottom: 15rem;
+}
+
+/* Efeito ao passar o mouse (Hover) */
+.botao:hover {
+  background: linear-gradient(135deg, #1a5aa2 0%, #1a7ba1 100%);
+  box-shadow: 0 6px 20px rgba(26, 90, 162, 0.4);
+}
+
+/* Efeito ao clicar (Active) */
+.botao:active {
+  transform: translateY(-1px); /* O botão desce um pouco ao clicar */
+}
+
+.b-avaliador {
+  display: flex;
+}
+
+#label-input-avaliador label{
+display: none;
+}
+
+#label-input-nomeavaliador label {
+  display: none;
+}
+
+#label-input-cargoavaliador label{
+  display: none;
+}
+    /* Remove as características de fieldset e centraliza o bloco */
+    #id-avaliador {
+        border: none !important;
+        margin-top: 50px !important; /* Espaço para não colar na tabela */
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .b-avaliador-carimbo {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 350px !important; /* Largura padrão de carimbo */
+    }
+
+    /* A linha onde o chefe vai assinar */
+    #linha-assinatura {
+      display: block;
+        width: 100%;
+        border-top: 1px solid black !important;
+        margin-bottom: 5px;
+    }
+
+    /* Estiliza os inputs para parecerem texto simples */
+    .b-avaliador-carimbo input {
+        border: none !important;
+        background: transparent !important;
+        text-align: center !important;
+        width: 100% !important;
+        font-family: 'Segoe UI', sans-serif;
+        padding: 0 !important;
+        margin: 0 !important;
+        color: black !important;
+    }
+
+    /* Nome em destaque (Negrito e Maiúsculo) */
+    #nome-carimbo {
+        font-weight: bold !important;
+        font-size: 11pt !important;
+        text-transform: uppercase;
+    }
+
+    /* Matrícula e Cargo em tamanho menor */
+    #matricula-carimbo, #cargo-carimbo {
+        font-size: 9pt !important;
+    }
+
+    /* Rótulo final (CHEFE IMEDIATO) */
+    #rotulo-carimbo {
+      display: block;
+        font-weight: bold;
+        font-size: 10pt;
+        margin-top: 5px;
+    }
+}
+    

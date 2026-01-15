@@ -120,3 +120,21 @@ function calcularDataAvaliacao() {
 inputEntrada.addEventListener('change', calcularDataAvaliacao);
 selectAvaliacao.addEventListener('change', calcularDataAvaliacao);
 
+
+
+function prepararImpressao() {
+    // Seleciona todos os textareas que têm a classe 'info1'
+    const textareas = document.querySelectorAll('textarea.info1');
+
+    textareas.forEach(textarea => {
+        // Verifica se o valor está vazio ou tem apenas espaços
+        if (textarea.value.trim() === "") {
+            textarea.closest('.c-infoc').classList.add('ocultar-na-impressao');
+        } else {
+            textarea.closest('.c-infoc').classList.remove('ocultar-na-impressao');
+        }
+    });
+
+    // Chama o comando de impressão do sistema
+    window.print();
+}

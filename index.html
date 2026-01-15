@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsivo.css" media="screen and (max-width: 1000px)">
+    <link rel="stylesheet" href="print.css" media="print">
     
     <title>Avaliação de Estágio Probatório</title>
 </head>
@@ -14,52 +16,90 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Bras%C3%A3o_de_Nova_Igua%C3%A7u.svg" alt="Brasão da Cidade de Nova Iguaçu">
                     
         <h1 id="cabecalho-principal">PREFEITURA DA CIDADE DE VELHO SERTÃO <br>
-                    SECRETARIA MUNICIPAL DE ADMINISTRAÇÃO <br>
-                    COMISSÃO DE AVALIAÇÃO DE DESEMPENHO DO SERVIDOR MUNICIPAL EM ESTÁGIO PROBATÓRIO</h1>    
+                    FORMULÁRIO DE AVALIAÇÃO DE DESEMPENHO <br>
+                    SERVIDOR PÚBLICO MUNICIPAL EM ESTÁGIO PROBATÓRIO</h1>    
 </header>
 
 
 <form onsubmit="event.preventDefault(); prepararImpressao();">
     <main>
         <fieldset id="a-dados-servidor">
-            <legend>Dados de identificação do servidor em Estágio Probatório</legend>
+            <legend>Dados de identificação</legend>
 
                 <div class="b-dados-servidor">
-                    <div class="c-label-input" id="d-matricula-nome">
-                        <div id="d-matricula">
+
+                    <div class="linha-label-input" id="linha-matricula">
+
+                        <div class="d-label-input" id="d-matricula">
                             <label for="matriculaservidor">Matrícula: </label>
-                            <input type="text" name="matriculaservidor" id="matriculaservidor" placeholder="00/123456-7">
-                        </div>
-                        <div id="d-nome">
-                            <label for="nomeservidor">Nome: </label>
-                            <input type="text" id="nomeservidor" name="nomeservidor">
+                            <input type="text" name="matriculaservidor" id="input-matriculaservidor" placeholder="00/123456-7">
                         </div>
                     </div>
 
+                    <div class="linha-label-input" id="linha-nome">
 
-                    <div class="c-label-input">
-                            <label for="cargoservidor">Cargo: </label>
-                            <input type="text" name="cargoservidor" id="cargoservidor">
+                        <div class="d-label-input" id="d-nome">
+                            <label for="nomeservidor" id="nome">Nome: </label>
+                            <input type="text" id="input-nomeservidor" name="nomeservidor">
+                        </div>
+
                     </div>
 
-                    <div class="c-label-input">
-                            <label for="secretariaservidor">Secretaria: </label>
-                            <input type="text" name="secretaria" id="secretariaservidor">
-                    </div>  
+                    <div class="linha-label-input" id="linha-cargo">
 
-                    <div class="c-label-input">
-                            <label for="lotacaoservidor">Lotação: </label>
-                            <input type="text" name="lotacao" id="lotacaoservidor">
-                    </div>   
-                            
-                    <div class="c-label-input" id="data-exercicio">        
-                            <label for="dataexercicioservidor">Data de entrada em exercício: </label>
-                            <input type="date" name="dataexercicioservidor" id="dataexercicioservidor">
+                        <div class="d-label-input">
+                                <label for="cargoservidor">Cargo: </label>
+                                <input type="text" name="cargoservidor" id="cargoservidor">
+                        </div>
+
                     </div>
+
+                    <div class="linha-label-input">
+
+                        <div class="d-label-input">
+                                <label for="secretariaservidor">Secretaria: </label>
+                                <select name="secretaria" id="secretaria"> 
+                                <option value="" disabled selected hidden>Selecione...</option>
+                                <option value="SEMED">Secretaria Municipal de Educação</option>
+                                <option value="SEMAD">Secretaria Municipal de Administração</option>
+                                <option value="SEMOP">Secretaria Municipal de Ordem Pública</option>
+                                <option value="SEMAS">Secretaria Municipal de Assistência Social</option>
+                                <option value="5">Secretaria Municipal de </option>
+                                <option value="6">Secretaria Municipal de </option>
+                                <option value="7">Secretaria Municipal de </option>
+                                <option value="8">Secretaria Municipal de </option>
+                                <option value="9">Secretaria Municipal de </option>
+                                <option value="10">Secretaria Municipal de </option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="linha-label-input">
+
+                        <div class="d-label-input">
+                                <label for="lotacaoservidor">Lotação: </label>
+                                <input type="text" name="lotacao" id="lotacaoservidor">
+                        </div>
+
+                    </div>
+
+                    <div class="linha-label-input">
+                                
+                        <div class="d-label-input" id="data-exercicio">        
+                                <label for="dataexercicioservidor" id="label-data-exercicio">Data de entrada em exercício: </label>
+                                <input type="date" name="dataexercicioservidor" id="dataexercicioservidor">
+                        </div>
+
+                    </div>    
                 </div>
+            </div>
                 
-                <div class="b-avaliacao">
-                    <div class="c-label-input" id="div-avaliacao">
+                <div class="b-avaliacao" id="sopratirar2">
+
+                    <div class="linha-label-input" id="div-avaliacao">
+                        
                         <label for="avaliacao-num">Avaliação:</label>
                         <select name="avaliacao-num" id="avaliacao-num"> 
                             <option value="" disabled selected hidden>Selecione...</option>
@@ -75,22 +115,24 @@
                             <option value="10">10</option>
                             <option value="outro">Outro</option>
                         </select>
+
+                        <div class="d-label-input" id="data-avaliacao">
+                            <label for="dataavaliacao" id="label-dataavaliacao">Data da avaliação: </label>
+                            <input type="date" name="dataavaliacao" id="dataavaliacao">  
+                        </div>
+
                     </div> 
 
-                    <div class="c-label-input" id="data-avaliacao">
-                        <label for="dataavaliacao">Data da avaliação: </label>
-                        <input type="date" name="dataavaliacao" id="dataavaliacao">  
-                    </div>
                 </div>  
         </fieldset>    
 
 <!--Explicação das notas dos quesitos-->
         <fieldset id="a-nivel">
-            <legend>Níveis e critérios de avaliação</legend>
+            <legend>Níveis e critérios de avaliação: 1, 3, 5 OU 7</legend>
                 <div class="b-nivel">
                
                     <div class="c-nivel">    
-                        <div class="sera-atribuido">
+                        <div class="sera-atribuido" id="sopratirar1">
                             A avaliação de desempenho do servidor em estágio probatório será realizada mediante a atribuição de níveis de desempenho, conforme os critérios abaixo:
                         </div>
 
@@ -605,6 +647,30 @@
                         </div> 
 
         </section> <!-- Container dos S-Quesitos-->
+
+          <!--Informações Complementares-->
+            <fieldset class="a-infoc" id="id-infoc">
+                <legend>Informações Complementares</legend>
+
+                    <div class="b-infoc">
+                    
+                        <div class="c-infoc">
+                            Com base nos fatores abordados pela avaliação, comente sobre aquele(s) que você considera importante(s), visando esclarecer e/ou acrescentar algum aspecto acerca do desenvolvimento do servidor:
+                            <br>
+                            <textarea name="info1" class="info1" placeholder="Caso tenha informações complementares, digite aqui..."></textarea>
+                        </div>
+                            
+                        <div class="c-infoc">
+                            Indique, se necessário, sugestões para melhor adaptação e/ou melhoria de desempenho do servidor:
+                            <textarea name="info2" class="info1" placeholder="Caso tenha informações complementares, digite aqui..."></textarea>
+                        </div>
+                        
+                        <div class="c-infoc">
+                            Este espaço está reservado para sugestões que possam favorecer o aperfeiçoamento desta avaliação:
+                            <textarea name="info3" class="info1" placeholder="Caso tenha informações complementares, digite aqui..."></textarea>
+                        </div>
+                    </div>
+            </fieldset> <!--DIV do S-infoc, Informações Complementares-->
             
             <!--Resumo da Avaliação por quesitos, tabela com o cálculo da pontuação-->
             <fieldset class="a-tabela" id="id-tabela">
@@ -656,8 +722,7 @@
                             <td colspan="3">Percentual Total Alcançado</td> <td id="percentual-total">0%</td>
                         </tr>
                     </tbody>
-                    <tfoot>
-                    </tfoot>
+                    
                 </table>
                 
                 <!--Resultado (Apto, Apto com restrições ou inapto)-->
@@ -678,48 +743,45 @@
                     <legend>Dados do Avaliador (Chefe Imediato)</legend>
 
                         <div class="b-avaliador">
-                            <div class="c-avaliador">
 
-                                <div class="c-label-input">
-                                    <label for="matricula-chefeimediato">Matrícula: </label>
-                                    <input type="text" name="matricula-chefeimediato" id="matricula-chefeimediato" placeholder="00/123456-7">
+                                <div class="linha-label-input">
+                                    <div id="linha-assinatura"></div>
+                                    <p id="rotulo-carimbo">CHEFE IMEDIATO</p>
+
+                                    <div class="d-label-input" id="label-input-avaliador">
+                                        <label for="matricula-chefeimediato">Matrícula: </label>
+                                        <input type="text" name="matricula-chefeimediato" id="matricula-chefeimediato" placeholder="00/123456-7">
+                                    </div>
                                 </div>
 
-                                <div class="c-label-input">
-                                    <label for="nomechefeimediato">Nome: </label>
-                                    <input type="text" id="nomechefeimediato" name="nomechefeimediato">
+                                <div class="linha-label-input">
+
+                                    <div class="d-label-input" id="label-input-nomeavaliador">
+                                        <label for="nomechefeimediato">Nome: </label>
+                                        <input type="text" id="nomechefeimediato" name="nomechefeimediato">
+                                    </div>
                                 </div>
 
-                                <div class="c-label-input">
-                                    <label for="cargoservidor">Cargo: </label>
-                                    <input type="text" name="cargoservidor" id="cargoservidor">
+                                <div class="linha-label-input">
+
+                                    <div class="d-label-input" id="label-input-cargoavaliador">
+                                        <label for="cargochefeimediato">Cargo: </label>
+                                        <input type="text" name="cargochefeimediato" id="cargochefeimediato">
+                                    </div>
                                 </div>
-                            </div>
-                        </div>  
-                </fieldset>    
 
-            <!--Informações Complementares-->
-            <fieldset class="a-infoc" id="id-infoc">
-                <legend>Informações Complementares</legend>
-
-                    <div class="b-infoc">
-                    
-                        <div class="c-infoc">
-                            Com base nos fatores abordados pela avaliação, comente sobre aquele(s) que você considera importante(s), visando esclarecer e/ou acrescentar algum aspecto acerca do desenvolvimento do servidor:
-                            <textarea name="info1" class="info1" placeholder="Caso tenha informações complementares, digite aqui..."></textarea>
-                        </div>
                             
-                        <div class="c-infoc">
-                            Indique, se necessário, sugestões para melhor adaptação e/ou melhoria de desempenho do servidor:
-                            <textarea name="info2" class="info1" placeholder="Caso tenha informações complementares, digite aqui..."></textarea>
-                        </div>
-                        
-                        <div class="c-infoc">
-                            Este espaço está reservado para sugestões que possam favorecer o aperfeiçoamento desta avaliação:
-                            <textarea name="info1" class="info1" placeholder="Caso tenha informações complementares, digite aqui..."></textarea>
-                        </div>
-                    </div>
-            </fieldset> <!--DIV do S-infoc, Informações Complementares-->
+                        </div>  
+                </fieldset>   
+                
+              
+    
+   
+        
+    
+</fieldset>
+
+          
 
             <div class="a-botao">
                 <button class="botao" onclick="prepararImpressao()">Imprimir Avaliação</button>
