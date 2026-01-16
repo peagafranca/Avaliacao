@@ -1,6 +1,7 @@
 @media print {
 
-    *{
+    *{ 
+        border: 1px solid black;
         font-size: 0.9rem;
         margin: 0;
         background: white;
@@ -14,7 +15,7 @@
         display: none !important;
     }
 
-    #sopratirar1, #sopratirar2{
+    #sopratirar1, #sopratirar2, #sopratirar3{
         display: none;
     }
 
@@ -56,7 +57,7 @@ legend {
     font-weight: bold;
 }
 
-#a-dados-servidor, #a-nivel, .a-quesito, .a-tabela, .a-infoc,.a-avaliador {
+#a-dados-servidor, #a-nivel, .a-quesito, .a-tabela, .a-infoc {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -110,14 +111,22 @@ legend {
   width: 100%;
 }
 #dataexercicioservidor, #dataavaliacao {
-  width: 20%;
+  width: 30%;
   text-align: center;
+  margin-bottom: 0.4rem;
 }
 #data-exercicio {
   width: auto;
 }
 #data-avaliacao input {
   width: auto;
+}
+
+select {
+  -webkit-appearance: none;  /* Remove no Chrome, Safari e Edge moderno */
+  -moz-appearance: none;     /* Remove no Firefox */
+  appearance: none;          /* Regra padrão */
+  background-image: none;    /* Garante que imagens de fundo sejam removidas */
 }
 
 .b-avaliacao {
@@ -159,10 +168,11 @@ legend {
     border: none; /* Cor azul das suas bordas */
     background-color: white;
     font-size: 0.9rem;
-    font-weight: bolder;
+    font-weight: normal;
     cursor: pointer;
     text-align: center;
     padding-right: 0.2rem; /* Espaço para a seta não cobrir o número */
+    text-align: left;
 }
 
 
@@ -238,14 +248,6 @@ section{
     width: 95%;
     justify-content: right;
 }
-
-.c-avaliador{
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding-left: 20%;
-}
-
 .c-infoc{
   text-align: left;
 }
@@ -260,6 +262,10 @@ input::placeholder, textarea::placeholder {
     color: white;
     opacity: 0;
 }
+
+
+
+
 
 /* Botões Radio */
 
@@ -289,7 +295,6 @@ input[type="radio"]:checked + label {
   background-color: black !important;
   color: white !important;
   border-color:black !important;
-  -webkit-print-color-adjust: exact;
   transform: translateY(0px);
 }
 
@@ -386,75 +391,83 @@ button {
   transform: translateY(-1px); /* O botão desce um pouco ao clicar */
 }
 
-.b-avaliador {
+.a-chefeimediato{
   display: flex;
 }
 
-#label-input-avaliador label{
-display: none;
+.campo-de-assinaturas{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+    justify-content: left;
+    align-items: left;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    text-align: center;
+    height: 20rem;
+}
+.data-mais-carimbo-chefeimediato{
+  display: flex;
+  padding: 0rem;
+  height: auto;
+  background-color:white;
 }
 
-#label-input-nomeavaliador label {
+.data-chefe{
+  display: flex;;
+  height: auto;
+  width: 25%;
+}
+.p-chefe{
+  width: 100%;
+}
+.carimbo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 75%;
+}
+.underline{
+  width: 100%;
+  border-bottom: 1px solid black;
+  color: white !important; 
+}
+.carimbo label {
+  width: 100%;
   display: none;
 }
-
-#label-input-cargoavaliador label{
-  display: none;
+.carimbo input {
+  width: 100%;
+  text-align: center;
+  font-size: 0.6rem;
 }
-    /* Remove as características de fieldset e centraliza o bloco */
-    #id-avaliador {
-        border: none !important;
-        margin-top: 50px !important; /* Espaço para não colar na tabela */
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
 
-    .b-avaliador-carimbo {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        width: 350px !important; /* Largura padrão de carimbo */
-    }
-
-    /* A linha onde o chefe vai assinar */
-    #linha-assinatura {
-      display: block;
-        width: 100%;
-        border-top: 1px solid black !important;
-        margin-bottom: 5px;
-    }
-
-    /* Estiliza os inputs para parecerem texto simples */
-    .b-avaliador-carimbo input {
-        border: none !important;
-        background: transparent !important;
-        text-align: center !important;
-        width: 100% !important;
-        font-family: 'Segoe UI', sans-serif;
-        padding: 0 !important;
-        margin: 0 !important;
-        color: black !important;
-    }
-
-    /* Nome em destaque (Negrito e Maiúsculo) */
-    #nome-carimbo {
-        font-weight: bold !important;
-        font-size: 11pt !important;
-        text-transform: uppercase;
-    }
-
-    /* Matrícula e Cargo em tamanho menor */
-    #matricula-carimbo, #cargo-carimbo {
-        font-size: 9pt !important;
-    }
-
-    /* Rótulo final (CHEFE IMEDIATO) */
-    #rotulo-carimbo {
-      display: block;
-        font-weight: bold;
-        font-size: 10pt;
-        margin-top: 5px;
-    }
+.data-mais-carimbo-secretario{
+  display: flex;
+  padding: 0rem;
+  height: auto;
+  background-color:white;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
-    
+
+.concordo-discordo{
+  margin-bottom: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+}

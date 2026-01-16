@@ -45,7 +45,7 @@ main {
 
 
 
-#a-dados-servidor, #a-nivel, .a-quesito, .a-tabela, .a-infoc,.a-avaliador {
+#a-dados-servidor, #a-nivel, .a-quesito, .a-tabela, .a-infoc,.a-chefeimediato {
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -363,3 +363,5 @@ button {
 #linha-assinatura, #rotulo-carimbo{
   display: none;
 }
+
+
