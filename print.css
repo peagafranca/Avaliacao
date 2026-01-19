@@ -1,15 +1,12 @@
 @media print {
 
-    *{ 
-        border: 1px solid black;
-        font-size: 0.9rem;
-        margin: 0;
-        background: white;
-        color: black;
-        box-shadow: none !important;
-        text-shadow: none !important;
-        border-radius: 0;
-    }
+*{ 
+  font-size: 0.9rem;
+  margin: 0;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  border-radius: 0;
+}
     /* Esconde o container inteiro (pergunta + textarea) se estiver vazio */
     .ocultar-na-impressao {
         display: none !important;
@@ -33,7 +30,17 @@ header {
     font-size: 0.9rem;
   align-items: flex-start;
   justify-content: flex-start;
+  background-color: white;
+  color: black;
+  background: linear-gradient(135deg, white 0%, white 100%);
 }
+h1 {
+  background-color: white;
+}
+img{
+  background-color: white;
+}
+
 
 form {
   padding-top: 60px;
@@ -64,7 +71,7 @@ legend {
   justify-content: flex-start;
   align-content: center;
   align-self: center;
-  background-color: white;
+  background-color: white !important;
   color: black;
   border: 0;
     width: 100% !important;
@@ -74,8 +81,9 @@ legend {
 .b-dados-servidor {
     padding: 0;
     gap: 0;
+    background-color: white;
+    color: black;
 }
-
 
 #d-matricula-nome{
     display: flex;
@@ -141,12 +149,14 @@ select {
 }
 #div.avaliacao{
     padding: 0;
+    background-color: white;
 }
 
 .linha-label-input {
   display: flex;
   flex-wrap: nowrap;
   gap: 0rem;
+  background-color: white;
 }
 
 .linha-label-input label {
@@ -175,12 +185,12 @@ select {
     text-align: left;
 }
 
-
 .b-nivel{
     margin: 0;
     padding: 0.1rem;
     width: 100%;
     margin-bottom: 1rem;
+    background-color: white;
 }
 .c-nivel{
   display: flex;
@@ -234,7 +244,6 @@ section{
     min-width: auto;
     align-items: right;
     width: 25%;
-
 }
 
 .b-totalobtido {
@@ -248,8 +257,12 @@ section{
     width: 95%;
     justify-content: right;
 }
+.b-infoc{
+  background-color: white;
+}
 .c-infoc{
   text-align: left;
+  background-color: white;
 }
 
 textarea {
@@ -264,30 +277,26 @@ input::placeholder, textarea::placeholder {
 }
 
 
-
-
-
 /* Botões Radio */
 
 .b-apto-inapto {
-    background-color: #eff6ff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
     padding: 0rem;
     padding-bottom: 0rem;
     margin-top: 0.5rem;
-
-    
 }
 
 .c-alternativas label, 
 .b-apto-inapto label{
+  
   display: inline-block;
-  padding: 0.1rem 1rem;
-  background-color: whitesmoke;
-  border: 2px solid #ddd;
-  cursor: pointer;
-  font-weight: bold;
-  user-select: none;
+  padding: 0.1rem 0.8rem;
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid black !important; /* Borda preta fina para garantir que apareça */
+  box-shadow: inset 0 0 0 1000px white !important;
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
 }
 
 /* Cores de Seleção dos botões Radio */
@@ -295,7 +304,9 @@ input[type="radio"]:checked + label {
   background-color: black !important;
   color: white !important;
   border-color:black !important;
-  transform: translateY(0px);
+  box-shadow: inset 0 0 0 1000px black !important;
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
 }
 
 /* Efeito de Hover Geral (para todos os botões) */
@@ -324,7 +335,7 @@ input[type="radio"]:disabled + label {
 /* Tabela de Resumo da Avaliação*/
 /* Tabela de Resumo da Avaliação*/
 
-#id-tabela {
+#id-tabela, #quesito-4 {
         /* Força o início de uma nova página antes deste fieldset */
         break-before: page;
 }
@@ -355,6 +366,9 @@ input[type="radio"]:disabled + label {
     background-color:white;
     font-weight: bold;
 }
+.b-tabela{
+  background-color: white;
+}
 
 .a-botao {
   display: flex;
@@ -362,112 +376,116 @@ input[type="radio"]:disabled + label {
 }
 button {
   display: none !important;
-  background: linear-gradient(135deg, #1a7ba1 0%, #1a5aa2 100%);
-  color: white;
-
-  padding: 1rem 2rem;
-  font-size: 2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 4px 15px rgba(26, 90, 162, 0.3);
-  
- 
-  margin: 1rem auto;
-  margin-bottom: 15rem;
 }
 
-/* Efeito ao passar o mouse (Hover) */
-.botao:hover {
-  background: linear-gradient(135deg, #1a5aa2 0%, #1a7ba1 100%);
-  box-shadow: 0 6px 20px rgba(26, 90, 162, 0.4);
-}
+/*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*/
+/*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*/
+/*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*/
+/*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*/
+/*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*/
 
-/* Efeito ao clicar (Active) */
-.botao:active {
-  transform: translateY(-1px); /* O botão desce um pouco ao clicar */
-}
-
-.a-chefeimediato{
-  display: flex;
-}
-
-.campo-de-assinaturas{
+#sopratirar4, #sopratirar5{
   display: flex;
   flex-direction: column;
-  width: 100%;
-    justify-content: left;
-    align-items: left;
-    gap: 0;
-    padding: 0;
-    margin: 0;
-    margin-top: 1rem;
-    font-size: 0.7rem;
-    text-align: center;
-    height: 20rem;
-}
-.data-mais-carimbo-chefeimediato{
-  display: flex;
-  padding: 0rem;
-  height: auto;
-  background-color:white;
+  background-color: white;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
-.data-chefe{
-  display: flex;;
-  height: auto;
-  width: 25%;
+.a-chefe{
+  display: flex;
+  background-color: white;
+  margin: 0;
+  padding: 0;
 }
-.p-chefe{
-  width: 100%;
-}
-.carimbo{
+
+.b-chefe{
   display: flex;
   flex-direction: column;
+  background-color: white;
+  width: 100%;
+    padding-top: 2rem;
+}
+
+.c-chefe{
+  background-color: blue;
+  display: flex;
+  justify-items: center;
   align-items: center;
-  height: auto;
-  width: 75%;
 }
-.underline{
-  width: 100%;
-  border-bottom: 1px solid black;
-  color: white !important; 
+.data-chefe, #data-secretario{
+  display: flex;
+  background-color: white;
+  width: 30%;
+  height: 7rem;
+  justify-items: flex-start;
+  text-align: center;
 }
-.carimbo label {
-  width: 100%;
+#carimbo-chefe, #carimbo-secretario{
+  background-color: white !important;
+  text-align: center;
+  width: 70%;
+    gap: 0;
+    padding-top: 0.5rem;
+    height: 7rem;
+}
+#carimbo-chefe label{
   display: none;
 }
-.carimbo input {
-  width: 100%;
-  text-align: center;
-  font-size: 0.6rem;
+#carimbo-chefe input{
+  background-color: white !important;
+  border-color: white;
+   width: 100%;
+   text-align: center;
+   font-size: smaller;
 }
-
-.data-mais-carimbo-secretario{
+.underline{
   display: flex;
-  padding: 0rem;
-  height: auto;
-  background-color:white;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  color: white;
+  border-bottom: 1px solid black;
+  font-size: 0.4rem;
 }
-
 .concordo-discordo{
-  margin-bottom: 2rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  width: auto;
+  text-align: left;
 }
 
+.assinatura-servidor{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+.data-mais-carimbo{
+  display: flex;
+  margin-top: 3rem;
+}
+#ass-servidor{
+  border-top: 1px solid black;
+  width: 100%;
+}
+.p-chefe, #data-chefe{
+  display: flex;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    /* O truque aqui é usar uma transição de cor de fundo que dure 'para sempre' */
+    -webkit-transition-delay: 9999s;
+    transition-delay: 9999s;
+    -webkit-transition-property: background-color, color;
+    transition-property: background-color, color;
+}
 
-
-
-
-
-
-
-
-
-
-
+/* Força o fundo branco e texto preto nos campos preenchidos */
+input, select, textarea {
+    background-color: white !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
 }
