@@ -35,7 +35,7 @@ main {
   gap: 1rem;
 }
 
-#a-dados-servidor, #a-nivel, .a-quesito, .a-tabela, .a-infoc,.a-chefe {
+#a-dados-servidor, #a-nivel, .a-quesito, .a-tabela, .a-infoc{
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -64,7 +64,7 @@ legend {
     font-weight: bold;
 }
 
-.b-dados-servidor, .b-nivel, .b-tabela, .b-chefe, .b-infoc{
+.b-dados-servidor, .b-nivel, .b-tabela, .b-infoc{
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
@@ -76,14 +76,7 @@ legend {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 80%;
 }
-.c-avaliador{
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: left;
-  width: 100%;
-  gap: 0.3rem;
-}
+
 
 .linha-label-input {
   display: flex;
@@ -356,87 +349,65 @@ button {
 /*BLOCO DA ASSINATURA*/
 /*BLOCO DA ASSINATURA*/
 
-#linha-assinatura, #rotulo-carimbo{
-  display: none;
+.a-chefe{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 0;
+    width: 100%;
+    padding-bottom: 0.5rem;
+}
+
+.b-chefe{
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+    font-size: 1rem;
+    background-color: #d0e0ff;
+    border-radius: 3px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+.c-chefe{
+  background-color: #EFF6FF;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 0.3rem;
+  padding: 1rem;
+  border-radius: 3px;
+
+}
+.carimbo-chefe{
+  background-color: #EFF6FF;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;  
+  padding: 1rem;
+}
+
+#input-matriculachefe{
+  width: 10rem;
+  text-align: center;
 }
 
 .data-chefe{
   display: none;
+  width: 30%;
 }
-
-.carimbo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: auto;
-  width: 75%;
-}
-.carimbo label {
-  display:none;
-}
-.carimbo input {
-  width: 100%;
-  text-align: center;
-  font-size: 0.6rem;
-}
-
-#matricula-chefeimediato{
-  text-align: center;
-  width: auto;
-
-}
-
-#data-mais-carimbo-chefe{
-  background-color: eff6ff;
-  padding: 1rem;
-}
-#carimbo-chefe {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-#carimbo-chefe  label {
-  display: flex;
-  flex-direction: row;
-  width: 5rem;
-  text-align: left;
-}
-#carimbo-chefe  input {
-  border-radius: 4px;
-  border: 1px solid royalblue;
-  font-size: 1rem;
-  padding: 0.1rem;
-}
-
-#nome-chefe{
-  display: flex;
-}
-#nome-chefe input{
-  width: 60%;
-}
-
-#matricula-chefe{
-display: flex;
-}
-#matricula-chefe input{
-  text-align: center;
-
-}
-#cargo-chefe{
-  display: flex;
-}
-#cargo-chefe input{
-  width: 40%;
-}
-
-#sopratirar4, #sopratirar5 {
+#d-ass-chefe{
   display: none;
 }
 
-.underline{
+#c-secretario, #c-justifique, #c-ass, #c-concordo{
   display: none;
 }
-
-
 
 

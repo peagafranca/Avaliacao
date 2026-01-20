@@ -64,13 +64,7 @@
                                 <option value="SEMAD">Secretaria Municipal de Administração</option>
                                 <option value="SEMOP">Secretaria Municipal de Ordem Pública</option>
                                 <option value="SEMAS">Secretaria Municipal de Assistência Social</option>
-                                <option value="5">Secretaria Municipal de </option>
-                                <option value="6">Secretaria Municipal de </option>
-                                <option value="7">Secretaria Municipal de </option>
-                                <option value="8">Secretaria Municipal de </option>
-                                <option value="9">Secretaria Municipal de </option>
-                                <option value="10">Secretaria Municipal de </option>
-                                <option value="outro">Outro</option>
+                                
                             </select>
                         </div>
 
@@ -737,107 +731,141 @@
                 </div>
             </div>
             </fieldset>  
-            
-                <fieldset class="a-chefe" id="id-chefe">
-                    <legend id="sopratirar3">Dados do Avaliador (Chefe Imediato)</legend>
 
-                        <div class="b-chefe">
+            <fieldset class="a-chefe">
+                <legend id="legend-chefeimediato">
+                    Dados do Avaliador (Chefe Imediato)
+                </legend>
 
-                                <div class="c-chefe" id=data-mais-carimbo-chefe>
+                    <div class="b-chefe">
+                        <div class="c-chefe">
 
-                                        <div class="data-chefe">
-                                            <p class="p-chefe">Data: 00/00/0000</p>
-                                        </div>
-
-                                        <div id="carimbo-chefe">
-                                            <div class="underline">.</div>
-
-                                            <div id="nome-chefe">
-                                            <label for="nome-chefeimediato">Nome:</label>
-                                            <input type="text" id="input-nome-chefe" class="tirar-borda">
-                                            </div>
-
-                                            <div id="matricula-chefe">
-                                            <label for="matricula-chefeimediato">Matrícula:</label>
-                                            <input type="text" id="input-matricula-chefe" class="tirar-borda">
-                                            </div>
-
-                                            <div id="cargo-chefe">
-                                            <label for="cargo-chefeimediato">Cargo:</label>
-                                            <input type="text" id="input-cargo-chefe" class="tirar-borda">
-                                            </div>
-
-                                        </div>
+                            <div class="data-chefe">
+                                Data: 00/00/2026
+                            </div>
                             
-                                </div>  
-
-                        <div id="sopratirar5">
-                                <div class="c-chefe">
-
-                                    <div id="data-secretario">
-                                        <p class="p-chefe">Data: ______/______/________</p>
+                            <div class="carimbo-chefe">
+                                
+                                <div class="linha-label-input" id="linha-nome-chefe">
+                                    <div class="d-label-input" id="d-ass-chefe">
+                                        _____________________________________________________________
                                     </div>
+                                </div>
+                                
+                                
 
-                                    <div id="carimbo-secretario">
-                                        <div class="underline">.</div>
-
-                                        <div id="secretario">  
-                                        <p id="ass-secretario">Secretário</p>
-                                        </div>
+                                <div class="linha-label-input" id="linha-nome-chefe">
+                                    <div class="d-label-input" id="d-nome-chefe">
+                                        <label for="nomechefe">
+                                            Nome: 
+                                        </label>
+                                        <input type="text" name="nomechefe" id="input-nomechefe">
                                     </div>
+                                </div>
+                                <div class="linha-label-input" id="linha-matricula-chefe">
+                                    <div class="d-label-input" id="d-matricula-chefe">
+                                        <label for="matriculachefe">
+                                            Matricula: 
+                                        </label>
+                                        <input type="text" name="matriculachefe" id="input-matriculachefe" placeholder="00/123456-7">
+                                    </div>
+                                </div>
+                                <div class="linha-label-input" id="linha-cargo-chefe">
+                                    <div class="d-label-input" id="d-cargo-chefe">
+                                        <label for="cargochefe">
+                                            Cargo: 
+                                        </label>
+                                        <input type="text" name="cargochefe" id="input-cargochefe">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="c-chefe" id="c-secretario">
+
+                            <div class="data-chefe">
+                                Data: ______/______/_______
+                            </div>
                             
-                                </div>  
-
-                                <div class=concordo-discordo>
-
-                                    <div class="ciencia-servidor">
-                                        <p class="ciencia">Ciência do servidor avaliado: <br><br>(___)Concordo com a avaliação (___)Discordo da Avaliação</p>
+                            <div class="carimbo-chefe">
+                                
+                                <div class="linha-label-input" id="linha-nome-chefe">
+                                    <div class="d-label-input" id="d-ass-chefe">
+                                        _____________________________________________________________
                                     </div>
-                                    <br>
-
-                                    <div class="quadrado-justifique">
-                                        <p class="p-justifique">Justifique:</p>
-                                        <p class="linhas-justifique"> ______________________________________________________________________________________________</p>
-                                        <p class="linhas-justifique"> ______________________________________________________________________________________________</p>
-                                        <p
-                                        class="linhas-justifique"> ______________________________________________________________________________________________</p>
-                                        <p class="linhas-justifique">______________________________________________________________________________________________</p>
+                                </div>
+                                 <div class="linha-label-input" id="linha-nome-chefe">
+                                    <div class="d-label-input" id="d-ass-chefe">
+                                        Responsável pelo órgão
                                     </div>
                                 </div>
 
-                                 <div class="c-chefe">
+                               
+                            </div>
+                        </div><!--C-Secretário tá escondido-->
 
-                                    <div id="data-servidor">
-                                        <p class="p-chefe">Data: ______/______/________</p>
-                                    </div>
+                        <div class="c-chefe" id="c-concordo">
 
-                                    <div id="carimbo-secretario">
-                                        <div class="underline">.</div>
-
-                                        <div id="secretario">  
-                                        <p id="ass-secretario">Secretário</p>
-                                        </div>
-                                    </div>
+                            <div class="data-chefe">
+                                Ciência do servidor avaliado: 
+                            </div>
                             
-                                </div>  
+                            <div class="carimbo-chefe" id="carimbo-concordo">
+                                
+                                <div class="linha-label-input" id="linha-concordo">
+                                    <div class="d-label-input" id="d-concordo">
+                                        (___)Concordo com a avaliação (___)Discordo da Avaliação <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--C-Justifique-->
 
-                                <div class="assinatura-servidor">
+                        <div class="c-chefe" id="c-justifique">
 
-                                    <div class=data-mais-carimbo>
+                            <div class="data-chefe">
+                                Justifique:
+                            </div>
+                            
+                            <div class="carimbo-chefe" id="carimbo-justifique">
+                                
+                                <div class="linha-label-input" id="linha-justifique">
+                                    <div class="d-label-input" id="d-justifique">
+                                        _________________________________________________________________________________________________ <br>
+                                        _________________________________________________________________________________________________ <br>
+                                        _________________________________________________________________________________________________ <br>
+                                        _________________________________________________________________________________________________ <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--C-Justifique-->
 
-                                        <div class="data-chefe">
-                                            <p class="p-chefe">Data: ______/______/________</p>
-                                        </div>
+                        <div class="c-chefe" id="c-ass">
 
-                                        <div class="carimbo">
-                                            <br>
-                                        <p id="ass-servidor">Servidor</p>
-                                        </div>
-                                    </div><!--Data-mais-carimbo-->
-                                </div><!--Assiantura-Servidor-->
-                        </div> <!--Só pra tirar 5-->
-                    </div> <!--b-chefe-->          
-                </fieldset>   
+                            <div class="data-chefe">
+                                Data: ______/______/_______
+                            </div>
+                            
+                            <div class="carimbo-chefe">
+                                
+                                <div class="linha-label-input" id="linha-nome-chefe">
+                                    <div class="d-label-input" id="d-ass">
+                                        _____________________________________________________________
+                                    </div>
+                                </div>
+                                 <div class="linha-label-input" id="linha-nome-chefe">
+                                    <div class="d-label-input" id="d-ass">
+                                        Servidor
+                                    </div>
+                                </div>
+
+                               
+                            </div>
+                        </div><!--C-Secretário tá escondido-->
+                    </div><!--B-Chefe-->
+            
+                  
+        </fieldset>    
+            
 
 
           

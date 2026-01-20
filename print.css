@@ -64,10 +64,10 @@ legend {
     font-weight: bold;
 }
 
-#a-dados-servidor, #a-nivel, .a-quesito, .a-tabela, .a-infoc {
+ #a-dados-servidor ,#a-nivel, .a-quesito, .a-tabela, .a-infoc {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   align-content: center;
   align-self: center;
@@ -83,6 +83,7 @@ legend {
     gap: 0;
     background-color: white;
     color: black;
+    width: 100%;
 }
 
 #d-matricula-nome{
@@ -259,10 +260,16 @@ section{
 }
 .b-infoc{
   background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
 }
 .c-infoc{
   text-align: left;
   background-color: white;
+  
 }
 
 textarea {
@@ -326,7 +333,7 @@ input[type="radio"]:checked + label {
 
 /* Quando o rádio está desabilitado, o "botão" (label) fica opaco */
 input[type="radio"]:disabled + label {
-    opacity: 0.4;
+    opacity: 1;
     cursor: not-allowed;
     filter: grayscale(1);
 }
@@ -368,6 +375,7 @@ input[type="radio"]:disabled + label {
 }
 .b-tabela{
   background-color: white;
+  width: 100%;
 }
 
 .a-botao {
@@ -383,109 +391,129 @@ button {
 /*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*/
 /*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*/
 /*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*/
-
-#sopratirar4, #sopratirar5{
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  padding: 1rem;
-  margin-top: 2rem;
 }
 
 .a-chefe{
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
   background-color: white;
-  margin: 0;
-  padding: 0;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 0;
+    width: 100%;
+    padding-bottom: 0.5rem;
 }
 
 .b-chefe{
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+    font-size: 1rem;
+    background-color: white;
+    border-radius: 3px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+.c-chefe{
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  width: 100%;
+  gap: 0rem;
+  padding: 0rem;
+  padding-top: 1.5rem;
+  border-radius: 3px;
+}
+.carimbo-chefe{
+  background-color: white;
   display: flex;
   flex-direction: column;
-  background-color: white;
-  width: 100%;
-    padding-top: 2rem;
-}
-
-.c-chefe{
-  background-color: blue;
-  display: flex;
-  justify-items: center;
   align-items: center;
-}
-.data-chefe, #data-secretario{
-  display: flex;
-  background-color: white;
-  width: 30%;
-  height: 7rem;
-  justify-items: flex-start;
-  text-align: center;
-}
-#carimbo-chefe, #carimbo-secretario{
-  background-color: white !important;
-  text-align: center;
+  gap: 0rem; 
+  padding: 0; 
   width: 70%;
-    gap: 0;
-    padding-top: 0.5rem;
-    height: 7rem;
 }
-#carimbo-chefe label{
+.carimbo-chefe label{
   display: none;
 }
-#carimbo-chefe input{
-  background-color: white !important;
-  border-color: white;
-   width: 100%;
-   text-align: center;
-   font-size: smaller;
-}
-.underline{
-  display: flex;
-  color: white;
-  border-bottom: 1px solid black;
-  font-size: 0.4rem;
-}
-.concordo-discordo{
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  margin-top: 1rem;
-  width: auto;
-  text-align: left;
+.carimbo-chefe input{
+  text-align: center;
 }
 
-.assinatura-servidor{
+#d-ass-chefe{
+  display: block;
+}
+
+.data-chefe{
+  display: flex;
+  background-color: white;
+  align-items: center;
+  text-align: right;
+  padding-right: 0rem;
+  width: 30%;
+}
+
+#input-matriculachefe{
+  width: 10rem;
+  text-align: center;
+}
+
+#legend-chefeimediato{
+  display: none;
+}
+
+#c-secretario, #c-ass{
   background-color: white;
   display: flex;
-  flex-direction: column;
-}
-.data-mais-carimbo{
-  display: flex;
-  margin-top: 3rem;
-}
-#ass-servidor{
-  border-top: 1px solid black;
+  flex-direction: row;
+  align-items: start;
   width: 100%;
+  gap: 0rem;
+  padding-top: 2rem;
+  border-radius: 3px;
 }
-.p-chefe, #data-chefe{
+#c-justifique, #c-concordo {
+   background-color: white;
   display: flex;
-}
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-    /* O truque aqui é usar uma transição de cor de fundo que dure 'para sempre' */
-    -webkit-transition-delay: 9999s;
-    transition-delay: 9999s;
-    -webkit-transition-property: background-color, color;
-    transition-property: background-color, color;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  gap: 0rem;
+  padding: 0rem;
+  border-radius: 3px;
 }
 
-/* Força o fundo branco e texto preto nos campos preenchidos */
+#carimbo-justifique{
+width: 100%;
+}
+#d-concordo{
+  padding: 1rem;
+}
+#input-nomechefe input{
+  background-color: white !important;
+}
+
+input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 1000px white inset !important;
+        box-shadow: 0 0 0 1000px white inset !important;
+        -webkit-text-fill-color: black !important;
+    }
 input, select, textarea {
-    background-color: white !important;
-    color: black !important;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-}
-}
+        background: transparent !important;
+        border: none !important; /* Se você usa os underscores (___) no texto, esconda a borda do input */
+        appearance: none;
+        -webkit-appearance: none;
+        color: black !important;
+    }
+
+
+
