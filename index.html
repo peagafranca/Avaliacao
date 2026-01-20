@@ -656,12 +656,12 @@
                             
                         <div class="c-infoc">
                             Indique, se necessário, sugestões para melhor adaptação e/ou melhoria de desempenho do servidor:
-                            <textarea name="info2" class="info1" placeholder="Caso tenha informações complementares, digite aqui..."></textarea>
+                            <textarea name="info2" class="info2" placeholder="Caso tenha informações complementares, digite aqui..."></textarea>
                         </div>
                         
                         <div class="c-infoc">
                             Este espaço está reservado para sugestões que possam favorecer o aperfeiçoamento desta avaliação:
-                            <textarea name="info3" class="info1" placeholder="Caso tenha informações complementares, digite aqui..."></textarea>
+                            <textarea name="info3" class="info3" placeholder="Caso tenha informações complementares, digite aqui..."></textarea>
                         </div>
                     </div>
             </fieldset> <!--DIV do S-infoc, Informações Complementares-->
@@ -732,139 +732,197 @@
             </div>
             </fieldset>  
 
-            <fieldset class="a-chefe">
+            <fieldset class="a-assinaturas">
                 <legend id="legend-chefeimediato">
                     Dados do Avaliador (Chefe Imediato)
                 </legend>
 
-                    <div class="b-chefe">
-                        <div class="c-chefe">
+                    <div class="b-assinaturas">
+                        <div class="c-bloco-assinatura" id="bloco-chefe">
 
-                            <div class="data-chefe">
+                            <div class="data-carimbo">
                                 Data: 00/00/2026
                             </div>
                             
-                            <div class="carimbo-chefe">
+                            <div class="carimbo" id="carimbo-chefe">
                                 
-                                <div class="linha-label-input" id="linha-nome-chefe">
-                                    <div class="d-label-input" id="d-ass-chefe">
-                                        _____________________________________________________________
-                                    </div>
+                                <div class="linha-label-input-ass" id="linha-underline-chefe">
+                                        ______________________________________________________
                                 </div>
-                                
-                                
-
-                                <div class="linha-label-input" id="linha-nome-chefe">
-                                    <div class="d-label-input" id="d-nome-chefe">
+                                <div class="linha-label-input-ass" id="linha-nome-chefe">
+                                    
                                         <label for="nomechefe">
                                             Nome: 
                                         </label>
                                         <input type="text" name="nomechefe" id="input-nomechefe">
-                                    </div>
+                                    
                                 </div>
-                                <div class="linha-label-input" id="linha-matricula-chefe">
-                                    <div class="d-label-input" id="d-matricula-chefe">
+                                <div class="linha-label-input-ass" id="linha-matricula-chefe">
+                                    
                                         <label for="matriculachefe">
                                             Matricula: 
                                         </label>
                                         <input type="text" name="matriculachefe" id="input-matriculachefe" placeholder="00/123456-7">
-                                    </div>
+                                    
                                 </div>
-                                <div class="linha-label-input" id="linha-cargo-chefe">
-                                    <div class="d-label-input" id="d-cargo-chefe">
+                                <div class="linha-label-input-ass" id="linha-cargo-chefe">
+                                    
                                         <label for="cargochefe">
                                             Cargo: 
                                         </label>
                                         <input type="text" name="cargochefe" id="input-cargochefe">
-                                    </div>
+                                    
                                 </div>
                             </div>
-                        </div>
+                        </div><!--Bloco Chefe-->
+                        
 
-                        <div class="c-chefe" id="c-secretario">
+                        <div id="bloco-que-some"> 
 
-                            <div class="data-chefe">
-                                Data: ______/______/_______
-                            </div>
-                            
-                            <div class="carimbo-chefe">
+                            <div class="c-bloco-assinatura" id="c-secretario">
+
+                                <div class="data-carimbo">
+                                    Data: ______/______/_______
+                                </div>
                                 
-                                <div class="linha-label-input" id="linha-nome-chefe">
-                                    <div class="d-label-input" id="d-ass-chefe">
-                                        _____________________________________________________________
+                                <div class="carimbo">
+                                    
+                                    <div class="linha-label-input-ass" id="linha-nome-secretario">
+                                        <div class="d-label-input-ass" id="d-ass-secretario">
+                                            __________________________________________________________________
+                                        </div>
                                     </div>
-                                </div>
-                                 <div class="linha-label-input" id="linha-nome-chefe">
-                                    <div class="d-label-input" id="d-ass-chefe">
-                                        Responsável pelo órgão
+                                    <div class="linha-label-input-ass" id="linha-nome-secretario">
+                                        <div class="d-label-input-ass" id="d-ass-secretario">
+                                            Responsável pelo órgão
+                                        </div>
                                     </div>
-                                </div>
 
-                               
-                            </div>
-                        </div><!--C-Secretário tá escondido-->
-
-                        <div class="c-chefe" id="c-concordo">
-
-                            <div class="data-chefe">
-                                Ciência do servidor avaliado: 
-                            </div>
-                            
-                            <div class="carimbo-chefe" id="carimbo-concordo">
                                 
-                                <div class="linha-label-input" id="linha-concordo">
-                                    <div class="d-label-input" id="d-concordo">
-                                        (___)Concordo com a avaliação (___)Discordo da Avaliação <br>
-                                    </div>
                                 </div>
-                            </div>
-                        </div><!--C-Justifique-->
+                            </div><!--C-Secretário tá escondido-->
 
-                        <div class="c-chefe" id="c-justifique">
+                            <div class="c-bloco-assinatura" id="c-concordo">
 
-                            <div class="data-chefe">
-                                Justifique:
-                            </div>
-                            
-                            <div class="carimbo-chefe" id="carimbo-justifique">
+                                <div class="data-carimbo">
+                                    Ciência do servidor avaliado: 
+                                </div>
                                 
-                                <div class="linha-label-input" id="linha-justifique">
-                                    <div class="d-label-input" id="d-justifique">
-                                        _________________________________________________________________________________________________ <br>
-                                        _________________________________________________________________________________________________ <br>
-                                        _________________________________________________________________________________________________ <br>
-                                        _________________________________________________________________________________________________ <br>
+                                <div class="carimbo" id="carimbo-concordo">
+                                    <div class="linha-label-input-ass" id="linha-concordo">
+                                        <div class="d-label-input-ass" id="d-concordo">
+                                            (___)Concordo com a avaliação <br> (___)Discordo da Avaliação
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div><!--C-Justifique-->
+                            </div><!--C-Concordo-->
 
-                        <div class="c-chefe" id="c-ass">
+                            <div class="c-bloco-assinatura" id="c-justifique">
 
-                            <div class="data-chefe">
-                                Data: ______/______/_______
-                            </div>
-                            
-                            <div class="carimbo-chefe">
+                                <div class="data-carimbo" id="data-justifique">
+                                    Justifique:
+                                </div>
                                 
-                                <div class="linha-label-input" id="linha-nome-chefe">
-                                    <div class="d-label-input" id="d-ass">
-                                        _____________________________________________________________
+                                <div class="carimbo" id="carimbo-justifique">
+                                    
+                                    <div class="linha-label-input-ass" id="linha-justifique">
+                                        <div class="d-label-input-ass" id="d-justifique">
+                                            ________________________________________________________________________________________________________________ <br>
+                                            ________________________________________________________________________________________________________________ <br>
+                                            ________________________________________________________________________________________________________________ <br>
+                                            ________________________________________________________________________________________________________________
+                                        </div>
                                     </div>
                                 </div>
-                                 <div class="linha-label-input" id="linha-nome-chefe">
-                                    <div class="d-label-input" id="d-ass">
-                                        Servidor
-                                    </div>
-                                </div>
+                            </div><!--C-Justifique-->
 
-                               
-                            </div>
-                        </div><!--C-Secretário tá escondido-->
-                    </div><!--B-Chefe-->
-            
-                  
-        </fieldset>    
+                            <div class="c-bloco-assinatura" id="c-servidor">
+
+                                <div class="data-carimbo">
+                                    Data: ______/______/_______ 
+                                </div>
+                                
+                                <div class="carimbo">
+                                    
+                                    <div class="linha-label-input-ass" id="linha-nome-servidor">
+                                        <div class="d-label-input-ass" id="d-ass">
+                                            __________________________________________________________________
+                                        </div>
+                                    </div>
+                                    <div class="linha-label-input-ass" id="linha-nome-servidor">
+                                        <div class="d-label-input-ass" id="d-servidor">
+                                            Servidor
+                                        </div>
+                                    </div>
+
+                                
+                                </div>
+                            </div><!--C-Servidor-->
+
+                            <div class="c-bloco-assinatura" id="ass-comissao">
+
+                                    <div class="carimbo">
+                                        
+                                        <div class="linha-label-input-ass" id="linha-nome-phelipe">
+                                            <div class="d-label-input-ass" id="d-nome-phelipe">
+                                                    Phelipe Peixoto da Silva França
+                                            </div>
+                                        </div>
+                                        <div class="linha-label-input-ass" id="linha-matricula-phelipe">
+                                            <div class="d-label-input-ass" id="d-matricula-phelipe">
+                                                    Matrícula 12/712.645-2
+                                            </div>
+                                        </div>
+                                        <div class="linha-label-input-ass" id="linha-cargo-phelipe">
+                                            <div class="d-label-input-ass" id="d-cargo-phelipe">
+                                                Membro da CADSMEP 
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    
+                                    <div class="carimbo">
+                                        
+                                        <div class="linha-label-input-ass" id="linha-nome-rafael">
+                                            <div class="d-label-input-ass" id="d-nome-rafael">
+                                                    Rafael de Oliveira Lima
+                                            </div>
+                                        </div>
+                                        <div class="linha-label-input-ass" id="linha-matricula-rafael">
+                                            <div class="d-label-input-ass" id="d-matricula-rafael">
+                                                    Matrícula 11/713.853-0
+                                            </div>
+                                        </div>
+                                        <div class="linha-label-input-ass" id="linha-cargo-rafael">
+                                            <div class="d-label-input-ass" id="d-cargo-rafael">
+                                                Membro da CADSMEP 
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="carimbo">
+                                        
+                                        <div class="linha-label-input-ass" id="linha-nome-membro">
+                                            <div class="d-label-input-ass" id="d-nome-membro">
+                                                    
+                                            </div>
+                                        </div>
+                                        <div class="linha-label-input-ass" id="linha-matricula-membro">
+                                            <div class="d-label-input-ass" id="d-matricula-membro">
+                                                    
+                                            </div>
+                                        </div>
+                                        <div class="linha-label-input-ass" id="linha-cargo-membro">
+                                            <div class="d-label-input-ass" id="d-cargo-membro">
+                                                Membro da CADSMEP
+                                            </div>
+                                        </div>
+                                    </div>
+
+                            </div><!--Bloco da Comissão-->
+
+                        </div><!--bloco que some-->
+                    </div><!--b-assinaturas-->
+            </fieldset>    
             
 
 

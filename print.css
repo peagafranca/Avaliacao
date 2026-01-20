@@ -27,7 +27,7 @@
 header {
     padding: 0;
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.6rem;
   align-items: flex-start;
   justify-content: flex-start;
   background-color: white;
@@ -35,15 +35,18 @@ header {
   background: linear-gradient(135deg, white 0%, white 100%);
 }
 h1 {
+  font-size: 0.8rem;
   background-color: white;
+  padding: 0;
 }
 img{
   background-color: white;
+  padding: 0;
 }
 
 
 form {
-  padding-top: 60px;
+  padding-top: 55px;
 }
 
 main {
@@ -55,13 +58,13 @@ main {
 legend {
     background-color: white;
     color: black;
-    font-size: 0.9rem;
     padding: 0.1rem;
     text-align: left;
     margin-top: 0rem;
     margin-bottom: 0rem;
     width: 100%;
     font-weight: bold;
+    font-size: 0.9rem;
 }
 
  #a-dados-servidor ,#a-nivel, .a-quesito, .a-tabela, .a-infoc {
@@ -76,7 +79,7 @@ legend {
   border: 0;
     width: 100% !important;
     padding: 0rem;
-    margin-top: 0.2rem;
+    margin-top: 0.1rem;
 }
 .b-dados-servidor {
     padding: 0;
@@ -120,9 +123,9 @@ legend {
   width: 100%;
 }
 #dataexercicioservidor, #dataavaliacao {
-  width: 30%;
+  width: 40%;
   text-align: center;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.1rem;
 }
 #data-exercicio {
   width: auto;
@@ -146,18 +149,18 @@ select {
     width: 80%;
     margin: 0;
     padding: 0;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.1rem;
 }
 #div.avaliacao{
     padding: 0;
     background-color: white;
 }
-
 .linha-label-input {
   display: flex;
   flex-wrap: nowrap;
   gap: 0rem;
   background-color: white;
+  width: 100%;
 }
 
 .linha-label-input label {
@@ -170,7 +173,6 @@ select {
     border: none;
     justify-content: left;
     width: 50vw;
-    font-size: 0.8rem;   
     border-radius: 0;
 }
 
@@ -178,11 +180,10 @@ select {
     padding: 0rem;
     border: none; /* Cor azul das suas bordas */
     background-color: white;
-    font-size: 0.9rem;
     font-weight: normal;
     cursor: pointer;
     text-align: center;
-    padding-right: 0.2rem; /* Espaço para a seta não cobrir o número */
+    padding-right: 0.5rem; /* Espaço para a seta não cobrir o número */
     text-align: left;
 }
 
@@ -190,7 +191,7 @@ select {
     margin: 0;
     padding: 0.1rem;
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     background-color: white;
 }
 .c-nivel{
@@ -227,35 +228,38 @@ section{
 .b-pergunta{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    font-size: 0.9rem;
     background-color: white;
-    text-align: left;
     width: 100%;
+    padding: 0;
 }
+
 .c-pergunta {
+  background-color: white;
     display: flex;
-    align-items: left;
-     width: 75%;
-     min-height: auto;
-     padding: 0.1rem;
+     padding: 0rem;
+     width: 80%;
+     padding: 0;
+     min-height: 2.2rem;   
 }
+
 .c-alternativas {
-    display: inline-block;
-    min-width: auto;
-    align-items: right;
-    width: 25%;
-}
+  background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+      width: 10%;
+      min-width: 20%;
+      padding: 0;
+  }
 
 .b-totalobtido {
   display: flex;
     background-color:white;
     color:black;
-    font-size: 0.9rem;
     font-weight: bold;
-    padding: 0.1rem;
-    margin-top: 0.1rem;
-    width: 95%;
+    padding: 0rem;
+    margin-top: 0rem;
+    width: 96%;
     justify-content: right;
 }
 .b-infoc{
@@ -273,10 +277,13 @@ section{
 }
 
 textarea {
-    height: auto;
-    width: 100%;
-    border: none;
-    padding: 0rem;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid black;
+    
+  /* A mágica acontece aqui */
+  field-sizing: content;
+  min-height: 3em; /* Garante que não suma totalmente se estiver vazio */
 }
 input::placeholder, textarea::placeholder {
     color: white;
@@ -391,112 +398,161 @@ button {
 /*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*/
 /*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*/
 /*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*/
-}
 
-.a-chefe{
+#bloco-que-some{
+  background-color: orange;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  font-size: 1rem;
-  background-color: white;
-  border-radius: 3px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.a-assinaturas{
+  background-color: red;
+  display: flex;
+  flex-direction: column;
   border: 0;
     width: 100%;
-    padding-bottom: 0.5rem;
+    padding: 0.5rem;
 }
 
-.b-chefe{
+.b-assinaturas{
+  background-color: blue;
    display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.4rem;
-    font-size: 1rem;
-    background-color: white;
     border-radius: 3px;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 80%;
+    width: 100%;
 }
-.c-chefe{
-  background-color: white;
+.c-bloco-assinatura{
+  background-color: violet;
   display: flex;
   flex-direction: row;
-  align-items: start;
+  align-items: baseline;
   width: 100%;
   gap: 0rem;
   padding: 0rem;
-  padding-top: 1.5rem;
+  padding-top: 2rem;
   border-radius: 3px;
 }
-.carimbo-chefe{
-  background-color: white;
+.data-carimbo{
+  display: flex;
+  background-color: yellow;
+  justify-content: center;
+  padding: 0rem;
+  width: 50%;
+}
+.carimbo{
+  background-color: brown;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem; 
+  padding-top: 0rem;
+  padding-bottom: 0;
+  width: 100%;
+}
+.carimbo label{
+  display: none;
+}
+.carimbo input{
+  width: 50%;
+}
+.linha-label-input-ass {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0rem; 
-  padding: 0; 
-  width: 70%;
+  gap: 0rem;
+  width: 100%;
+  padding: 0rem;
 }
-.carimbo-chefe label{
-  display: none;
-}
-.carimbo-chefe input{
+
+.linha-label-input-ass input {
+  
+  border-radius: 3px;
+  border: 1px solid royalblue;
+  font-size: 1rem;
+  padding: 0rem;
+  width: 100%;
   text-align: center;
 }
 
-#d-ass-chefe{
-  display: block;
-}
-
-.data-chefe{
+#linha-underline-chefe{
   display: flex;
-  background-color: white;
-  align-items: center;
-  text-align: right;
-  padding-right: 0rem;
-  width: 30%;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  gap: 0;
 }
 
 #input-matriculachefe{
   width: 10rem;
   text-align: center;
-}
 
+}
 #legend-chefeimediato{
   display: none;
 }
-
-#c-secretario, #c-ass{
-  background-color: white;
+#c-secretario, #c-servidor{
+  background-color: gray;
   display: flex;
   flex-direction: row;
   align-items: start;
   width: 100%;
   gap: 0rem;
-  padding-top: 2rem;
+  padding-top: 4rem;
   border-radius: 3px;
 }
-#c-justifique, #c-concordo {
-   background-color: white;
+#c-concordo {
+  background-color: green;
   display: flex;
-  flex-direction: column;
-  align-items: start;
+  text-align: center;
   width: 100%;
   gap: 0rem;
-  padding: 0rem;
+  padding: 0.5rem;
+  padding-bottom: 0;
   border-radius: 3px;
 }
-
-#carimbo-justifique{
-width: 100%;
+#linha-concordo{
+  display: flex;
+  width: 100%;
 }
 #d-concordo{
-  padding: 1rem;
+  background-color: white;
+  padding: 0.5rem;
+  text-align: left;
+  width: 100%;
 }
+
+#c-justifique{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0rem;
+  padding: 0.5rem;
+  border-radius: 3px;
+}
+#data-justifique{
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding-left: 2rem;
+}
+#carimbo-justifique{
+  display: block;
+  width: 100%;
+  
+  padding-left: 2rem;
+}
+#carimbo-chefe{
+  font-size: 0.9rem;
+}
+
+
 #input-nomechefe input{
   background-color: white !important;
+}
+#ass-comissao{
+  padding-top: 3rem;
 }
 
 input:-webkit-autofill,
@@ -515,5 +571,5 @@ input, select, textarea {
         color: black !important;
     }
 
-
+}
 
