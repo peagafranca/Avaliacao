@@ -287,8 +287,9 @@ section{
     font-weight: bold;
     padding: 0rem;
     margin-top: 0rem;
-    width: 96%;
+    width: 100%;
     justify-content: right;
+    font-size: 0.9rem;
 }
 .b-infoc{
   background-color: white;

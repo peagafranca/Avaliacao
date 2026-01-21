@@ -90,6 +90,14 @@ function calcularDataAvaliacao() {
     const dataBaseStr = inputEntrada.value;
     const numAvaliacao = selectAvaliacao.value;
 
+    // --- NOVA LÓGICA PARA ATUALIZAR O NÚMERO NA CONCLUSÃO ---
+    const displayNumConclusao = document.getElementById('exibir-num-avaliacao');
+    if (displayNumConclusao) {
+        displayNumConclusao.innerText = numAvaliacao === "outro" ? "___" : numAvaliacao;
+    }
+    // -------------------------------------------------------
+
+
     if (!dataBaseStr || !numAvaliacao || numAvaliacao === "outro") return;
 
     // Criamos o objeto de data baseado na entrada em exercício
@@ -114,6 +122,8 @@ function calcularDataAvaliacao() {
     const dia = String(dataCalculada.getDate()).padStart(2, '0');
 
     inputDataAvaliacao.value = `${ano}-${mes}-${dia}`;
+
+    if (displayDataCarimbo) displayDataCarimbo.innerText = `${dia}/${mes}/${ano}`;
 }
 
 // Ouve as mudanças nos dois campos
@@ -138,3 +148,22 @@ function prepararImpressao() {
     // Chama o comando de impressão do sistema
     window.print();
 }
+
+// Seleciona o elemento onde a data será exibida no carimbo
+const displayDataCarimbo = document.getElementById('exibir-data');
+
+// Função para formatar data ISO (AAAA-MM-DD) para BR (DD/MM/AAAA)
+function formatarDataBR(dataISO) {
+    if (!dataISO) return "00/00/2026";
+    const [ano, mes, dia] = dataISO.split('-');
+    return `${dia}/${mes}/${ano}`;
+}
+
+// Escuta mudanças manuais no campo de data
+inputDataAvaliacao.addEventListener('change', function() {
+    displayDataCarimbo.innerText = formatarDataBR(this.value);
+});
+
+// IMPORTANTE: Atualize sua função calcularDataAvaliacao existente 
+// Adicione esta linha no FINAL da função calcularDataAvaliacao:
+// displayDataCarimbo.innerText = formatarDataBR(inputDataAvaliacao.value);
