@@ -133,20 +133,44 @@ selectAvaliacao.addEventListener('change', calcularDataAvaliacao);
 
 
 function prepararImpressao() {
-    // Seleciona todos os textareas que têm a classe 'info1'
-    const textareas = document.querySelectorAll('textarea.info1');
+    // 1. Validação de Quesitos (Rádios)
+    const totalPerguntas = 26; // Soma de todas as perguntas dos 5 quesitos
+    const marcados = document.querySelectorAll('input[type="radio"].score-radio1:checked, \
+                                               input[type="radio"].score-radio2:checked, \
+                                               input[type="radio"].score-radio3:checked, \
+                                               input[type="radio"].score-radio4:checked, \
+                                               input[type="radio"].score-radio5:checked').length;
 
+    if (marcados < totalPerguntas) {
+        alert(`Atenção: Existem perguntas sem resposta! (${marcados} de ${totalPerguntas} preenchidas). Por favor, complete a avaliação antes de imprimir.`);
+        return; // Interrompe a função aqui
+    }
+
+    // 2. Validação de Dados Básicos
+    if (!document.getElementById('input-nomeservidor').value || !document.getElementById('dataavaliacao').value) {
+        alert("Por favor, preencha o nome do servidor e a data da avaliação.");
+        return;
+    }
+
+    // 3. Lógica de Ocultar Textareas Vazios (Sua lógica que já funciona)
+    const textareas = document.querySelectorAll('textarea.info1');
     textareas.forEach(textarea => {
-        // Verifica se o valor está vazio ou tem apenas espaços
+        const container = textarea.closest('.c-infoc');
         if (textarea.value.trim() === "") {
-            textarea.closest('.c-infoc').classList.add('ocultar-na-impressao');
+            if (container) container.classList.add('ocultar-na-impressao');
         } else {
-            textarea.closest('.c-infoc').classList.remove('ocultar-na-impressao');
+            if (container) container.classList.remove('ocultar-na-impressao');
         }
     });
 
-    // Chama o comando de impressão do sistema
+    // 4. Personalizar título do PDF e Imprimir
+    const nomeServidor = document.getElementById('input-nomeservidor').value;
+    const tituloOriginal = document.title;
+    document.title = `AED - ${nomeServidor}`;
+    
     window.print();
+    
+    document.title = tituloOriginal;
 }
 
 // Seleciona o elemento onde a data será exibida no carimbo
@@ -167,3 +191,70 @@ inputDataAvaliacao.addEventListener('change', function() {
 // IMPORTANTE: Atualize sua função calcularDataAvaliacao existente 
 // Adicione esta linha no FINAL da função calcularDataAvaliacao:
 // displayDataCarimbo.innerText = formatarDataBR(inputDataAvaliacao.value);
+
+// Parte que escolhe o nome dos membros da CADSMEP
+// Banco de dados dos membros por secretaria
+// Banco de dados centralizado por secretaria
+const DADOS_SECRETARIAS = {
+    'SEMED': {
+        membro: { nome: 'Alan Pimenta', mat: 'Matrícula 10/000.000-0', cargo: 'Membro da CADSMEP - SEMED' },
+        secretario: { nome: 'Maria Virgínia', mat: 'Matrícula 11/999.999-9', cargo: 'Secretário Municipal de Educação' }
+    },
+    'SEMAD': {
+        membro: { nome: 'Maria da Paz', mat: 'Matrícula 22.222-2', cargo: 'Membro da CADSMEP - SEMAD' },
+        secretario: { nome: 'Paulo Sergio Monteiro', mat: 'Matrícula 33.333-3', cargo: 'Secretário Municipal de Administração' }
+    },
+    'SEMOP': {
+        membro: { nome: 'Ronaldinho', mat: 'Matrícula 44.444-4', cargo: 'Membro da CADSMEP - SEMOP' },
+        secretario: { nome: 'Nome do Secretário de Ordem Pública', mat: 'Matrícula 55.555-5', cargo: 'Secretário Municipal de Ordem Pública' }
+    },
+    'SEMAS': {
+        membro: { nome: 'Nome do Membro SEMAS', mat: 'Matrícula 66.666-6', cargo: 'Membro da CADSMEP - SEMAS' },
+        secretario: { nome: 'Nome do Secretário de Assistência', mat: 'Matrícula 77.777-7', cargo: 'Secretário Municipal de Assistência Social' }
+    }
+};
+
+// Elementos do Membro (3º carimbo)
+const displayNomeMembro = document.getElementById('d-nome-membro');
+const displayMatMembro = document.getElementById('d-matricula-membro');
+const displayCargoMembro = document.getElementById('d-cargo-membro');
+
+// Elementos do Secretário (4º carimbo)
+const displayNomeSec = document.getElementById('d-nome-secretario');
+const displayMatSec = document.getElementById('d-matricula-secretario');
+const displayCargoSec = document.getElementById('d-cargo-secretario');
+const displayDataSec = document.getElementById('exibir-data2');
+
+// Escutador do Select de Secretaria
+document.getElementById('secretaria').addEventListener('change', function() {
+    const selecao = this.value;
+    const dados = DADOS_SECRETARIAS[selecao];
+
+    if (dados) {
+        // Preenche Membro
+        displayNomeMembro.innerText = dados.membro.nome;
+        displayMatMembro.innerText = dados.membro.mat;
+        displayCargoMembro.innerText = dados.membro.cargo;
+
+        // Preenche Secretário
+        displayNomeSec.innerText = dados.secretario.nome;
+        displayMatSec.innerText = dados.secretario.mat;
+        displayCargoSec.innerText = dados.secretario.cargo;
+        
+        // Sincroniza a data do carimbo do secretário com a data principal
+        const dataPrincipal = document.getElementById('dataavaliacao').value;
+        if (dataPrincipal) {
+            const [ano, mes, dia] = dataPrincipal.split('-');
+            displayDataSec.innerText = `${dia}/${mes}/${ano}`;
+        }
+    }
+});
+
+// Adicionar este gatilho para atualizar a data do carimbo 2 quando a data principal mudar
+document.getElementById('dataavaliacao').addEventListener('change', function() {
+    if (this.value) {
+        const [ano, mes, dia] = this.value.split('-');
+        const dataFormatada = `${dia}/${mes}/${ano}`;
+        if (displayDataSec) displayDataSec.innerText = dataFormatada;
+    }
+});

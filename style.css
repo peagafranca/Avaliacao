@@ -278,6 +278,15 @@ section{
 .c-infoc{
   text-align: left;
 }
+.infotext {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    resize: none; /* Impede o usuário de puxar o cantinho manualmente */
+    overflow: hidden; /* Esconde a barra de rolagem */
+    field-sizing: content; /* Faz o campo crescer sozinho em navegadores modernos */
+    min-height: 40px; 
+}
 
 textarea {
     height: 100px;

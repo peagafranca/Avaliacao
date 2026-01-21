@@ -304,16 +304,13 @@ section{
   background-color: white;
   
 }
-
-textarea {
-  width: 100%;
-  padding: 1rem;
-  border: 1px solid black;
-    
-  /* A mágica acontece aqui */
-  field-sizing: content;
-  min-height: 3em; /* Garante que não suma totalmente se estiver vazio */
-}
+.infotext {
+        border: 1px solid white !important;
+        height: auto !important; /* Força a altura automática */
+        min-height: 0.5rem !important; /* Fica pequeno se estiver vazio */
+        overflow: visible !important; /* Garante que o texto não seja cortado */
+        field-sizing: content;
+    }
 input::placeholder, textarea::placeholder {
     color: white;
     opacity: 0;
@@ -429,7 +426,7 @@ button {
 /*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*//*BLOCO DA ASSINATURA*/
 
 #bloco-que-some{
-  background-color: orange;
+  background-color: white;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -437,7 +434,7 @@ button {
 }
 
 .a-assinaturas{
-  background-color: red;
+  background-color: white;
   display: flex;
   flex-direction: column;
   border: 0;
@@ -446,14 +443,14 @@ button {
 }
 
 .b-assinaturas{
-  background-color: blue;
+  background-color: white;
    display: flex;
   flex-direction: column;
     border-radius: 3px;
     width: 100%;
 }
 .c-bloco-assinatura{
-  background-color: violet;
+  background-color: white;
   display: flex;
   flex-direction: row;
   align-items: baseline;
@@ -465,21 +462,24 @@ button {
 }
 .data-carimbo{
   display: flex;
-  background-color: yellow;
+  background-color: white;
   justify-content: right;
   text-align: right;
   padding: 0rem;
   width: 30%;
 }
 .carimbo{
-  background-color: brown;
+  background-color: white;
   display: flex;
   flex-direction: column;
   gap: 0rem; 
   padding-top: 0rem;
   padding-bottom: 0;
-  width: 80%;
+  width: 100%;
 }
+
+
+
 .carimbo label{
   display: none;
 }
@@ -498,8 +498,8 @@ button {
 .linha-label-input-ass input {
   
   border-radius: 3px;
-  border: 1px solid royalblue;
-  font-size: 0.7rem;
+  border: 1px solid white;
+  font-size: 0.9rem;
   padding: 0rem;
   width: 100%;
   text-align: center;
@@ -518,7 +518,7 @@ button {
 }
 
 #input-matriculachefe{
-  width: 5rem;
+  width: 8rem;
   text-align: center;
 }
 #input-nomechefe{
@@ -531,7 +531,7 @@ button {
   display: none;
 }
 #c-secretario, #c-servidor{
-  background-color: gray;
+  background-color: white;
   display: flex;
   flex-direction: row;
   align-items: start;
@@ -541,15 +541,17 @@ button {
   border-radius: 3px;
 }
 #c-concordo {
-  background-color: green;
+  background-color: white;
   display: flex;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   gap: 0rem;
   padding: 0rem;
-  padding-top: 1rem;
+  padding-top: 3rem;
   padding-left: 3rem;
   border-radius: 3px;
+
 }
 #linha-concordo{
   display: flex;
@@ -560,6 +562,10 @@ button {
   padding: 0rem;
   text-align: left;
   width: 100%;
+}
+
+#carimbo-concordo{
+  width: 50%;
 }
 
 #c-justifique{

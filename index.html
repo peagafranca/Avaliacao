@@ -643,17 +643,17 @@
                         <div class="c-infoc">
                             Com base nos fatores abordados pela avaliação, comente sobre aquele(s) que você considera importante(s), visando esclarecer e/ou acrescentar algum aspecto acerca do desenvolvimento do servidor:
                             <br>
-                            <textarea name="info1" class="info1" placeholder="Caso tenha informações complementares, digite aqui..."></textarea>
+                            <textarea name="info1" class="infotext" id="info1" placeholder="Caso tenha informações complementares, digite aqui..."></textarea>
                         </div>
                             
                         <div class="c-infoc">
                             Indique, se necessário, sugestões para melhor adaptação e/ou melhoria de desempenho do servidor:
-                            <textarea name="info2" class="info2" placeholder="Caso tenha informações complementares, digite aqui..."></textarea>
+                            <textarea name="info2" class="infotext"  id="info2" placeholder="Caso tenha informações complementares, digite aqui..."></textarea>
                         </div>
                         
                         <div class="c-infoc">
                             Este espaço está reservado para sugestões que possam favorecer o aperfeiçoamento desta avaliação:
-                            <textarea name="info3" class="info3" placeholder="Caso tenha informações complementares, digite aqui..."></textarea>
+                            <textarea name="info3" class="infotext"  id="info3" placeholder="Caso tenha informações complementares, digite aqui..."></textarea>
                         </div>
                     </div>
             </fieldset> <!--DIV do S-infoc, Informações Complementares-->
@@ -774,23 +774,33 @@
                             <div class="c-bloco-assinatura" id="c-secretario">
 
                                 <div class="data-carimbo">
-                                    Data: ______/______/_______
+                                    Data: <span id="exibir-data2">00/00/0000</span>
                                 </div>
                                 
                                 <div class="carimbo">
-                                    
-                                    <div class="linha-label-input-ass" id="linha-nome-secretario">
-                                        <div class="d-label-input-ass" id="d-ass-secretario">
-                                            __________________________________________________________________
-                                        </div>
-                                    </div>
-                                    <div class="linha-label-input-ass" id="linha-nome-secretario">
-                                        <div class="d-label-input-ass" id="d-ass-secretario2">
-                                            Responsável pelo órgão
-                                        </div>
-                                    </div>
 
-                                
+                                        <div class="linha-label-input-ass" id="linha-nome-secretario">
+                                            <div class="d-label-input-ass" id="d-ass-secretario">
+                                                __________________________________________________________________
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="linha-label-input-ass" id="linha-nome-secretario">
+                                            <div class="d-label-input-ass" id="d-nome-secretario">
+                                                    
+                                            </div>
+                                        </div>
+                                        <div class="linha-label-input-ass" id="linha-matricula-secretario">
+                                            <div class="d-label-input-ass" id="d-matricula-secretario">
+                                                    
+                                            </div>
+                                        </div>
+                                        <div class="linha-label-input-ass" id="linha-cargo-secretario">
+                                            <div class="d-label-input-ass" id="d-cargo-secretario">
+                                                
+                                            </div>
+                                        </div>
+                                                                   
                                 </div>
                             </div><!--C-Secretário tá escondido-->
 
@@ -918,12 +928,12 @@
             
 
 
-          
 
             <div class="a-botao">
-                <button class="botao" onclick="prepararImpressao()">Imprimir Avaliação</button>
+                <button type="button" onclick="prepararImpressao()" class="botao">Imprimir Avaliação</button>
                     <p id="mensagem"></p>
             </div>
+        
 </main> 
 </form>
 <script src="script.js"></script>
