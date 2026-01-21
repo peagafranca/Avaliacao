@@ -30,33 +30,24 @@
 
                     <div class="linha-label-input" id="linha-matricula">
 
+                        <div class="d-label-input" id="d-nome">
+                            <label for="nomeservidor" id="nome">Nome: </label>
+                            <input type="text" id="input-nomeservidor" name="nomeservidor">
+                        </div>
                         <div class="d-label-input" id="d-matricula">
                             <label for="matriculaservidor">Matrícula: </label>
                             <input type="text" name="matriculaservidor" id="input-matriculaservidor" placeholder="00/123456-7">
                         </div>
                     </div>
 
-                    <div class="linha-label-input" id="linha-nome">
-
-                        <div class="d-label-input" id="d-nome">
-                            <label for="nomeservidor" id="nome">Nome: </label>
-                            <input type="text" id="input-nomeservidor" name="nomeservidor">
-                        </div>
-
-                    </div>
-
                     <div class="linha-label-input" id="linha-cargo">
 
-                        <div class="d-label-input">
+                        <div class="d-label-input" id="cargo50">
                                 <label for="cargoservidor">Cargo: </label>
                                 <input type="text" name="cargoservidor" id="cargoservidor">
                         </div>
 
-                    </div>
-
-                    <div class="linha-label-input">
-
-                        <div class="d-label-input">
+                        <div class="d-label-input" id="secretaria50">
                                 <label for="secretariaservidor">Secretaria: </label>
                                 <select name="secretaria" id="secretaria"> 
                                 <option value="" disabled selected hidden>Selecione...</option>
@@ -67,48 +58,49 @@
                                 
                             </select>
                         </div>
-
                     </div>
 
-                    <div class="linha-label-input">
+                    <div class="linha-label-input" id="linha-lotacao">
 
-                        <div class="d-label-input">
+                        <div class="d-label-input" id="lotacao50">
                                 <label for="lotacaoservidor">Lotação: </label>
                                 <input type="text" name="lotacao" id="lotacaoservidor">
                         </div>
 
+                        
+                                    
+                            <div class="d-label-input" id="dataexercicio50">        
+                                    <label for="dataexercicioservidor" id="label-data-exercicio">Data de entrada em exercício: </label>
+                                    <input type="date" name="dataexercicioservidor" id="dataexercicioservidor">
+                            </div>
+    
+                         
                     </div>
 
-                    <div class="linha-label-input">
-                                
-                        <div class="d-label-input" id="data-exercicio">        
-                                <label for="dataexercicioservidor" id="label-data-exercicio">Data de entrada em exercício: </label>
-                                <input type="date" name="dataexercicioservidor" id="dataexercicioservidor">
-                        </div>
-
-                    </div>    
                 </div>
             </div>
                 
                 <div class="b-avaliacao" id="sopratirar2">
 
-                    <div class="linha-label-input" id="div-avaliacao">
+                    <div class="linha-label-input" id="linha-avaliacao">
                         
-                        <label for="avaliacao-num">Avaliação:</label>
-                        <select name="avaliacao-num" id="avaliacao-num"> 
-                            <option value="" disabled selected hidden>Selecione...</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="outro">Outro</option>
-                        </select>
+                        <div class="d-label-input" id="avaliacao-num50">
+                            <label for="avaliacao-num" id="avaliacao-label">Avaliação:</label>
+                            <select name="avaliacao-num" id="avaliacao-num"> 
+                                <option value="" disabled selected hidden>Selecione...</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
 
                         <div class="d-label-input" id="data-avaliacao">
                             <label for="dataavaliacao" id="label-dataavaliacao">Data da avaliação: </label>
@@ -721,7 +713,7 @@
                 
                 <!--Resultado (Apto, Apto com restrições ou inapto)-->
                 <div class="b-apto-inapto">
-                    <strong>Conclusão da X° avaliação - O servidor até o momento é considerado:</strong><br>
+                    Conclusão da <strong>X°</strong> avaliação - O servidor até o momento é considerado:<br> <br>
                             <input type="radio" name="aptoouinapto" id="apto" value="apto">
                             <label for="apto">Apto</label>
                             <input type="radio" name="aptoouinapto" id="aptocomrestricoes" value="aptocomrestricoes">
@@ -747,7 +739,7 @@
                             <div class="carimbo" id="carimbo-chefe">
                                 
                                 <div class="linha-label-input-ass" id="linha-underline-chefe">
-                                        ______________________________________________________
+                                        __________________________________________________________________
                                 </div>
                                 <div class="linha-label-input-ass" id="linha-nome-chefe">
                                     
@@ -793,7 +785,7 @@
                                         </div>
                                     </div>
                                     <div class="linha-label-input-ass" id="linha-nome-secretario">
-                                        <div class="d-label-input-ass" id="d-ass-secretario">
+                                        <div class="d-label-input-ass" id="d-ass-secretario2">
                                             Responsável pelo órgão
                                         </div>
                                     </div>
@@ -827,10 +819,10 @@
                                     
                                     <div class="linha-label-input-ass" id="linha-justifique">
                                         <div class="d-label-input-ass" id="d-justifique">
-                                            ________________________________________________________________________________________________________________ <br>
-                                            ________________________________________________________________________________________________________________ <br>
-                                            ________________________________________________________________________________________________________________ <br>
-                                            ________________________________________________________________________________________________________________
+                                            ____________________________________________________________________________________________________________________ <br>
+                                            ____________________________________________________________________________________________________________________ <br>
+                                            ____________________________________________________________________________________________________________________ <br>
+                                            ____________________________________________________________________________________________________________________
                                         </div>
                                     </div>
                                 </div>
@@ -913,7 +905,7 @@
                                         </div>
                                         <div class="linha-label-input-ass" id="linha-cargo-membro">
                                             <div class="d-label-input-ass" id="d-cargo-membro">
-                                                Membro da CADSMEP
+                                                
                                             </div>
                                         </div>
                                     </div>

@@ -77,7 +77,6 @@ legend {
     width: 80%;
 }
 
-
 .linha-label-input {
   display: flex;
   gap: 1rem;
@@ -92,44 +91,81 @@ legend {
 .linha-label-input input {
   border-radius: 3px;
   border: 1px solid royalblue;
-  font-size: 1rem;
+  font-size: 0.9rem;
   padding: 0.1rem;
 }
 .linha-label-input select{
    border-radius: 3px;
   border: 1px solid royalblue;
-  font-size: 1rem;
-  padding: 0.1rem;
+  font-size: 0.9rem;
+  padding: 0rem;
 }
 
-.d-label-input{
-display: flex;
+
+
+
+/*Parte de preenchimento do servidor*/
+/*Parte de preenchimento do servidor*/
+/*Parte de preenchimento do servidor*/
+/*Parte de preenchimento do servidor*/
+
+#linha-matricula{
+  display: flex;
+  width: 100%;
+}
+#d-matricula{
+  display: flex;
+  width: 100%;
+}
+#d-nome{
+  display: flex;
+  width: 100%;
+}
+#input-nomeservidor{
 width: 100%;
 }
-.d-label-input input{
-width: 50%;
-}
-.d-label-input select{
-  width: 50%;
-}
-
-#dataexercicioservidor, #dataavaliacao{
-  width: auto;
-  text-align: center;
-  margin-left: 1rem;
-}
-#label-dataavaliacao{
-  width: auto;
-}
-
-#label-data-exercicio{
-  width: auto;
-}
-
 #input-matriculaservidor{
   width: 10rem;
   text-align: center;
 }
+
+#linha-cargo{
+  display: flex;
+  width: 100%;
+}
+#cargo50, #secretaria50, #lotacao50{
+  display: flex;
+  width: 100%;
+}
+#cargoservidor{
+  width: 100%;
+}
+
+#secretaria{
+  width: 80%;
+}
+#secretaria label{
+  width: 100%;
+}
+
+#linha-lotacao{
+  display: flex;
+  width: 100%;
+}
+#lotacaoservidor{
+  display: flex;
+  width: 100%;
+}
+#dataexercicio50{
+  display: flex;
+  width: 100%;
+}
+
+/*Aqui já é a parte de escolha e data da avaliação*/
+/*Aqui já é a parte de escolha e data da avaliação*/
+/*Aqui já é a parte de escolha e data da avaliação*/
+/*Aqui já é a parte de escolha e data da avaliação*/
+/*Aqui já é a parte de escolha e data da avaliação*/
 
 .b-avaliacao {
   display: flex;
@@ -139,16 +175,50 @@ width: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 0.2rem 0.3rem 0;
     padding: 0.5rem;
-    width: 80%;
+    width: 45%;
+    align-items: center;
     justify-content: center;
 }
-#avaliacao-num{
-  width: auto;
+#linha-avaliacao{
+  display: flex;
+  width: 100%;
+}
+#avaliacao-num50{
+  width: 50%;
+  display: flex;
+  justify-content: center;
   text-align: center;
 }
-#div-avaliacao{
-  display: flex;
+#avaliacao-num50 select{
+  text-align: center;
 }
+#data-avaliacao{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+#dataavaliacao{
+  display: flex;
+  text-align: center;
+}
+#label-dataavaliacao{
+  width: auto;
+  padding-right: 1rem;
+}
+
+#label-data-exercicio{
+  width: auto;
+  padding-right: 0.5rem;
+}
+
+
+
+
+
+
 
 .c-nivel{
   display: flex;
@@ -414,6 +484,12 @@ button {
 #input-matriculachefe{
   width: 10rem;
   text-align: center;
+}
+#input-nomechefe{
+  width: 50%;
+}
+#input-cargochefe{
+  width: 50%
 }
 
 .data-carimbo{
