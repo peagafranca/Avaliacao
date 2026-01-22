@@ -530,7 +530,7 @@ button {
 #legend-chefeimediato{
   display: none;
 }
-#c-secretario, #c-servidor{
+#c-secretario{
   background-color: white;
   display: flex;
   flex-direction: row;
@@ -540,6 +540,24 @@ button {
   padding-top: 3rem;
   border-radius: 3px;
 }
+#c-servidor{
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  width: 100%;
+  gap: 0rem;
+  padding-top: 3rem;
+  padding-left: 2rem;
+  border-radius: 3px;
+}
+#carimbo-servidor{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+
 #c-concordo {
   background-color: white;
   display: flex;

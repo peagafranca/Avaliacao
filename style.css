@@ -467,6 +467,11 @@ button {
   padding: 1rem;
   gap: 0rem;
 }
+#carimbo-servidor{
+  background-color: #a71d2a;
+  display: flex;
+  justify-content: center;
+}
 
 
 .linha-label-input-ass {
