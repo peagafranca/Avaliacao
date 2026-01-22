@@ -123,6 +123,8 @@ function calcularDataAvaliacao() {
 
     inputDataAvaliacao.value = `${ano}-${mes}-${dia}`;
 
+    formatarDataBR(inputDataAvaliacao.value);
+
     if (displayDataCarimbo) displayDataCarimbo.innerText = `${dia}/${mes}/${ano}`;
 }
 
@@ -180,13 +182,17 @@ const displayDataCarimbo = document.getElementById('exibir-data');
 function formatarDataBR(dataISO) {
     if (!dataISO) return "00/00/2026";
     const [ano, mes, dia] = dataISO.split('-');
-    return `${dia}/${mes}/${ano}`;
+    const dataFormatada = `${dia}/${mes}/${ano}`;
+    
+    // Atualiza ambos os spans de uma vez
+    const d1 = document.getElementById('exibir-data');
+    const d2 = document.getElementById('exibir-data2');
+    
+    if (d1) d1.innerText = dataFormatada;
+    if (d2) d2.innerText = dataFormatada;
+    
+    return dataFormatada;
 }
-
-// Escuta mudanças manuais no campo de data
-inputDataAvaliacao.addEventListener('change', function() {
-    displayDataCarimbo.innerText = formatarDataBR(this.value);
-});
 
 // IMPORTANTE: Atualize sua função calcularDataAvaliacao existente 
 // Adicione esta linha no FINAL da função calcularDataAvaliacao:
@@ -197,21 +203,30 @@ inputDataAvaliacao.addEventListener('change', function() {
 // Banco de dados centralizado por secretaria
 const DADOS_SECRETARIAS = {
     'SEMED': {
-        membro: { nome: 'Alan Pimenta', mat: 'Matrícula 10/000.000-0', cargo: 'Membro da CADSMEP - SEMED' },
-        secretario: { nome: 'Maria Virgínia', mat: 'Matrícula 11/999.999-9', cargo: 'Secretário Municipal de Educação' }
+        membro: { nome: 'Alan Pimenta', mat: 'Matrícula 10/711.784-9', cargo: 'Membro da CADSMEP - SEMED' },
+        secretario: { nome: 'Maria Virgínia Andrade Rocha Feitosa', mat: 'Matrícula 11/694.638-8', cargo: 'Secretária Municipal de Educação' }
     },
     'SEMAD': {
-        membro: { nome: 'Maria da Paz', mat: 'Matrícula 22.222-2', cargo: 'Membro da CADSMEP - SEMAD' },
-        secretario: { nome: 'Paulo Sergio Monteiro', mat: 'Matrícula 33.333-3', cargo: 'Secretário Municipal de Administração' }
+        membro: { nome: 'Maria da Paz Silva Oliveira', mat: 'Matrícula 11/687.990-2', cargo: 'Membro da CADSMEP - SEMAD' },
+        secretario: { nome: 'Paulo Sergio da Silva Monteiro', mat: 'Matrícula 11/692.135-7', cargo: 'Secretário Municipal de Administração' }
     },
     'SEMOP': {
-        membro: { nome: 'Ronaldinho', mat: 'Matrícula 44.444-4', cargo: 'Membro da CADSMEP - SEMOP' },
-        secretario: { nome: 'Nome do Secretário de Ordem Pública', mat: 'Matrícula 55.555-5', cargo: 'Secretário Municipal de Ordem Pública' }
+        membro: { nome: 'Ronaldo Ramos de Carvalho', mat: 'Matrícula 34/727.441-8', cargo: 'Membro da CADSMEP - SEMOP' },
+        secretario: { nome: 'Fernando Vieira Bastos', mat: 'Matrícula 34/734.009-4', cargo: 'Secretário Municipal de Ordem Pública' }
     },
     'SEMAS': {
-        membro: { nome: 'Nome do Membro SEMAS', mat: 'Matrícula 66.666-6', cargo: 'Membro da CADSMEP - SEMAS' },
-        secretario: { nome: 'Nome do Secretário de Assistência', mat: 'Matrícula 77.777-7', cargo: 'Secretário Municipal de Assistência Social' }
+        membro: { nome: 'Pricilla Pereira Nunes', mat: 'Matrícula 11/701.199-2', cargo: 'Membro da CADSMEP - SEMAS' },
+        secretario: { nome: 'Elaine Medeiros Fonseca da Silva', mat: 'Matrícula 60/734.021-9', cargo: 'Secretária Municipal de Assistência Social' }
+    },
+    'SEMUS': {
+        membro: { nome: 'Denise Evangelista da Silva', mat: 'Matrícula 10/690.340-5', cargo: 'Membro da CADSMEP - SEMUS' },
+        secretario: { nome: 'Luiz Carlos Nobre Cavalcanti', mat: 'Matrícula 60/734.016-9', cargo: 'Secretário Municipal de Saúde' }
+    },
+    'SEMAM': {
+        membro: { nome: 'Tânia Mauricea Costa dos Santos', mat: 'Matrícula 12/684.273-6', cargo: 'Membro da CADSMEP - SEMAM' },
+        secretario: { nome: 'Caio Carneiro Campos', mat: 'Matrícula 60/736.699-0', cargo: 'Secretário Municipal de Agricultura e Meio Ambiente' }
     }
+    
 };
 
 // Elementos do Membro (3º carimbo)
@@ -257,4 +272,9 @@ document.getElementById('dataavaliacao').addEventListener('change', function() {
         const dataFormatada = `${dia}/${mes}/${ano}`;
         if (displayDataSec) displayDataSec.innerText = dataFormatada;
     }
+});
+
+// Quando você altera a data manualmente no calendário
+inputDataAvaliacao.addEventListener('change', function() {
+    formatarDataBR(this.value);
 });
