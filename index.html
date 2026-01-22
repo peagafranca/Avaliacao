@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsivo.css" media="screen and (max-width: 1000px)">
+    <link rel="stylesheet" href="responsivo.css" media="screen and (max-width: 1200px)">
     <link rel="stylesheet" href="print.css" media="print">
     
     <title>Avaliação de Estágio Probatório</title>
@@ -33,7 +33,10 @@
 
                         <div class="d-label-input" id="d-nome">
                             <label for="nomeservidor" id="nome">Nome: </label>
-                            <input type="text" id="input-nomeservidor" name="nomeservidor">
+                            <input type="text" 
+                                    id="input-nomeservidor" 
+                                    name="nomeservidor"
+                                    maxlength="50">
                         </div>
                         <div class="d-label-input" id="d-matricula">
                             <label for="matriculaservidor">Matrícula: </label>
@@ -48,7 +51,8 @@
 
                         <div class="d-label-input" id="cargo50">
                                 <label for="cargoservidor">Cargo: </label>
-                                <input type="text" name="cargoservidor" id="cargoservidor">
+                                <input type="text" name="cargoservidor" id="cargoservidor"
+                                        maxlength="50">
                         </div>
 
                         <div class="d-label-input" id="secretaria50">
@@ -73,7 +77,8 @@
 
                         <div class="d-label-input" id="lotacao50">
                                 <label for="lotacaoservidor">Lotação: </label>
-                                <input type="text" name="lotacao" id="lotacaoservidor">
+                                <input type="text" name="lotacao" id="lotacaoservidor"
+                                        maxlength="50">
                         </div>
 
                         
@@ -755,12 +760,13 @@
                                         <label for="nomechefe">
                                             Nome: 
                                         </label>
-                                        <input type="text" name="nomechefe" id="input-nomechefe">
+                                        <input type="text" name="nomechefe" id="input-nomechefe"
+                                                maxlength="50">
                                     
                                 </div>
                                 <div class="linha-label-input-ass" id="linha-matricula-chefe">
                                     
-                                        <label for="matriculachefe">
+                                        <label for="matriculachefe" id="labe-matriculachefe">
                                             Matricula: 
                                         </label>
                                         
@@ -775,7 +781,8 @@
                                         <label for="cargochefe">
                                             Cargo: 
                                         </label>
-                                        <input type="text" name="cargochefe" id="input-cargochefe">
+                                        <input type="text" name="cargochefe" id="input-cargochefe"
+                                                maxlength="50">
                                     
                                 </div>
                             </div>
