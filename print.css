@@ -632,5 +632,9 @@ input, select, textarea {
         color: black !important;
     }
 
+footer{
+  display: none;
+}
+
 }
 
