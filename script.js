@@ -135,44 +135,85 @@ selectAvaliacao.addEventListener('change', calcularDataAvaliacao);
 
 
 function prepararImpressao() {
-    // 1. Validação de Quesitos (Rádios)
-    const totalPerguntas = 26; // Soma de todas as perguntas dos 5 quesitos
-    const marcados = document.querySelectorAll('input[type="radio"].score-radio1:checked, \
-                                               input[type="radio"].score-radio2:checked, \
-                                               input[type="radio"].score-radio3:checked, \
-                                               input[type="radio"].score-radio4:checked, \
-                                               input[type="radio"].score-radio5:checked').length;
+    // 1. Limpa destaques de erros anteriores
+    document.querySelectorAll('.pergunta-pendente').forEach(el => {
+        el.classList.remove('pergunta-pendente');
+    });
 
-    if (marcados < totalPerguntas) {
-        alert(`Atenção: Existem perguntas sem resposta! (${marcados} de ${totalPerguntas} preenchidas). Por favor, complete a avaliação antes de imprimir.`);
-        return; // Interrompe a função aqui
-    }
+    let perguntasFaltando = 0;
+    let primeiraFaltante = null;
 
-    // 2. Validação de Dados Básicos
-    if (!document.getElementById('input-nomeservidor').value || !document.getElementById('dataavaliacao').value) {
-        alert("Por favor, preencha o nome do servidor e a data da avaliação.");
-        return;
-    }
+    // 2. Validação dinâmica baseada no CONFIG_QUESITOS
+    // Percorre quesito por quesito (1 a 5)
+    Object.keys(CONFIG_QUESITOS).forEach(quesitoNum => {
+        const totalPerguntas = CONFIG_QUESITOS[quesitoNum].perguntas;
 
-    // 3. Lógica de Ocultar Textareas Vazios (Sua lógica que já funciona)
-    const textareas = document.querySelectorAll('textarea.info1');
-    textareas.forEach(textarea => {
-        const container = textarea.closest('.c-infoc');
-        if (textarea.value.trim() === "") {
-            if (container) container.classList.add('ocultar-na-impressao');
-        } else {
-            if (container) container.classList.remove('ocultar-na-impressao');
+        // Para cada pergunta do quesito (ex: q1p1, q1p2...)
+        for (let p = 1; p <= totalPerguntas; p++) {
+            const nomeGrupo = `q${quesitoNum}p${p}`;
+            const selecionado = document.querySelector(`input[name="${nomeGrupo}"]:checked`);
+
+            if (!selecionado) {
+                perguntasFaltando++;
+                // Busca o container 'b-pergunta' para destacar
+                const inputExemplo = document.getElementsByName(nomeGrupo)[0];
+                if (inputExemplo) {
+                    const container = inputExemplo.closest('.b-pergunta');
+                    if (container) {
+                        container.classList.add('pergunta-pendente');
+                        if (!primeiraFaltante) primeiraFaltante = container;
+                    }
+                }
+            }
         }
     });
 
-    // 4. Personalizar título do PDF e Imprimir
-    const nomeServidor = document.getElementById('input-nomeservidor').value;
+    // 3. Validação de Dados Obrigatórios (Nome e Data)
+    const nomeServidor = document.getElementById('input-nomeservidor');
+    const dataAval = document.getElementById('dataavaliacao');
+
+    if (!nomeServidor.value.trim()) {
+        nomeServidor.classList.add('pergunta-pendente');
+        if (!primeiraFaltante) primeiraFaltante = nomeServidor;
+    }
+    if (!dataAval.value) {
+        dataAval.classList.add('pergunta-pendente');
+        if (!primeiraFaltante) primeiraFaltante = dataAval;
+    }
+
+    // 4. Se houver erro, avisa e para a execução
+    if (perguntasFaltando > 0 || !nomeServidor.value || !dataAval.value) {
+        alert(`Atenção: Existem ${perguntasFaltando} pergunta(s) sem resposta ou campos obrigatórios vazios. Verifique os itens destacados em vermelho.`);
+        
+        if (primeiraFaltante) {
+            primeiraFaltante.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        return;
+    }
+
+    // 5. Se tudo estiver OK, prepara para imprimir
     const tituloOriginal = document.title;
-    document.title = `AED - ${nomeServidor}`;
-    
-    window.print();
-    
-    document.title = tituloOriginal;
+    document.title = `AED - ${nomeServidor.value}`;
+
+    // Esconder textareas vazios
+    document.querySelectorAll('textarea.infotext').forEach(textarea => {
+    if (textarea.value.trim() === "") {
+        // Se estiver vazio, adiciona a classe que esconde apenas a caixa de texto
+        textarea.classList.add('ocultar-na-impressao');
+    } else {
+        // Se tiver texto, garante que ela apareça
+        textarea.classList.remove('ocultar-na-impressao');
+    }
+});
+
+window.print();
+
+// Após a impressão, removemos a classe para que o usuário possa digitar novamente na tela
+document.querySelectorAll('textarea.infotext').forEach(textarea => {
+    textarea.classList.remove('ocultar-na-impressao');
+});
+
+document.title = tituloOriginal;
 }
 
 // Seleciona o elemento onde a data será exibida no carimbo
@@ -278,3 +319,22 @@ document.getElementById('dataavaliacao').addEventListener('change', function() {
 inputDataAvaliacao.addEventListener('change', function() {
     formatarDataBR(this.value);
 });
+
+
+//Máscara Matrícula
+function aplicarMascaraMatricula(idInput) {
+    const input = document.getElementById(idInput);
+    if (!input) return;
+
+    input.addEventListener('input', (e) => {
+        let v = e.target.value.replace(/\D/g, "");
+        v = v.replace(/^(\d{2})(\d)/, "$1/$2");
+        v = v.replace(/(\d{2})\/(\d{3})(\d)/, "$1/$2.$3");
+        v = v.replace(/(\d{2})\/(\d{3})\.(\d{3})(\d)/, "$1/$2.$3-$4");
+        e.target.value = v;
+    });
+}
+
+// Chame para os dois campos:
+aplicarMascaraMatricula('input-matriculaservidor');
+aplicarMascaraMatricula('input-matriculachefe');

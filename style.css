@@ -573,4 +573,22 @@ button {
     }
 }
 
+/* Destaque para campos não preenchidos */
+.pergunta-pendente {
+    border: 2px solid #ff0000 !important;
+    background-color: #fff0f0 !important;
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+}
+
+/* Garante que os campos ocultos não ocupem espaço na impressão */
+@media print {
+    .ocultar-na-impressao {
+        display: none !important;
+    }
+}
+
+
+
 

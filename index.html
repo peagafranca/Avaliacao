@@ -15,7 +15,8 @@
         <!-- Cabeçalho-->
         <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Bras%C3%A3o_de_Nova_Igua%C3%A7u.svg" alt="Brasão da Cidade de Nova Iguaçu">
                     
-        <h1 id="cabecalho-principal">PREFEITURA DA CIDADE DE NOVA IGUAÇU <br>
+        <h1 id="cabecalho-principal">
+                    PREFEITURA DA CIDADE DE NOVA IGUAÇU <br>
                     FORMULÁRIO DE AVALIAÇÃO DE DESEMPENHO <br>
                     SERVIDOR PÚBLICO MUNICIPAL EM ESTÁGIO PROBATÓRIO</h1>    
 </header>
@@ -24,7 +25,7 @@
 <form onsubmit="event.preventDefault(); prepararImpressao();">
     <main>
         <fieldset id="a-dados-servidor">
-            <legend>Dados de identificação</legend>
+            <legend>Dados de identificação do Servidor Avaliado</legend>
 
                 <div class="b-dados-servidor">
 
@@ -36,7 +37,10 @@
                         </div>
                         <div class="d-label-input" id="d-matricula">
                             <label for="matriculaservidor">Matrícula: </label>
-                            <input type="text" name="matriculaservidor" id="input-matriculaservidor" placeholder="00/123456-7">
+                            <input  type="text" 
+                                    name="matriculaservidor" 
+                                    id="input-matriculaservidor"
+                                    maxlength="12">
                         </div>
                     </div>
 
@@ -93,16 +97,16 @@
                             <label for="avaliacao-num" id="avaliacao-label">Avaliação:</label>
                             <select name="avaliacao-num" id="avaliacao-num"> 
                                 <option value="" disabled selected hidden>Selecione...</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
+                                <option value="1">1ª</option>
+                                <option value="2">2ª</option>
+                                <option value="3">3ª</option>
+                                <option value="4">4ª</option>
+                                <option value="5">5ª</option>
+                                <option value="6">6ª</option>
+                                <option value="7">7ª</option>
+                                <option value="8">8ª</option>
+                                <option value="9">9ª</option>
+                                <option value="10">10ª</option>
                                 <option value="outro">Outro</option>
                             </select>
                         </div>
@@ -759,7 +763,11 @@
                                         <label for="matriculachefe">
                                             Matricula: 
                                         </label>
-                                        <input type="text" name="matriculachefe" id="input-matriculachefe" placeholder="00/123456-7">
+                                        
+                                        <input type="text" 
+                                        name="matriculachefe" 
+                                        id="input-matriculachefe"
+                                        maxlength="12">
                                     
                                 </div>
                                 <div class="linha-label-input-ass" id="linha-cargo-chefe">
