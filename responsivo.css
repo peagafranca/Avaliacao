@@ -53,6 +53,9 @@
         width: 100% !important;
         height: 40px; /* Melhora o toque */
     }
+    #dataexercicioservidor {
+        text-align: center;
+    }
 
     /* 3. Blocos de Avaliação e Datas */
     .b-avaliacao, .b-nivel, .b-infoc {
@@ -65,6 +68,12 @@
     #avaliacao-num50, #data-avaliacao {
         width: 100%;
     }
+    #avaliacao-num, #dataavaliacao{
+        padding: 0.5rem;
+        text-align: center;
+        justify-content: center;
+    }
+
 
     /* 4. Quesitos e Alternativas (O maior desafio no mobile) */
     .b-pergunta {

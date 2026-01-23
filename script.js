@@ -89,43 +89,50 @@ const inputDataAvaliacao = document.getElementById('dataavaliacao');
 function calcularDataAvaliacao() {
     const dataBaseStr = inputEntrada.value;
     const numAvaliacao = selectAvaliacao.value;
-
-    // --- NOVA LÓGICA PARA ATUALIZAR O NÚMERO NA CONCLUSÃO ---
     const displayNumConclusao = document.getElementById('exibir-num-avaliacao');
+
+    // 1. Atualiza o número da avaliação no texto de conclusão
     if (displayNumConclusao) {
         displayNumConclusao.innerText = numAvaliacao === "outro" ? "___" : numAvaliacao;
     }
-    // -------------------------------------------------------
 
+    // 2. LÓGICA DE TRAVAMENTO: Libera se for "outro", trava se for número
+    if (numAvaliacao === "outro") {
+        inputDataAvaliacao.readOnly = false; // Permite edição manual
+        inputDataAvaliacao.style.backgroundColor = "#ffffff"; // Fundo branco
+        inputDataAvaliacao.style.cursor = "text";
+        return; // Sai da função para não sobrescrever o que o usuário digitar
+    } else {
+        inputDataAvaliacao.readOnly = true; // Bloqueia edição manual
+        inputDataAvaliacao.style.backgroundColor = "#e9ecef"; // Fundo cinza (estilo desabilitado)
+        inputDataAvaliacao.style.cursor = "not-allowed";
+    }
 
-    if (!dataBaseStr || !numAvaliacao || numAvaliacao === "outro") return;
+    // 3. Validação básica para o cálculo
+    if (!dataBaseStr || !numAvaliacao) return;
 
-    // Criamos o objeto de data baseado na entrada em exercício
+    // 4. Cálculo da data proporcional
     let dataCalculada = new Date(dataBaseStr);
     
-    // Ajuste para evitar erro de fuso horário ao criar a data
+    // Ajuste de fuso horário
     dataCalculada.setMinutes(dataCalculada.getMinutes() + dataCalculada.getTimezoneOffset());
 
     if (numAvaliacao === "1") {
-        // 1ª Avaliação: +4 meses
         dataCalculada.setMonth(dataCalculada.getMonth() + 4);
     } else {
-        // Demais: 4 meses (da primeira) + 3 meses para cada avaliação adicional
-        // Fórmula: 4 + ((N - 1) * 3)
         const mesesAdicionais = 4 + ((parseInt(numAvaliacao) - 1) * 3);
         dataCalculada.setMonth(dataCalculada.getMonth() + mesesAdicionais);
     }
 
-    // Formata de volta para YYYY-MM-DD para o input
+    // 5. Formatação para o input (YYYY-MM-DD)
     const ano = dataCalculada.getFullYear();
     const mes = String(dataCalculada.getMonth() + 1).padStart(2, '0');
     const dia = String(dataCalculada.getDate()).padStart(2, '0');
 
     inputDataAvaliacao.value = `${ano}-${mes}-${dia}`;
 
+    // 6. Sincroniza com os carimbos de data (exibir-data e exibir-data2)
     formatarDataBR(inputDataAvaliacao.value);
-
-    if (displayDataCarimbo) displayDataCarimbo.innerText = `${dia}/${mes}/${ano}`;
 }
 
 // Ouve as mudanças nos dois campos
@@ -140,81 +147,71 @@ function prepararImpressao() {
         el.classList.remove('pergunta-pendente');
     });
 
-    let perguntasFaltando = 0;
-    let primeiraFaltante = null;
+    let camposFaltando = 0;
+    let primeiroErro = null;
 
-    // 2. Validação dinâmica baseada no CONFIG_QUESITOS
-    // Percorre quesito por quesito (1 a 5)
+    // 2. Validar todos os inputs de texto, data e selects do cabeçalho
+    // Selecionamos todos os campos de dados do servidor
+    const camposObrigatorios = document.querySelectorAll('#a-dados-servidor input, #a-dados-servidor select, #dataavaliacao');
+
+    camposObrigatorios.forEach(campo => {
+        if (!campo.value || campo.value.trim() === "") {
+            camposFaltando++;
+            campo.classList.add('pergunta-pendente');
+            if (!primeiroErro) primeiroErro = campo;
+        }
+    });
+
+    // 3. Validação das Perguntas (Rádios) baseada no CONFIG_QUESITOS
     Object.keys(CONFIG_QUESITOS).forEach(quesitoNum => {
         const totalPerguntas = CONFIG_QUESITOS[quesitoNum].perguntas;
 
-        // Para cada pergunta do quesito (ex: q1p1, q1p2...)
         for (let p = 1; p <= totalPerguntas; p++) {
             const nomeGrupo = `q${quesitoNum}p${p}`;
             const selecionado = document.querySelector(`input[name="${nomeGrupo}"]:checked`);
 
             if (!selecionado) {
-                perguntasFaltando++;
-                // Busca o container 'b-pergunta' para destacar
+                camposFaltando++;
                 const inputExemplo = document.getElementsByName(nomeGrupo)[0];
                 if (inputExemplo) {
                     const container = inputExemplo.closest('.b-pergunta');
                     if (container) {
                         container.classList.add('pergunta-pendente');
-                        if (!primeiraFaltante) primeiraFaltante = container;
+                        if (!primeiroErro) primeiroErro = container;
                     }
                 }
             }
         }
     });
 
-    // 3. Validação de Dados Obrigatórios (Nome e Data)
-    const nomeServidor = document.getElementById('input-nomeservidor');
-    const dataAval = document.getElementById('dataavaliacao');
-
-    if (!nomeServidor.value.trim()) {
-        nomeServidor.classList.add('pergunta-pendente');
-        if (!primeiraFaltante) primeiraFaltante = nomeServidor;
-    }
-    if (!dataAval.value) {
-        dataAval.classList.add('pergunta-pendente');
-        if (!primeiraFaltante) primeiraFaltante = dataAval;
-    }
-
-    // 4. Se houver erro, avisa e para a execução
-    if (perguntasFaltando > 0 || !nomeServidor.value || !dataAval.value) {
-        alert(`Atenção: Existem ${perguntasFaltando} pergunta(s) sem resposta ou campos obrigatórios vazios. Verifique os itens destacados em vermelho.`);
+    // 4. Bloqueio caso haja erro
+    if (camposFaltando > 0) {
+        alert(`Atenção: Existem ${camposFaltando} itens pendentes. Por favor, preencha os campos marcados em vermelho.`);
         
-        if (primeiraFaltante) {
-            primeiraFaltante.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (primeiroErro) {
+            primeiroErro.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
         return;
     }
 
-    // 5. Se tudo estiver OK, prepara para imprimir
+    // 5. Lógica de Impressão (Mantida)
+    const nomeServidor = document.getElementById('input-nomeservidor').value;
     const tituloOriginal = document.title;
-    document.title = `AED - ${nomeServidor.value}`;
+    document.title = `AED - ${nomeServidor}`;
 
-    // Esconder textareas vazios
     document.querySelectorAll('textarea.infotext').forEach(textarea => {
-    if (textarea.value.trim() === "") {
-        // Se estiver vazio, adiciona a classe que esconde apenas a caixa de texto
-        textarea.classList.add('ocultar-na-impressao');
-    } else {
-        // Se tiver texto, garante que ela apareça
-        textarea.classList.remove('ocultar-na-impressao');
-    }
-});
+        if (textarea.value.trim() === "") {
+            textarea.classList.add('ocultar-na-impressao');
+        }
+    });
 
-window.print();
-
-// Após a impressão, removemos a classe para que o usuário possa digitar novamente na tela
-document.querySelectorAll('textarea.infotext').forEach(textarea => {
-    textarea.classList.remove('ocultar-na-impressao');
-});
-
-document.title = tituloOriginal;
+    window.print();
+    
+    // Reset pós-impressão
+    document.querySelectorAll('.ocultar-na-impressao').forEach(el => el.classList.remove('ocultar-na-impressao'));
+    document.title = tituloOriginal;
 }
+
 
 // Seleciona o elemento onde a data será exibida no carimbo
 const displayDataCarimbo = document.getElementById('exibir-data');
