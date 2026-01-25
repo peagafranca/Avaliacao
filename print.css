@@ -43,7 +43,7 @@ header {
   background: none !important;
   position: static !important; /* Remove qualquer comportamento de tela */
         margin-bottom: 10px !important;
-  border-bottom: 2px solid #000;
+
 }
 
 #cabecalho-principal {
@@ -78,13 +78,14 @@ main {
 legend {
     background-color: white;
     color: black;
-    padding: 0rem;
+    padding-bottom: 0rem;
+    padding: 0;
     text-align: left;
     margin-top: 0rem;
     margin-bottom: 0rem;
     width: 100%;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
  #a-dados-servidor ,#a-nivel, .a-quesito, .a-tabela, .a-infoc {
@@ -99,7 +100,10 @@ legend {
   border: 0;
     width: 100% !important;
     padding: 0rem;
-    margin: 0.1rem;
+    margin: 0rem;
+    
+    padding-bottom: 0.1rem;
+    padding-top: 0.5rem;
 }
 .a-tabela{
   
@@ -230,6 +234,7 @@ select {
     border: none;
     justify-content: left;
     border-radius: 0;
+    font-size: 1rem;
 }
 
 .linha-label-input select {
@@ -241,6 +246,8 @@ select {
     text-align: center;
     padding-right: 0.5rem; /* Espaço para a seta não cobrir o número */
     text-align: left;
+    
+    font-size: 1rem;
 }
 
 .b-nivel{
@@ -303,7 +310,9 @@ section{
      padding: 0rem;
      width: 90%;
      padding: 0;
-     min-height: 2.0rem; 
+     min-height: 1.5rem; 
+     
+    font-size: 0.9rem;
 }
 
 .c-alternativas {
