@@ -60,21 +60,29 @@ function atualizarResumoFinal() {
     const radioApto = document.getElementById('apto');
     const radioRestrito = document.getElementById('aptocomrestricoes');
     const radioInapto = document.getElementById('inapto');
+    
+    // Obtém o número da avaliação atual
+    const numAvaliacao = document.getElementById('avaliacao-num').value;
+
+    // --- NOVA LÓGICA DE NOTA DE CORTE ---
+    // Se for a 1ª avaliação, o corte é 50. Se for qualquer outra (ou "outro"), é 70.
+    const notaCorte = (numAvaliacao === "1") ? 50 : 70;
 
     if (percentualGeral > 0) {
-        if (percentualGeral < 70) {
-            // ABAIXO DE 70%: Força Inapto (Vermelho)
+        if (percentualGeral < notaCorte) {
+            // ABAIXO DA MÉDIA: Força Inapto
             radioInapto.checked = true;
-            radioInapto.disabled = false; // Garante que ele possa ser marcado
+            radioInapto.disabled = false;
             radioApto.disabled = true;
             radioRestrito.disabled = true;
         } 
         else {
-            // 70% OU MAIS: Libera opções de Apto
+            // ACIMA DA MÉDIA: Libera opções de Apto
             radioApto.disabled = false;
             radioRestrito.disabled = false;
-            radioInapto.disabled = true; // Impede marcar Inapto se a nota é boa
+            radioInapto.disabled = true; 
 
+            // Se nada estiver marcado ainda, marca Apto por padrão
             if (!radioRestrito.checked) {
                 radioApto.checked = true;
             }
