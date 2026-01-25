@@ -195,17 +195,24 @@ function prepararImpressao() {
     }
 
     // 5. Lógica de Impressão (Mantida)
-    const nomeServidor = document.getElementById('input-nomeservidor').value;
-    const tituloOriginal = document.title;
-    document.title = `AED - ${nomeServidor}`;
-
     document.querySelectorAll('textarea.infotext').forEach(textarea => {
-        if (textarea.value.trim() === "") {
-            textarea.classList.add('ocultar-na-impressao');
-        }
-    });
+    const valorOriginal = textarea.value.trim();
+    
+    if (valorOriginal === "") {
+        // 1. Salva que estava vazio para restaurar depois
+        textarea.setAttribute('data-vazio', 'true');
+        // 2. Insere o texto padrão para a impressão
+        textarea.value = "Não preenchido";
+        // 3. Estiliza para ficar discreto na impressão (opcional)
+        textarea.style.fontStyle = "italic";
+        textarea.style.color = "#555";
+    }
+    
+    // Remove a borda para parecer um documento oficial impresso
+    textarea.style.border = "none";
+});
 
-    window.print();
+window.print();
     
     // Reset pós-impressão
     document.querySelectorAll('.ocultar-na-impressao').forEach(el => el.classList.remove('ocultar-na-impressao'));

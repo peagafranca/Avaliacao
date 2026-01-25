@@ -276,7 +276,12 @@ section{
 }
 
 .c-infoc{
-  text-align: left;
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* Coloca o texto em cima e a caixa embaixo */
+    gap: 8px;              /* Espaço entre a pergunta e a caixa */
+    margin-bottom: 15px;    /* Espaço entre um bloco de pergunta e outro */
+    width: 100%;
 }
 .infotext {
     width: 100%;
@@ -286,10 +291,16 @@ section{
     overflow: hidden; /* Esconde a barra de rolagem */
     field-sizing: content; /* Faz o campo crescer sozinho em navegadores modernos */
     min-height: 40px; 
+
+    border-radius: 8px;
+    height: auto;
+    min-height: 80px;
+    display: block;
+
 }
 
 textarea {
-    height: 100px;
+    height: 80px;
     width: 100%;
     border: 1px solid royalblue;
     border-radius: 8px;
@@ -330,7 +341,6 @@ input[type="radio"]:checked + label {
   background-color: green;
   color: white;
   border-color: green;
-  transform: translateY(-1px);
 }
 
 /* Efeito de Hover Geral (para todos os botões) */
@@ -338,7 +348,6 @@ input[type="radio"]:checked + label {
 .b-apto-inapto label:hover{
   background-color: #e0e0e0; /* Um cinza um pouco mais escuro que o whitesmoke */
   border-color: #bbb;       /* Escurece a borda levemente */
-  transform: translateY(-2px); /* Faz o botão "subir" um pouquinho */
   transition: all 0.2s ease;   /* Deixa o movimento suave */
 }
 

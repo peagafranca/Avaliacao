@@ -49,7 +49,7 @@
       flex-direction: column;
     }
 
-    #input-matriculaservidor, #input-nomeservidor, #cargoservidor, #secretaria, #lotacaoservidor, #dataexercicioservidor {
+    #input-matriculaservidor, #input-nomeservidor, #cargoservidor, #secretaria, #lotacaoservidor, #dataexercicioservidor, #input-nomechefe, #input-matriculachefe, #input-cargochefe {
         width: 100% !important;
         height: 40px; /* Melhora o toque */
     }

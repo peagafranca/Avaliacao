@@ -1,12 +1,28 @@
 @media print {
 
 *{ 
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin: 0;
   box-shadow: none !important;
   text-shadow: none !important;
   border-radius: 0;
 }
+
+/* O Safari ignora quebras dentro de elementos Flex */
+    main, form, body {
+        display: block !important;
+        float: none !important;
+        position: relative !important;
+    }
+
+    /* Garante que os fieldsets não fiquem 'presos' um ao outro */
+    fieldset {
+        display: block !important;
+        page-break-inside: avoid; /* Tenta não quebrar uma pergunta ao meio */
+        break-inside: avoid;
+        margin-bottom: 20px;
+    }
+
     /* Esconde o container inteiro (pergunta + textarea) se estiver vazio */
     .ocultar-na-impressao {
         display: none !important;
@@ -58,13 +74,13 @@ main {
 legend {
     background-color: white;
     color: black;
-    padding: 0.1rem;
+    padding: 0rem;
     text-align: left;
     margin-top: 0rem;
     margin-bottom: 0rem;
     width: 100%;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
  #a-dados-servidor ,#a-nivel, .a-quesito, .a-tabela, .a-infoc {
@@ -80,6 +96,7 @@ legend {
     width: 100% !important;
     padding: 0rem;
     margin-top: 0.1rem;
+    margin: 0.1rem;
 }
 .b-dados-servidor {
   display: flex;
@@ -87,6 +104,8 @@ legend {
     gap: 0;
     color: black;
     width: 100%;
+    margin: 1rem 0 1rem 0;
+    font-size: 1.1rem;
 }
 /*Parte de preenchimento do servidor*/
 /*Parte de preenchimento do servidor*/
@@ -106,9 +125,12 @@ legend {
 }
 #input-matriculaservidor{
   text-align: left;
+  
+font-weight: bold;
 }
 #input-nomeservidor{
 width: 100%;
+font-weight: bold;
 }
 
 #linha-cargo{
@@ -123,6 +145,7 @@ width: 100%;
 }
 #secretaria{
   width: 90%;
+  padding-left: 0.4rem;
 }
 
 #linha-lotacao{
@@ -212,7 +235,7 @@ select {
 
 .b-nivel{
     margin: 0;
-    padding: 0.1rem;
+    padding: 0rem;
     width: 100%;
     margin-bottom: 0.5rem;
     background-color: white;
@@ -221,7 +244,7 @@ select {
 .c-nivel{
   display: flex;
   flex-direction: column;
-  gap: 0.1rem;
+  gap: 0rem;
   justify-content: left;
   text-align: left;
   margin: 0;
@@ -232,10 +255,13 @@ select {
 .sera-atribuido {
   padding: 0;
   margin: 0;
+  font-size: 0.9rem;
 }
 .sera-atribuido b {
   padding: 0;
   margin: 0;
+  font-weight: normal;
+  font-size: 0.9rem;
 }
 .sera-atribuido br {
         display: none;
@@ -267,7 +293,7 @@ section{
      padding: 0rem;
      width: 90%;
      padding: 0;
-     min-height: 2.6rem; 
+     min-height: 2.0rem; 
 }
 
 .c-alternativas {
@@ -287,6 +313,7 @@ section{
     font-weight: bold;
     padding: 0rem;
     margin-top: 0rem;
+    margin: 0;
     width: 100%;
     justify-content: right;
     font-size: 0.9rem;
@@ -302,12 +329,15 @@ section{
 .c-infoc{
   text-align: left;
   background-color: white;
+        gap: 1rem; 
+        margin-bottom: 5px;
+  
   
 }
 .infotext {
         border: 1px solid white !important;
         height: auto !important; /* Força a altura automática */
-        min-height: 0.5rem !important; /* Fica pequeno se estiver vazio */
+        min-height: 1rem !important; /* Fica pequeno se estiver vazio */
         overflow: visible !important; /* Garante que o texto não seja cortado */
         field-sizing: content;
     }
@@ -354,7 +384,6 @@ input[type="radio"]:checked + label {
 .b-apto-inapto label:hover{
   background-color: whitesmoke;
   border: 2px solid #ddd;
-  transform: translateY(0px); /* Faz o botão "subir" um pouquinho */
   transition: all 0s ease;   /* Deixa o movimento suave */
 }
 
@@ -499,7 +528,7 @@ button {
   
   border-radius: 3px;
   border: 1px solid white;
-  font-size: 0.9rem;
+  font-size: 1rem;
   padding: 0rem;
   width: 100%;
   text-align: center;
@@ -607,7 +636,7 @@ button {
   padding-left: 0rem;
 }
 #carimbo-chefe{
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 #input-nomechefe input{
   background-color: white !important;
