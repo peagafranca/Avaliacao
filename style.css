@@ -6,7 +6,7 @@
     
 }
 form {
-    padding-top: 20px; /* Reduza o padding-top já que o header não é mais absoluto */
+    padding-top: 0; /* Reduza o padding-top já que o header não é mais absoluto */
 }
 /* Cabeçalho*/
 /* Cabeçalho*/
@@ -22,6 +22,8 @@ header {
     position: relative; /* Mudado de absolute para relative */
     width: 100%;
     margin: 0;
+    
+    margin-bottom: 0;
     box-sizing: border-box; /* Fundamental para o preenchimento não empurrar a lateral */
     font-size: 0.4rem;
 }
@@ -49,6 +51,7 @@ main {
   border: 0;
     width: 80%;
     padding-bottom: 0.5rem;
+    margin-top: 0;
 }
 legend {
     background-color: royalblue;

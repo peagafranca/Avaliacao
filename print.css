@@ -9,19 +9,10 @@
 }
 
 /* O Safari ignora quebras dentro de elementos Flex */
-    main, form, body {
-        display: block !important;
-        float: none !important;
-        position: relative !important;
-    }
+    
 
     /* Garante que os fieldsets não fiquem 'presos' um ao outro */
-    fieldset {
-        display: block !important;
-        page-break-inside: avoid; /* Tenta não quebrar uma pergunta ao meio */
-        break-inside: avoid;
-        margin-bottom: 20px;
-    }
+    
 
     /* Esconde o container inteiro (pergunta + textarea) se estiver vazio */
     .ocultar-na-impressao {
@@ -41,6 +32,7 @@
         margin: 0;
     }
 header {
+  display: flex;
     padding: 0;
     margin: 0;
     font-size: 0.6rem;
@@ -48,21 +40,33 @@ header {
   justify-content: flex-start;
   background-color: white;
   color: black;
-  background: linear-gradient(135deg, white 0%, white 100%);
+  background: none !important;
+  position: static !important; /* Remove qualquer comportamento de tela */
+        margin-bottom: 10px !important;
+  border-bottom: 2px solid #000;
 }
+
+#cabecalho-principal {
+        font-size: 0.7rem; /* Aumentado para leitura no celular */
+        margin: 0;
+        padding: 0;
+        
+    }
 h1 {
   font-size: 0.8rem;
   background-color: white;
   padding: 0;
+  margin: 0;
 }
 img{
   background-color: white;
   padding: 0;
 }
-
-
 form {
-  padding-top: 55px;
+  padding:0;
+  margin: 0;
+  padding-top: 0 !important;
+        margin-top: 0 !important;
 }
 
 main {
@@ -95,16 +99,22 @@ legend {
   border: 0;
     width: 100% !important;
     padding: 0rem;
-    margin-top: 0.1rem;
     margin: 0.1rem;
 }
+.a-tabela{
+  
+        page-break-before: always;
+        break-before: page;
+    
+}
+
 .b-dados-servidor {
   display: flex;
     padding: 0rem;
     gap: 0;
     color: black;
     width: 100%;
-    margin: 1rem 0 1rem 0;
+    margin: 0;
     font-size: 1.1rem;
 }
 /*Parte de preenchimento do servidor*/

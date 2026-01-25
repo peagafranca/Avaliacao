@@ -16,7 +16,6 @@
 
     #cabecalho-principal {
         font-size: 0.7rem; /* Aumentado para leitura no celular */
-        
     }
 
     img {
@@ -32,7 +31,7 @@
 
     #a-dados-servidor, #a-nivel, .a-quesito, .a-tabela, .a-infoc, .a-assinaturas {
         width: 95% !important;
-        margin: 0.5rem auto !important;
+        margin: 0rem !important;
         box-sizing: border-box;
     }
     .b-dados-servidor{
