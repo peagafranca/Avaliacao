@@ -6,24 +6,24 @@
     
 }
 form {
-  padding-top: 90px;
+    padding-top: 20px; /* Reduza o padding-top já que o header não é mais absoluto */
 }
 /* Cabeçalho*/
 /* Cabeçalho*/
 /* Cabeçalho*/
 header {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  background: linear-gradient(135deg, #332f7d 0%, #2b52bd 100%);
-  color: white;
-  padding: 0.7rem;
-  position: absolute;
-  top: 0;
-  z-index: 1000;
-  font-size: 0.35rem;
-        width: 100%;
-        margin: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(135deg, #332f7d 0%, #2b52bd 100%);
+    color: white;
+    padding: 0.7rem;
+    position: relative; /* Mudado de absolute para relative */
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box; /* Fundamental para o preenchimento não empurrar a lateral */
+    font-size: 0.4rem;
 }
 img {
   width: 3rem;
