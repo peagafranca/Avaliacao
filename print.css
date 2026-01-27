@@ -7,51 +7,43 @@
   text-shadow: none !important;
   border-radius: 0;
 }
+.ocultar-na-impressao {
+    display: none !important;
+}
 
-/* O Safari ignora quebras dentro de elementos Flex */
-    
+#sopratirar1, #sopratirar2, #sopratirar3{
+    display: none;
+}
 
-    /* Garante que os fieldsets não fiquem 'presos' um ao outro */
-    
-
-    /* Esconde o container inteiro (pergunta + textarea) se estiver vazio */
-    .ocultar-na-impressao {
-        display: none !important;
-    }
-
-    #sopratirar1, #sopratirar2, #sopratirar3{
-        display: none;
-    }
-
-    html{
-        padding: 0;
-        margin: 0;
-    }
-    body {
-        padding: 0;
-        margin: 0;
-    }
-header {
-  display: flex;
+html{
     padding: 0;
     margin: 0;
-    font-size: 0.6rem;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  font-size: 0.6rem;
   align-items: flex-start;
   justify-content: flex-start;
   background-color: white;
   color: black;
   background: none !important;
   position: static !important; /* Remove qualquer comportamento de tela */
-        margin-bottom: 10px !important;
-
+  margin-bottom: 10px !important;
 }
 
 #cabecalho-principal {
-        font-size: 0.7rem; /* Aumentado para leitura no celular */
-        margin: 0;
-        padding: 0;
-        
-    }
+  font-size: 0.7rem; /* Aumentado para leitura no celular */
+  margin: 0;
+  padding: 0;     
+}
+
 h1 {
   font-size: 0.8rem;
   background-color: white;
@@ -106,10 +98,8 @@ legend {
     padding-top: 0.5rem;
 }
 .a-tabela{
-  
-        page-break-before: always;
-        break-before: page;
-    
+  page-break-before: always;
+  break-before: page;
 }
 
 .b-dados-servidor {
@@ -169,8 +159,6 @@ font-weight: bold;
 #lotacaoservidor{
   width: 100%;
 }
-
-
 
 #matriculaservidor{
   width: auto;
@@ -239,7 +227,7 @@ select {
 
 .linha-label-input select {
     padding: 0rem;
-    border: none; /* Cor azul das suas bordas */
+    border: none; 
     background-color: white;
     font-weight: normal;
     cursor: pointer;
@@ -281,10 +269,10 @@ select {
   font-size: 0.9rem;
 }
 .sera-atribuido br {
-        display: none;
+  display: none;
 }
 
-    /* Adiciona um espaço após o </b> para o texto não ficar colado */
+/* Adiciona um espaço após o </b> para o texto não ficar colado */
 .sera-atribuido b::after {
     content: " ";
 }
@@ -355,9 +343,9 @@ section{
 }
 .infotext {
         border: 1px solid white !important;
-        height: auto !important; /* Força a altura automática */
-        min-height: 1rem !important; /* Fica pequeno se estiver vazio */
-        overflow: visible !important; /* Garante que o texto não seja cortado */
+        height: auto !important; 
+        min-height: 1rem !important; 
+        overflow: visible !important; 
         field-sizing: content;
     }
 input::placeholder, textarea::placeholder {
@@ -365,7 +353,10 @@ input::placeholder, textarea::placeholder {
     opacity: 0;
 }
 
-
+/* Botões Radio */
+/* Botões Radio */
+/* Botões Radio */
+/* Botões Radio */
 /* Botões Radio */
 
 .b-apto-inapto {
@@ -542,7 +533,6 @@ button {
 }
 
 .linha-label-input-ass input {
-  
   border-radius: 3px;
   border: 1px solid white;
   font-size: 1rem;

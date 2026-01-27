@@ -61,29 +61,39 @@ function atualizarResumoFinal() {
     const radioRestrito = document.getElementById('aptocomrestricoes');
     const radioInapto = document.getElementById('inapto');
     
-    // Obtém o número da avaliação atual
     const numAvaliacao = document.getElementById('avaliacao-num').value;
 
-    // --- NOVA LÓGICA DE NOTA DE CORTE ---
-    // Se for a 1ª avaliação, o corte é 50. Se for qualquer outra (ou "outro"), é 70.
+    // Se for 1ª avaliação o corte é 50, se for 2, 3, 4 ou "outro", o corte é 70
     const notaCorte = (numAvaliacao === "1") ? 50 : 70;
 
     if (percentualGeral > 0) {
+        // Habilitamos todos para permitir que o JS troque a marcação
+        radioApto.disabled = false;
+        radioRestrito.disabled = false;
+        radioInapto.disabled = false;
+
         if (percentualGeral < notaCorte) {
-            // ABAIXO DA MÉDIA: Força Inapto
+            // ABAIXO DA MÉDIA: Força Inapto e limpa os outros
             radioInapto.checked = true;
-            radioInapto.disabled = false;
+            radioApto.checked = false;
+            radioRestrito.checked = false;
+
+            // Bloqueia para não permitir erro manual
             radioApto.disabled = true;
             radioRestrito.disabled = true;
         } 
         else {
-            // ACIMA DA MÉDIA: Libera opções de Apto
-            radioApto.disabled = false;
-            radioRestrito.disabled = false;
-            radioInapto.disabled = true; 
+            // ACIMA DA MÉDIA: Bloqueia o Inapto
+            radioInapto.disabled = true;
+            
+            // Se o Inapto estava marcado (pela troca de avaliação), volta para o Apto
+            if (radioInapto.checked) {
+                radioInapto.checked = false;
+                radioApto.checked = true;
+            }
 
-            // Se nada estiver marcado ainda, marca Apto por padrão
-            if (!radioRestrito.checked) {
+            // Garante que algo esteja marcado
+            if (!radioApto.checked && !radioRestrito.checked) {
                 radioApto.checked = true;
             }
         }
@@ -150,6 +160,9 @@ selectAvaliacao.addEventListener('change', calcularDataAvaliacao);
 
 
 function prepararImpressao() {
+
+    atualizarResumoFinal(); 
+
     // 1. Limpa destaques de erros anteriores
     document.querySelectorAll('.pergunta-pendente').forEach(el => {
         el.classList.remove('pergunta-pendente');
@@ -247,9 +260,8 @@ function formatarDataBR(dataISO) {
     return dataFormatada;
 }
 
-// IMPORTANTE: Atualize sua função calcularDataAvaliacao existente 
-// Adicione esta linha no FINAL da função calcularDataAvaliacao:
-// displayDataCarimbo.innerText = formatarDataBR(inputDataAvaliacao.value);
+
+
 
 // Parte que escolhe o nome dos membros da CADSMEP
 // Banco de dados dos membros por secretaria
@@ -354,3 +366,10 @@ function aplicarMascaraMatricula(idInput) {
 // Chame para os dois campos:
 aplicarMascaraMatricula('input-matriculaservidor');
 aplicarMascaraMatricula('input-matriculachefe');
+
+// Detecta qualquer tentativa de impressão (Botão, Ctrl+P, Menu do Navegador)
+window.onbeforeprint = function() {
+    console.log("Preparando lógica de avaliação antes de imprimir...");
+    atualizarResumoFinal();
+    
+};
