@@ -373,3 +373,14 @@ window.onbeforeprint = function() {
     atualizarResumoFinal();
     
 };
+
+// Para colocar o número da avaliação no topo direito da página
+    const qualAvaliacao = document.getElementById('avaliacao-num');
+    const displayH6 = document.getElementById('qual-avaliacao');
+
+        qualAvaliacao.addEventListener('change', function() {
+    
+        const textoSelecionado = qualAvaliacao.options[qualAvaliacao.selectedIndex].text;
+        
+        displayH6.textContent = textoSelecionado;
+    });

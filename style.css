@@ -27,6 +27,9 @@ header {
     box-sizing: border-box; /* Fundamental para o preenchimento não empurrar a lateral */
     font-size: 0.4rem;
 }
+header h6 {
+  color: royalblue;
+}
 img {
   width: 3rem;
 }
