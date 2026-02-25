@@ -18,7 +18,7 @@
         <h1 id="cabecalho-principal">
                     PREFEITURA DA CIDADE DE NOVA IGUAÇU <br>
                     FORMULÁRIO DE AVALIAÇÃO DE DESEMPENHO <br>
-                    SERVIDOR PÚBLICO MUNICIPAL EM ESTÁGIO PROBATÓRIO
+                    SERVIDOR PÚBLICO MUNICIPAL EM ESTÁGIO PROBATÓRIO 
         </h1>
         <h6 id="qual-avaliacao">
             X
@@ -33,7 +33,7 @@
 
                 <div class="b-dados-servidor">
 
-                    <div class="linha-label-input" id="linha-matricula">
+                    <div class="linha-label-input" id="linha-nome">
 
                         <div class="d-label-input" id="d-nome">
                             <label for="nomeservidor" id="nomeservidor">Nome: </label>
@@ -42,6 +42,11 @@
                                     name="nomeservidor"
                                     maxlength="50">
                         </div>
+
+                    </div>
+                    
+                    <div class="linha-label-input" id="linha-matricula">
+
                         <div class="d-label-input" id="d-matricula">
                             <label for="input-matriculaservidor">Matrícula: </label>
                             <input  type="text" 
@@ -49,7 +54,9 @@
                                     id="input-matriculaservidor"
                                     maxlength="12">
                         </div>
+
                     </div>
+
 
                     <div class="linha-label-input" id="linha-cargo">
 
@@ -58,6 +65,10 @@
                                 <input type="text" name="cargoservidor" id="cargoservidor"
                                         maxlength="50">
                         </div>
+
+                    </div>
+                    
+                     <div class="linha-label-input" id="linha-secretaria">
 
                         <div class="d-label-input" id="secretaria50">
                                 <label for="secretariaservidor">Secretaria: </label>
@@ -72,6 +83,7 @@
                                 <option value="SEMEF">Secretaria Municipal de Fazenda e Fiscalização Tributária</option>
                             </select>
                         </div>
+
                     </div>
 
                     <div class="linha-label-input" id="linha-lotacao">
@@ -82,8 +94,10 @@
                                         maxlength="50">
                         </div>
 
-                        
-                                    
+                    </div>
+
+                    <div class="linha-label-input" id="linha-dataexercicio">   
+
                             <div class="d-label-input" id="dataexercicio50">        
                                 <label 
                                     for="dataexercicioservidor" 
@@ -97,6 +111,7 @@
                                     min="2000-01-01"
                                     max="2026-01-23">
                             </div>
+                            
                     </div>
                 </div>
                 
@@ -129,7 +144,8 @@
 
                     </div> 
 
-                </div>  
+                </div>
+            </div>  
         </fieldset>    
 
 <!--Explicação das notas dos quesitos-->
@@ -143,19 +159,19 @@
                         </div>
 
                         <div class="sera-atribuido">
-                                <b>Será atribuído pontuação (nível 1)</b> <br> quando o desempenho do servidor está muito abaixo do nível desejado para o cargo.
+                                <b>Será atribuído pontuação (nível 1)</b> <br> quando o desempenho está muito abaixo do nível desejado para o cargo.
                         </div>  
 
                         <div class="sera-atribuido">
-                                <b>Será atribuído pontuação (nível 3)</b> <br> quando o desempenho do servidor aproxima-se do nível desejado.
+                                <b>Será atribuído pontuação (nível 3)</b> <br> quando o desempenho aproxima-se do nível desejado.
                         </div>
 
                         <div class="sera-atribuido">
-                                <b>Será atribuído pontuação (nível 5)</b> <br> quando o desempenho do servidor atende às expectativas para o cargo que ocupa.
+                                <b>Será atribuído pontuação (nível 5)</b> <br> quando o desempenho atende às expectativas para o cargo que ocupa.
                         </div>
 
                         <div class="sera-atribuido">
-                                <b>Será atribuído pontuação (nível 7)</b> <br> quando o desempenho do servidor supera a exigência do seu cargo, demonstrando excelente qualidade de trabalho.
+                                <b>Será atribuído pontuação (nível 7)</b> <br> quando o desempenho supera a exigência do seu cargo, demonstrando excelente qualidade de trabalho.
                         </div>
                     </div>
                 </div>
@@ -733,7 +749,7 @@
                 
                 <!--Resultado (Apto, Apto com restrições ou inapto)-->
                 <div class="b-apto-inapto">
-                    Conclusão da <strong><span id="exibir-num-avaliacao">X</span>°</strong> avaliação - O servidor até o momento é considerado:<br> <br>
+                    Conclusão da <strong><span id="exibir-num-avaliacao">X</span>°</strong> avaliação em <span id="exibir-data">00/00/0000</span> - O servidor até o momento é considerado:<br> <br>
                             <input type="radio" name="aptoouinapto" id="apto" value="apto">
                             <label for="apto">Apto</label>
                             <input type="radio" name="aptoouinapto" id="aptocomrestricoes" value="aptocomrestricoes">
@@ -753,7 +769,7 @@
                         <div class="c-bloco-assinatura" id="bloco-chefe">
 
                             <div class="data-carimbo">
-                                Data: <span id="exibir-data">00/00/0000</span>
+                                Data: _____/_____/_____
                             </div>
                             
                             <div class="carimbo" id="carimbo-chefe">
@@ -772,7 +788,7 @@
                                 </div>
                                 <div class="linha-label-input-ass" id="linha-matricula-chefe">
                                     
-                                        <label for="matriculachefe" id="labe-matriculachefe">
+                                        <label for="matriculachefe" id="label-matriculachefe">
                                             Matricula: 
                                         </label>
                                         
@@ -800,7 +816,7 @@
                             <div class="c-bloco-assinatura" id="c-secretario">
 
                                 <div class="data-carimbo">
-                                    Data: <span id="exibir-data2">00/00/0000</span>
+                                    Data: _____/_____/_____
                                 </div>
                                 
                                 <div class="carimbo">
@@ -832,7 +848,7 @@
 
                             <div class="c-bloco-assinatura" id="c-concordo">
 
-                                <div class="data-carimbo">
+                                <div class="data-carimbo" id="carimbo-data-ciencia">
                                     Ciência do servidor avaliado: 
                                 </div>
                                 
@@ -893,12 +909,12 @@
                                         
                                         <div class="linha-label-input-ass" id="linha-nome-phelipe">
                                             <div class="d-label-input-ass" id="d-nome-phelipe">
-                                                    Phelipe Peixoto da Silva França
+                                                Phelipe Peixoto da Silva França
                                             </div>
                                         </div>
                                         <div class="linha-label-input-ass" id="linha-matricula-phelipe">
                                             <div class="d-label-input-ass" id="d-matricula-phelipe">
-                                                    Matrícula 12/712.645-2
+                                                Matrícula 12/712.645-2
                                             </div>
                                         </div>
                                         <div class="linha-label-input-ass" id="linha-cargo-phelipe">
@@ -912,12 +928,12 @@
                                         
                                         <div class="linha-label-input-ass" id="linha-nome-rafael">
                                             <div class="d-label-input-ass" id="d-nome-rafael">
-                                                    Rafael de Oliveira Lima
+                                                Rafael de Oliveira Lima
                                             </div>
                                         </div>
                                         <div class="linha-label-input-ass" id="linha-matricula-rafael">
                                             <div class="d-label-input-ass" id="d-matricula-rafael">
-                                                    Matrícula 11/713.853-0
+                                                Matrícula 11/713.853-0
                                             </div>
                                         </div>
                                         <div class="linha-label-input-ass" id="linha-cargo-rafael">
@@ -952,9 +968,6 @@
                     </div><!--b-assinaturas-->
             </fieldset>    
             
-
-
-
             <div class="a-botao">
                 <button type="button" onclick="prepararImpressao()" class="botao">Gerar Avaliação</button>
                     <p id="mensagem"></p>

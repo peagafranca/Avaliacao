@@ -269,7 +269,7 @@ function formatarDataBR(dataISO) {
 const DADOS_SECRETARIAS = {
     'SEMED': {
         membro: { nome: 'Alan Pimenta', mat: 'Matrícula 10/711.784-9', cargo: 'Membro da CADSMEP - SEMED' },
-        secretario: { nome: 'Maria Virgínia Andrade Rocha Feitosa', mat: 'Matrícula 11/694.638-8', cargo: 'Secretária Municipal de Educação' }
+        secretario: { nome: 'Bruna Martins de Oliveira Sagawe', mat: 'Matrícula 18/731.802-5', cargo: 'Superintendente de Gestão de Pessoal' }
     },
     'SEMAD': {
         membro: { nome: 'Maria da Paz Silva Oliveira', mat: 'Matrícula 11/687.990-2', cargo: 'Membro da CADSMEP - SEMAD' },

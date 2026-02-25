@@ -1,7 +1,7 @@
 @media print {
 
 *{ 
-  font-size: 1rem;
+  font-size: 0.95rem;
   margin: 0;
   box-shadow: none !important;
   text-shadow: none !important;
@@ -21,14 +21,14 @@ html{
 }
 body {
     padding: 0;
-    margin: 0;
+    margin: 1rem;
 }
 
 header {
   display: flex;
   padding: 0;
   margin: 0;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   align-items: flex-start;
   justify-content: flex-start;
   background-color: white;
@@ -39,7 +39,7 @@ header {
 }
 
 #cabecalho-principal {
-  font-size: 0.7rem; /* Aumentado para leitura no celular */
+  font-size: 0.8rem;
   margin: 0;
   padding: 0;     
 }
@@ -51,6 +51,7 @@ h1 {
   margin: 0;
 }
 header h6 {
+  font-size: 1.2rem;
   margin-left: auto;
   margin-top: 0;
   text-align: right;
@@ -81,10 +82,10 @@ legend {
     padding: 0;
     text-align: left;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 0.3rem;
     width: 100%;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
  #a-dados-servidor ,#a-nivel, .a-quesito, .a-tabela, .a-infoc {
@@ -118,91 +119,34 @@ legend {
     width: 100%;
     margin: 0;
     margin-bottom: 0.5rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
+
 /*Parte de preenchimento do servidor*/
 /*Parte de preenchimento do servidor*/
 /*Parte de preenchimento do servidor*/
 /*Parte de preenchimento do servidor*/
 
-#linha-matricula{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
+#d-matricula input, #d-nome input{
+  font-weight: bold;
 }
-#d-nome{
-  width: 100%;
-}
-#d-matricula{
-  width: 100%;
+#secretaria {
+  font-size: 1rem;
 }
 #input-matriculaservidor{
+  width: 80%;
   text-align: left;
-  
-font-weight: bold;
+  font-size: 0.9rem
+}
+#cargo50, #secretaria50, #lotacao50, #d-nome, #d-matricula{
+  display: flex;
+  width: 100%;
 }
 #input-nomeservidor{
-width: 100%;
-font-weight: bold;
+  font-size: 1.05rem
 }
 
-#linha-cargo{
-  display: flex;
-  width: 100%;
-}
-#cargo50, #secretaria50{
-  width: 100%;
-}
-#cargoservidor{
-  width: 100%;
-  font-size: 0.9rem;
-}
-#secretaria{
-  width: 100%;
-  padding-left: 0.4rem;
-  
-  font-size: 0.9rem;
-}
 
-#linha-lotacao{
-  display: flex;
-  width: 100%;
-}
-#lotacaoservidor{
-  width: 100%;
-  font-size: 0.9rem;
-  text-align: left;
-  background-color: orange;
-}
-
-#matriculaservidor{
-  width: auto;
-  text-align: left;
-}
-#matriculaservidor input{
-  width: 100%;
-  text-align: center;
-}
-
-#nomeservidor label {
-  width: 100%;
-}
-#nomeservidor input {
-  width: 100%;
-}
-#dataexercicioservidor, #dataavaliacao {
-  width: 30%;
-  font-size: 0.9rem;
-}
-#data-exercicio {
-  width: 100%;
-}
-#dataexercicio50{
-  font-size: 0.9rem;
-}
-#data-avaliacao input {
-  width: auto;
-}
 
 select {
   -webkit-appearance: none;  /* Remove no Chrome, Safari e Edge moderno */
@@ -231,29 +175,18 @@ select {
 
 .linha-label-input label {
     text-align: left;
-    width: 5rem;
+    width: 7rem;
+    font-size: 1rem;
 }
 
 .linha-label-input input {
-    padding: 0.1rem;
+    padding: 0;
     border: none;
     justify-content: left;
     border-radius: 0;
     font-size: 1rem;
 }
 
-.linha-label-input select {
-    padding: 0rem;
-    border: none; 
-    background-color: white;
-    font-weight: normal;
-    cursor: pointer;
-    text-align: center;
-    padding-right: 0.5rem; /* Espaço para a seta não cobrir o número */
-    text-align: left;
-    
-    font-size: 1rem;
-}
 
 .b-nivel{
     margin: 0;
@@ -278,13 +211,13 @@ select {
 .sera-atribuido {
   padding: 0;
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 .sera-atribuido b {
   padding: 0;
   margin: 0;
   font-weight: normal;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 .sera-atribuido br {
   display: none;
@@ -308,17 +241,20 @@ section{
     background-color: white;
     width: 100%;
     padding: 0;
+    padding-bottom: 0.5rem;
+    align-items: flex-start;
+    
 }
 
 .c-pergunta {
   background-color: white;
     display: flex;
-     padding: 0rem;
-     width: 90%;
+     width: 78%;
      padding: 0;
-     min-height: 1.5rem; 
      
-    font-size: 0.9rem;
+     min-height: 0rem; 
+    align-items: flex-start;
+    font-size: 1rem;
 }
 
 .c-alternativas {
@@ -326,9 +262,11 @@ section{
     display: flex;
     flex-direction: row;
     justify-content: center;
-      width: 10%;
+      width: 20%;
       min-width: 15%;
       padding: 0;
+      
+    padding-top: 0.3rem;
   }
 
 .b-totalobtido {
@@ -339,7 +277,7 @@ section{
     padding: 0;
     margin-top: 0;
     margin: 0;
-    width: 100%;
+    width: 96%;
     justify-content: right;
     font-size: 0.7rem;
 }
@@ -356,6 +294,7 @@ section{
   background-color: white;
         gap: 1rem; 
         margin-bottom: 5px;
+        font-size: 1rem;
   
   
 }
@@ -378,10 +317,12 @@ input::placeholder, textarea::placeholder {
 /* Botões Radio */
 
 .b-apto-inapto {
+  font-size: 0.9rem;
     background-color: white;
     padding: 0rem;
     padding-bottom: 0rem;
     margin-top: 0.5rem;
+    width: 100%;
 }
 
 .c-alternativas label, 
@@ -432,7 +373,7 @@ input[type="radio"]:disabled + label {
 /* Tabela de Resumo da Avaliação*/
 /* Tabela de Resumo da Avaliação*/
 
-#id-tabela, #quesito-4 {
+#id-tabela, #quesito-3, #id-infoc {
         /* Força o início de uma nova página antes deste fieldset */
         break-before: page;
 }
@@ -459,13 +400,14 @@ input[type="radio"]:disabled + label {
     background-color:white;
 }
 
-.tabela-pontuacao tbody tr:nth-last-child(-n+2) td {
+.tabela-pontuacao tbody tr:nth-last-child(-n+1) td {
     background-color:white;
     font-weight: bold;
 }
 .b-tabela{
   background-color: white;
-  width: 100%;
+  width: 85%;
+  font-size: 0.8rem;
 }
 
 .a-botao {
@@ -553,7 +495,7 @@ button {
 .linha-label-input-ass input {
   border-radius: 3px;
   border: 1px solid white;
-  font-size: 1rem;
+  font-size: 0.9rem;
   padding: 0rem;
   width: 100%;
   text-align: center;
@@ -565,21 +507,24 @@ button {
   margin: 0;
   padding: 0;
   gap: 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 #d-ass-secretario{
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 #input-matriculachefe{
   width: 8rem;
   text-align: center;
+  font-size: 0.8rem;
 }
 #input-nomechefe{
   width: 100%;
+  font-size: 0.8rem;
 }
 #input-cargochefe{
-  width: 100%
+  width: 100%;
+  font-size: 0.8rem;
 }
 #legend-chefeimediato{
   display: none;
@@ -615,14 +560,18 @@ button {
 #c-concordo {
   background-color: white;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: baseline;
   width: 100%;
   gap: 0rem;
   padding: 0rem;
   padding-top: 2rem;
-  padding-left: 3.5rem;
+  padding-left: 2rem;
 
+}
+#carimbo-data-ciencia{
+  width: 50%;
+  text-align: left;
 }
 #linha-concordo{
   display: flex;
@@ -636,7 +585,7 @@ button {
 }
 
 #carimbo-concordo{
-  width: 50%;
+  width: 40%;
 }
 
 #c-justifique{
@@ -660,13 +609,16 @@ button {
   padding-left: 0rem;
 }
 #carimbo-chefe{
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 #input-nomechefe input{
   background-color: white !important;
 }
 #ass-comissao{
-  padding-top: 5rem;
+  padding-top: 4rem;
+}
+.d-label-input-ass{
+  font-size: 0.8rem;
 }
 
 input:-webkit-autofill,
