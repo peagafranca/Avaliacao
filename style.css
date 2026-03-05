@@ -2,11 +2,11 @@
 :root {
     /* Cores exatas do print enviado */
     --roxo-principal: #4a4488; 
-    --roxo-menu: #3c367a;
+    --roxo-menu: #5973c7;
     --laranja-destaque: #f37032;
     --laranja-hover: #d1561f;
-    --fundo-suave: #e2e3ee;
-    --fundo-2: #eff0f1;
+    --fundo-suave: #e8eefc;
+    --fundo-2: #f8fcff;
     --branco: #ffffff;
     --texto: #444444;
     --dourado: #f5b025;
@@ -111,7 +111,7 @@ legend {
 }
 .linha-label-input input {
   border-radius: 3px;
-  border: 1px solid rgb(33, 54, 117);
+  border: 1px solid rgb(109, 144, 252);
   font-size: 0.9rem;
   padding: 0.1rem;
 }
@@ -389,10 +389,10 @@ input[type="radio"]:disabled + label {
 }
 
 .tabela-pontuacao thead th {
-    background-color: var(--roxo-principal);
+    background-color: var(--roxo-menu);
     color: white;
     padding: 1rem;
-    border: 1px solid #3b62a7;
+    border: 1px solid #4c81dd;
 }
 
 .tabela-pontuacao td {
@@ -441,7 +441,7 @@ button {
 
 /* Efeito ao passar o mouse (Hover) */
 .botao:hover {
-  background: linear-gradient(135deg, #1a5aa2 0%, #1a7ba1 100%);
+  background: linear-gradient(135deg, #cf6016 0%, #e0c423 100%);
   box-shadow: 0 6px 20px rgba(26, 90, 162, 0.4);
 }
 
