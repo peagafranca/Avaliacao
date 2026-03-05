@@ -36,6 +36,7 @@ header {
   background: none !important;
   position: static !important; /* Remove qualquer comportamento de tela */
   margin-bottom: 10px !important;
+  border: none;
 }
 
 #cabecalho-principal {
