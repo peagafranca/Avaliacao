@@ -1,7 +1,7 @@
 /* PALETA DE CORES OFICIAL NOVA IGUAÇU */
 :root {
     /* Cores exatas do print enviado */
-    --roxo-principal: #4a4488; 
+    --roxo-principal: #453E7E; 
     --roxo-menu: #5973c7;
     --laranja-destaque: #f37032;
     --laranja-hover: #d1561f;
@@ -26,27 +26,50 @@ form {
 /* Cabeçalho*/
 /* Cabeçalho - Ajustado para o Gradiente Oficial */
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    background-color: var(--roxo-principal); /* Cor sólida conforme o print */
-    color: var(--branco);
-    padding: 1.5rem;
-    width: 100%;
-    margin-bottom: 0;
-    border-bottom: 4px solid white;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: var(--roxo-principal); 
+  color: var(--branco);
+  padding-top: 0.5rem;
+  padding-left: 2rem;
+  width: 100%;
+  margin-bottom: 0;
+  border-bottom: 4px solid white;
+  
+  position: fixed; /* Fixa o elemento na tela */
+    top: 0;          /* Alinha ao topo exato */
+    left: 0;         /* Alinha à esquerda */
+    z-index: 1000;   /* Garante que ele fique por cima de tudo */
+}
+#brasao-responsivo {
+  display: none;
+}
+#brasao-print{
+  display: none;
+}
+.container-header{
+  width: 80%;
+  display: flex;
+  gap: 1.3rem;
 }
 header h1{
-  font-size: 1rem;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 header h6 {
-  color: var(--roxo-principal); /* Destaque em dourado no subtitulo */
+  color: var(--roxo-principal); 
   font-weight: bold;
 }
 img {
-  width: 3rem;
+  width: auto;
+  height: 4.6rem;
+}
+
+body{
+  padding-top: 6.5rem;
 }
 
 main {

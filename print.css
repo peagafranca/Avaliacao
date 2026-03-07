@@ -44,6 +44,19 @@ header {
   margin: 0;
   padding: 0;     
 }
+.container-header{
+  width: 100%;
+  display: flex;
+  gap: 0rem;
+}
+ #brasao-style {
+  display: none;
+}
+#brasao-print {
+  display: flex;
+  width: 4rem;
+  height: auto;
+}
 
 h1 {
   font-size: 0.8rem;
@@ -62,6 +75,11 @@ header h6 {
 img{
   background-color: white;
   padding: 0;
+  width: auto;
+  height: 3.5rem;
+  margin: 0;
+
+  
 }
 form {
   padding:0;
