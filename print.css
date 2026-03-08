@@ -47,7 +47,7 @@ header {
 .container-header{
   width: 100%;
   display: flex;
-  gap: 0rem;
+  gap: 0.5rem;
   height: 4rem;
 }
  #brasao-style {
@@ -77,10 +77,9 @@ img{
   background-color: white;
   padding: 0;
   width: auto;
-  height: 3.5rem;
+  height: 4.5rem;
   margin: 0;
-
-  
+  padding-top: 0rem;
 }
 form {
   padding:0;
