@@ -48,6 +48,7 @@ header {
   width: 100%;
   display: flex;
   gap: 0rem;
+  height: 4rem;
 }
  #brasao-style {
   display: none;

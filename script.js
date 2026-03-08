@@ -196,6 +196,10 @@ function prepararImpressao() {
         }
         textarea.style.border = "none";
     });
+    
+    //Troca o cabeçalho de SECRETARIA para PREFEITURA
+    let trocar = document.getElementById("trocar");
+    trocar.innerHTML="PREFEITURA DA CIDADE DE NOVA IGUAÇU";
 
     window.print();
 }
