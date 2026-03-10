@@ -155,7 +155,11 @@ legend {
 #input-matriculaservidor{
   width: 80%;
   text-align: left;
-  font-size: 0.9rem
+  font-size: 1rem
+}
+#prefixo{
+  display: none;
+  font-size: 0.9rem;
 }
 #cargo50, #secretaria50, #lotacao50, #d-nome, #d-matricula{
   display: flex;
@@ -164,8 +168,6 @@ legend {
 #input-nomeservidor{
   font-size: 1.05rem
 }
-
-
 
 select {
   -webkit-appearance: none;  /* Remove no Chrome, Safari e Edge moderno */

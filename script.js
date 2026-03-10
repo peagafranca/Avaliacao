@@ -336,19 +336,22 @@ function extrairNucleo(matricula) {
 // Realiza a busca inteligente
 function buscarPorNucleo() {
     const campoMatricula = document.getElementById('input-matriculaservidor');
+    // Pega apenas os números digitados (o usuário digita os 6 dígitos)
     const apenasNumeros = campoMatricula.value.replace(/\D/g, "");
 
-    // O gatilho acontece ao digitar os 6 números centrais 
+    // O gatilho acontece ao atingir exatamente 6 dígitos
     if (apenasNumeros.length === 6) {
         const encontrado = baseServidores.find(s => {
-            const numerosBase = s.matricula.replace(/\D/g, "");
-            const nucleoBase = numerosBase.substring(2, 8); 
-            return nucleoBase === apenasNumeros;
+            // Ajustado para ler a chave "matricula" do seu JSON
+            const matriculaBase = s.matricula ? s.matricula.toString().trim() : ""; 
+            return matriculaBase === apenasNumeros;
         });
 
         if (encontrado) {
-            // Preenchimento dos dados do JSON 
-            campoMatricula.value = encontrado.matricula;
+            // 1. Coloca o prefixo "13/" seguido da matrícula encontrada
+            //campoMatricula.value = "13/" + encontrado.matricula;
+            
+            // 2. Preenche os campos usando as chaves em minúsculo do seu JSON
             document.getElementById('input-nomeservidor').value = encontrado.nome;
             document.getElementById('cargoservidor').value = encontrado.cargo;
             document.getElementById('secretaria').value = encontrado.secretaria;
@@ -358,19 +361,22 @@ function buscarPorNucleo() {
                 document.getElementById('dataexercicioservidor').value = encontrado.data_exercicio;
             }
 
-            // --- TRAVANDO APENAS OS CAMPOS ESTRUTURAIS ---
+            // --- TRAVANDO CAMPOS ESTRUTURAIS ---
             document.getElementById('input-nomeservidor').readOnly = true;
             document.getElementById('cargoservidor').readOnly = true;
             document.getElementById('dataexercicioservidor').readOnly = true;
             
             // --- LIBERADOS PARA EDIÇÃO (SECRETARIA E LOTAÇÃO) ---
-            document.getElementById('secretaria').disabled = false; // Permanece editável
-            document.getElementById('lotacaoservidor').readOnly = false; // Permanece editável
+            document.getElementById('secretaria').disabled = false;
+            document.getElementById('lotacaoservidor').readOnly = false;
 
             // Dispara atualizações automáticas 
             document.getElementById('secretaria').dispatchEvent(new Event('change'));
             if (typeof calcularDataAvaliacao === "function") calcularDataAvaliacao();
             if (typeof atualizarResumoFinal === "function") atualizarResumoFinal();
+            
+        } else {
+            console.log("Servidor não encontrado com a matrícula: " + apenasNumeros);
         }
     }
 }
