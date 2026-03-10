@@ -18,6 +18,7 @@
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 form {
     padding-top: 0; /* Reduza o padding-top já que o header não é mais absoluto */
 }
@@ -203,6 +204,18 @@ width: 80%;
   text-align: center;
 }
 
+select:disabled {
+    color: #000000 !important;
+    opacity: 1 !important; /* Remove a transparência padrão */
+    -webkit-text-fill-color: #000000 !important; /* Necessário para navegadores Safari/iOS */
+    background-color: var(--fundo-2);
+}
+
+input[readonly] {
+    color: #000000 !important;
+    background-color: var(--fundo-2);
+}
+
 /*Aqui já é a parte de escolha e data da avaliação*/
 /*Aqui já é a parte de escolha e data da avaliação*/
 /*Aqui já é a parte de escolha e data da avaliação*/
@@ -239,6 +252,7 @@ width: 80%;
   width: 50%;
   display: flex;
   justify-content: center;
+  background-color: var(--fundo-2);
 }
 #data-avaliacao input {
   width: 30%;

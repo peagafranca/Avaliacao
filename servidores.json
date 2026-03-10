@@ -1,0 +1,26 @@
+[
+  {
+    "matricula": "12/711.645-2",
+    "nome": "Phelipe Peixoto da Silva França",
+    "cargo": "Agente Administrativo",
+    "secretaria": "SEMAD",
+    "lotacao": "CADSMEP",
+    "data_exercicio": "2012-09-12"
+  },
+  {
+    "matricula": "11/700.000-0",
+    "nome": "RAFAEL DE OLIVEIRA LIMA",
+    "cargo": "AGENTE ADMINISTRATIVO",
+    "secretaria": "SEMAD",
+    "lotacao": "CADSMEP",
+    "data_exercicio": "2025-01-01"
+  },
+  {
+    "matricula": "10/711.111-9",
+    "nome": "ALAN PIMENTA",
+    "cargo": "PROFESSOR",
+    "secretaria": "SEMED",
+    "lotacao": "DIRETORIA DE RECURSOS HUMANOS",
+    "data_exercicio": "2026-12-29"
+  }
+]

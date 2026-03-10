@@ -17,6 +17,7 @@ function preencherDataHojeReal() {
     const mes = String(hoje.getMonth() + 1).padStart(2, '0');
     const ano = hoje.getFullYear();
     
+    // CRIANDO A VARIÁVEL QUE ESTAVA FALTANDO:
     const dataFormatada = `${dia}/${mes}/${ano}`;
     
     const el = document.getElementById('datadehoje');
@@ -295,7 +296,7 @@ function aplicarMascaraMatricula(idInput) {
     });
 }
 
-aplicarMascaraMatricula('input-matriculaservidor');
+// aplicarMascaraMatricula('input-matriculaservidor');
 aplicarMascaraMatricula('input-matriculachefe');
 
 window.onbeforeprint = function() {
@@ -309,3 +310,87 @@ qualAvaliacao.addEventListener('change', function() {
     const textoSelecionado = qualAvaliacao.options[qualAvaliacao.selectedIndex].text;
     displayH6.textContent = textoSelecionado;
 });
+
+/* --- NOVAS FUNCIONALIDADES: BUSCA POR NÚCLEO E LIMPEZA --- */
+
+let baseServidores = [];
+
+// Carrega o arquivo JSON da mesma pasta do site
+async function carregarBaseDeDados() {
+    try {
+        const resposta = await fetch('servidores.json');
+        if (!resposta.ok) throw new Error("Arquivo servidores.json não encontrado");
+        baseServidores = await resposta.json();
+        console.log("Base de servidores carregada com sucesso.");
+    } catch (erro) {
+        console.error("Erro ao carregar a base de dados:", erro);
+    }
+}
+
+// Extrai os 6 dígitos centrais (padrão RH Nova Iguaçu)
+function extrairNucleo(matricula) {
+    const numeros = matricula.replace(/\D/g, "");
+    return numeros.length >= 8 ? numeros.substring(2, 8) : numeros;
+}
+
+// Realiza a busca inteligente
+function buscarPorNucleo() {
+    const campoMatricula = document.getElementById('input-matriculaservidor');
+    const apenasNumeros = campoMatricula.value.replace(/\D/g, "");
+
+    // O gatilho acontece ao digitar os 6 números centrais 
+    if (apenasNumeros.length === 6) {
+        const encontrado = baseServidores.find(s => {
+            const numerosBase = s.matricula.replace(/\D/g, "");
+            const nucleoBase = numerosBase.substring(2, 8); 
+            return nucleoBase === apenasNumeros;
+        });
+
+        if (encontrado) {
+            // Preenchimento dos dados do JSON 
+            campoMatricula.value = encontrado.matricula;
+            document.getElementById('input-nomeservidor').value = encontrado.nome;
+            document.getElementById('cargoservidor').value = encontrado.cargo;
+            document.getElementById('secretaria').value = encontrado.secretaria;
+            document.getElementById('lotacaoservidor').value = encontrado.lotacao;
+            
+            if (encontrado.data_exercicio) {
+                document.getElementById('dataexercicioservidor').value = encontrado.data_exercicio;
+            }
+
+            // --- TRAVANDO APENAS OS CAMPOS ESTRUTURAIS ---
+            document.getElementById('input-nomeservidor').readOnly = true;
+            document.getElementById('cargoservidor').readOnly = true;
+            document.getElementById('dataexercicioservidor').readOnly = true;
+            
+            // --- LIBERADOS PARA EDIÇÃO (SECRETARIA E LOTAÇÃO) ---
+            document.getElementById('secretaria').disabled = false; // Permanece editável
+            document.getElementById('lotacaoservidor').readOnly = false; // Permanece editável
+
+            // Dispara atualizações automáticas 
+            document.getElementById('secretaria').dispatchEvent(new Event('change'));
+            if (typeof calcularDataAvaliacao === "function") calcularDataAvaliacao();
+            if (typeof atualizarResumoFinal === "function") atualizarResumoFinal();
+        }
+    }
+}
+
+// Função para o botão "Nova Avaliação"
+function limparTudo() {
+    if (confirm("Deseja zerar o formulário para uma nova avaliação?")) {
+        document.querySelector('form').reset();
+        localStorage.removeItem('progresso_cadsmep'); // Remove o que foi salvo no navegador
+        if (typeof atualizarResumoFinal === "function") atualizarResumoFinal();
+        window.scrollTo(0, 0);
+        alert("Formulário limpo!");
+    }
+}
+
+/* --- ATUALIZAÇÃO DOS EVENTOS --- */
+window.addEventListener('load', () => {
+    carregarBaseDeDados(); // Carrega o JSON
+    preencherDataHojeReal(); // Mantém sua função original de data 
+});
+
+// Adiciona o monitor de digitação no campo de matrícula
+document.getElementById('input-matriculaservidor').addEventListener('input', buscarPorNucleo);

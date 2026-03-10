@@ -44,6 +44,18 @@
             <legend>Dados de identificação do Servidor Avaliado</legend>
 
                 <div class="b-dados-servidor">
+                    
+                    <div class="linha-label-input" id="linha-matricula">
+
+                        <div class="d-label-input" id="d-matricula">
+                            <label for="input-matriculaservidor">Matrícula: </label>
+                            <input  type="text" 
+                                    name="matriculaservidor" 
+                                    id="input-matriculaservidor"
+                                    maxlength="12">
+                        </div>
+
+                    </div>
 
                     <div class="linha-label-input" id="linha-nome">
 
@@ -57,17 +69,6 @@
 
                     </div>
                     
-                    <div class="linha-label-input" id="linha-matricula">
-
-                        <div class="d-label-input" id="d-matricula">
-                            <label for="input-matriculaservidor">Matrícula: </label>
-                            <input  type="text" 
-                                    name="matriculaservidor" 
-                                    id="input-matriculaservidor"
-                                    maxlength="12">
-                        </div>
-
-                    </div>
 
 
                     <div class="linha-label-input" id="linha-cargo">
@@ -86,13 +87,13 @@
                                 <label for="secretariaservidor">Secretaria: </label>
                                 <select name="secretaria" id="secretaria" onchange="atualizarResumoFinal()"> 
                                 <option value="" disabled selected hidden>Selecione...</option>
-                                <option value="SEMED">Secretaria Municipal de Educação</option>
-                                <option value="SEMAD">Secretaria Municipal de Administração</option>
-                                <option value="SEMOP">Secretaria Municipal de Ordem Pública</option>
-                                <option value="SEMAS">Secretaria Municipal de Assistência Social</option>
-                                <option value="SEMUS">Secretaria Municipal de Saúde</option>
-                                <option value="SEMAM">Secretaria Municipal de Agricultura e Meio Ambiente</option>
-                                <option value="SEMEF">Secretaria Municipal de Fazenda e Fiscalização Tributária</option>
+                                <option value="SEMED">SECRETARIA MUNICIPAL DE EDUCAÇÃO</option>
+                                <option value="SEMAD">SECRETARIA MUNICIPAL DE ADMINISTRAÇÃO</option>
+                                <option value="SEMOP">SECRETARIA MUNICIPAL DE ORDEM PÚBLICA</option>
+                                <option value="SEMAS">SECRETARIA MUNICIPAL DE ASSISTÊNCIA SOCIAL</option>
+                                <option value="SEMUS">SECRETARIA MUNICIPAL DE SAÚDE</option>
+                                <option value="SEMAM">SECRETARIA MUNICIPAL DE AGRICULTURA E MEIO AMBIENTE</option>
+                                <option value="SEMEF">SECRETARIA MUNICIPAL DE FAZENDA E FISCALIZAÇÃO TRIBUTÁRIA</option>
                             </select>
                         </div>
 
