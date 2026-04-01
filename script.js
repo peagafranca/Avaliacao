@@ -244,7 +244,7 @@ const DADOS_SECRETARIAS = {
     },
     'SEMAM': {
         membro: { nome: 'Tânia Mauricea Costa dos Santos', mat: 'Matrícula 12/684.273-6', cargo: 'Membro da CADSMEP - SEMAM' },
-        secretario: { nome: 'Caio Carneiro Campos', mat: 'Matrícula 60/736.699-0', cargo: 'Secretário Municipal de Agricultura e Meio Ambiente' }
+        secretario: { nome: 'Pedro Henrique de Oliveira Barreto', mat: 'Matrícula 60/738.237', cargo: 'Secretário Municipal de Agricultura e Meio Ambiente' }
     },
     'SEMEF': {
         membro: { nome: ' ', mat: 'Matrícula  ', cargo: 'Membro da CADSMEP - SEMEF' },
