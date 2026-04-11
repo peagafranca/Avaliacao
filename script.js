@@ -364,7 +364,7 @@ function buscarPorNucleo() {
             // --- TRAVANDO CAMPOS ESTRUTURAIS ---
             document.getElementById('input-nomeservidor').readOnly = true;
             document.getElementById('cargoservidor').readOnly = true;
-            document.getElementById('dataexercicioservidor').readOnly = true;
+            document.getElementById('dataexercicioservidor').readOnly = false;
             
             // --- LIBERADOS PARA EDIÇÃO (SECRETARIA E LOTAÇÃO) ---
             document.getElementById('secretaria').disabled = false;
