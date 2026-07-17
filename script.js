@@ -239,15 +239,27 @@ const DADOS_SECRETARIAS = {
         secretario: { nome: 'Elaine Medeiros Fonseca da Silva', mat: 'Matrícula 60/734.021-9', cargo: 'Secretária Municipal de Assistência Social' }
     },
     'SEMUS': {
-        membro: { nome: 'Denise Evangelista da Silva', mat: 'Matrícula 10/690.340-5', cargo: 'Membro da CADSMEP - SEMUS' },
+        membro: { nome: 'Rodrigo Ramacciotti Rasmussen', mat: 'Matrícula 11/715.386', cargo: 'Membro da CADSMEP - SEMUS' },
         secretario: { nome: 'Luiz Carlos Nobre Cavalcanti', mat: 'Matrícula 60/734.016-9', cargo: 'Secretário Municipal de Saúde' }
     },
     'SEMAM': {
         membro: { nome: 'Tânia Mauricea Costa dos Santos', mat: 'Matrícula 12/684.273-6', cargo: 'Membro da CADSMEP - SEMAM' },
         secretario: { nome: 'Pedro Henrique de Oliveira Barreto', mat: 'Matrícula 60/738.237', cargo: 'Secretário Municipal de Agricultura e Meio Ambiente' }
     },
+    'SEMUG': {
+        membro: { nome: 'Marli Martins Mendes Mattos', mat: 'Matrícula 11/068.511', cargo: 'Membro da CADSMEP - SEMUG' },
+        secretario: { nome: 'Marco Antônio Barros Dias Junior', mat: 'Matrícula 60/734.314', cargo: 'Secretário Municipal de Governo' }
+    },
+    'SEMTMU': {
+        membro: { nome: '  ', mat: 'Matrícula  ', cargo: 'Membro da CADSMEP - SEMTMU' },
+        secretario: { nome: 'Leonardo Bastos Callijão', mat: 'Matrícula 734.289', cargo: 'Secretário Municipal de Transporte, Trânsito e Mobilidade Urbana' }
+    },
+    'SEMDETTUR': {
+        membro: { nome: '  ', mat: 'Matrícula  ', cargo: 'Membro da CADSMEP - SEMDETTUR' },
+        secretario: { nome: 'Mário Pereira Lopes', mat: 'Matrícula 60/734.017', cargo: 'Secretário Municipal de Desenvolvimento Econômico, Trabalho e Turismo' }
+    },
     'SEMEF': {
-        membro: { nome: ' ', mat: 'Matrícula  ', cargo: 'Membro da CADSMEP - SEMEF' },
+        membro: { nome: 'João Carlos de Moraes', mat: 'Matrícula 60/734.048-2', cargo: 'Membro da CADSMEP - SEMEF' },
         secretario: { nome: 'Evandro Gonçalves de Almeida', mat: 'Matrícula 60/734.018-5', cargo: 'Secretário Municipal de Fazenda e Fiscalização Tributária' }
     }
 };
