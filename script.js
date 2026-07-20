@@ -360,11 +360,10 @@ function buscarPorNucleo() {
         });
 
         if (encontrado) {
-            // 1. Coloca o prefixo "13/" seguido da matrícula encontrada
-            //campoMatricula.value = "13/" + encontrado.matricula;
-            
+                       
             // 2. Preenche os campos usando as chaves em minúsculo do seu JSON
             document.getElementById('input-nomeservidor').value = encontrado.nome;
+            atualizarAssinaturaServidor();
             document.getElementById('cargoservidor').value = encontrado.cargo;
             document.getElementById('secretaria').value = encontrado.secretaria;
             document.getElementById('lotacaoservidor').value = encontrado.lotacao;
@@ -412,3 +411,17 @@ window.addEventListener('load', () => {
 
 // Adiciona o monitor de digitação no campo de matrícula
 document.getElementById('input-matriculaservidor').addEventListener('input', buscarPorNucleo);
+
+// Atualiza o nome do servidor avaliado no bloco de assinatura correspondente
+function atualizarAssinaturaServidor() {
+    const nomeServidorInput = document.getElementById('input-nomeservidor');
+    const displayAssServidor = document.getElementById('d-servidor');
+    
+    if (displayAssServidor) {
+        const nomeValor = nomeServidorInput.value.trim();
+        // Se estiver preenchido, mostra o nome; caso contrário, deixa em branco
+        displayAssServidor.innerText = nomeValor !== "" ? nomeValor : "";
+    }
+}
+document.getElementById('input-nomeservidor').addEventListener('input', atualizarAssinaturaServidor);
+
