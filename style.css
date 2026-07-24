@@ -231,16 +231,17 @@ input[readonly] {
   flex-direction: row;
     background-color: var(--fundo-2);
     border-radius: 3px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 0.2rem 0.3rem 0;
-    padding: 0.5rem;
-    width: 70%;
+    margin: -0.5rem;
+    padding: 2rem;
+    width: 80%;
     align-items: center;
-    justify-content: center;
 }
 #linha-avaliacao{
   display: flex;
-  width: 80%;
+  width: 50%;
 }
 #avaliacao-num50{
   width: 50%;
@@ -250,7 +251,8 @@ input[readonly] {
 }
 #avaliacao-num50 select{
   text-align: center;
-  width: 30%;
+  width: 35%;
+  font-weight: bold;
 }
 #data-avaliacao{
   width: 50%;
@@ -259,8 +261,9 @@ input[readonly] {
   background-color: var(--fundo-2);
 }
 #data-avaliacao input {
-  width: 30%;
+  width: 50%;
   text-align: center;
+  font-weight: bold;
 }
 
 #label-dataavaliacao{
@@ -272,7 +275,6 @@ input[readonly] {
   width: auto;
   padding-right: 0.5rem;
 }
-
 
 .c-nivel{
   display: flex;
