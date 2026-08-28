@@ -1,7 +1,7 @@
 @media print {
 
 *{ 
-  font-size: 0.89rem;
+  font-size: 0.88rem;
   margin: 0;
   box-shadow: none !important;
   text-shadow: none !important;
@@ -207,6 +207,12 @@ select {
     border-radius: 0;
     font-size: 1rem;
 }
+
+#dataexercicio50 input {
+  width: 30%;
+  text-align: left;
+}
+
 
 
 .b-nivel{
