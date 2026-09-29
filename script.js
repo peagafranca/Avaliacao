@@ -222,45 +222,53 @@ function formatarDataBR(dataISO) {
 }
 
 const DADOS_SECRETARIAS = {
-    'SEMED': {
-        membro: { nome: 'Alan Pimenta', mat: 'Matrícula 10/711.784-9', cargo: 'Membro da CADSMEP - SEMED' },
-        secretario: { nome: 'Bruna Martins de Oliveira Sagawe', mat: 'Matrícula 18/731.802-5', cargo: 'Superintendente de Gestão de Pessoal' }
-    },
-    'SEMAD': {
+    'SECRETARIA MUNICIPAL DE ADMINISTRACAO': {
         membro: { nome: 'Maria da Paz Silva Oliveira', mat: 'Matrícula 11/687.990-2', cargo: 'Membro da CADSMEP - SEMAD' },
         secretario: { nome: 'Paulo Sergio da Silva Monteiro', mat: 'Matrícula 11/692.135-7', cargo: 'Secretário Municipal de Administração' }
     },
-    'SEMOP': {
-        membro: { nome: 'Ronaldo Ramos de Carvalho', mat: 'Matrícula 34/727.441-8', cargo: 'Membro da CADSMEP - SEMOP' },
-        secretario: { nome: 'Fernando Vieira Bastos', mat: 'Matrícula 34/734.009-4', cargo: 'Secretário Municipal de Ordem Pública' }
-    },
-    'SEMAS': {
-        membro: { nome: 'Pricilla Pereira Nunes', mat: 'Matrícula 11/701.199-2', cargo: 'Membro da CADSMEP - SEMAS' },
-        secretario: { nome: 'Elaine Medeiros Fonseca da Silva', mat: 'Matrícula 60/734.021-9', cargo: 'Secretária Municipal de Assistência Social' }
-    },
-    'SEMUS': {
-        membro: { nome: 'Rodrigo Ramacciotti Rasmussen', mat: 'Matrícula 11/715.386', cargo: 'Membro da CADSMEP - SEMUS' },
-        secretario: { nome: 'Luiz Carlos Nobre Cavalcanti', mat: 'Matrícula 60/734.016-9', cargo: 'Secretário Municipal de Saúde' }
-    },
-    'SEMAM': {
+    'SECRETARIA MUNICIPAL DE AGRICULTURA E MEIO AMBIENTE': {
         membro: { nome: 'Tânia Mauricea Costa dos Santos', mat: 'Matrícula 12/684.273-6', cargo: 'Membro da CADSMEP - SEMAM' },
         secretario: { nome: 'Pedro Henrique de Oliveira Barreto', mat: 'Matrícula 60/738.237', cargo: 'Secretário Municipal de Agricultura e Meio Ambiente' }
     },
-    'SEMUG': {
+    'SECRETARIA MUNICIPAL DE ASSISTENCIA SOCIAL': {
+        membro: { nome: 'Pricilla Pereira Nunes', mat: 'Matrícula 11/701.199-2', cargo: 'Membro da CADSMEP - SEMAS' },
+        secretario: { nome: 'Elaine Medeiros Fonseca da Silva', mat: 'Matrícula 60/734.021-9', cargo: 'Secretária Municipal de Assistência Social' }
+    },
+    'SECRETARIA MUNICIPAL ATENDIMENTO GERAL E OUVIDORIA': {
+        membro: { nome: ' ', mat: 'Matrícula  ', cargo: 'Membro da CADSMEP - SEMAGO' },
+        secretario: { nome: 'Ricardo Gomes Rosa ', mat: 'Matrícula  60/734170', cargo: 'Secretário Municipal de Atendimento Geral e Ordem Pública' }
+    },
+    'SECRETARIA MUNICIPAL DE CONTROLE GERAL': {
+        membro: { nome: ' ', mat: 'Matrícula  ', cargo: 'Membro da CADSMEP - SEMCOGER' },
+        secretario: { nome: 'Rafael Martins Gomes', mat: 'Matrícula 60/734.013 ', cargo: 'Secretário Municipal de Controle Geral' }
+    },
+    'SECRETARIA MUNICIPAL DE DESENV. EC. TRABALHO E TURISMO': {
+        membro: { nome: '  ', mat: 'Matrícula  ', cargo: 'Membro da CADSMEP - SEMDETTUR' },
+        secretario: { nome: 'Mário Pereira Lopes', mat: 'Matrícula 60/734.017', cargo: 'Secretário Municipal de Desenvolvimento Econômico, Trabalho e Turismo' }
+    },
+    'SECRETARIA MUNICIPAL DE EDUCACAO': {
+        membro: { nome: 'Alan Pimenta', mat: 'Matrícula 10/711.784-9', cargo: 'Membro da CADSMEP - SEMED' },
+        secretario: { nome: 'Bruna Martins de Oliveira Sagawe', mat: 'Matrícula 18/731.802-5', cargo: 'Superintendente de Gestão de Pessoal' }
+    },
+    'SECRETARIA MUNICIPAL DE FAZENDA E FISC TRIBUTARIA': {
+        membro: { nome: 'João Carlos de Moraes', mat: 'Matrícula 60/734.048-2', cargo: 'Membro da CADSMEP - SEMEF' },
+        secretario: { nome: 'Evandro Gonçalves de Almeida', mat: 'Matrícula 60/734.018-5', cargo: 'Secretário Municipal de Fazenda e Fiscalização Tributária' }
+    },
+    'SESECRETARIA MUNICIPAL DE GOVERNO': {
         membro: { nome: 'Marli Martins Mendes Mattos', mat: 'Matrícula 11/068.511', cargo: 'Membro da CADSMEP - SEMUG' },
         secretario: { nome: 'Marco Antônio Barros Dias Junior', mat: 'Matrícula 60/734.314', cargo: 'Secretário Municipal de Governo' }
+    },
+    'SECRETARIA MUNICIPAL DE ORDEM PUBLICA': {
+        membro: { nome: 'Ronaldo Ramos de Carvalho', mat: 'Matrícula 34/727.441-8', cargo: 'Membro da CADSMEP - SEMOP' },
+        secretario: { nome: 'Fernando Vieira Bastos', mat: 'Matrícula 34/734.009-4', cargo: 'Secretário Municipal de Ordem Pública' }
+    },
+    'SECRETARIA MUNICIPAL DE SAUDE': {
+        membro: { nome: 'Rodrigo Ramacciotti Rasmussen', mat: 'Matrícula 11/715.386', cargo: 'Membro da CADSMEP - SEMUS' },
+        secretario: { nome: 'Luiz Carlos Nobre Cavalcanti', mat: 'Matrícula 60/734.016-9', cargo: 'Secretário Municipal de Saúde' }
     },
     'SEMTMU': {
         membro: { nome: '  ', mat: 'Matrícula  ', cargo: 'Membro da CADSMEP - SEMTMU' },
         secretario: { nome: 'Leonardo Bastos Callijão', mat: 'Matrícula 734.289', cargo: 'Secretário Municipal de Transporte, Trânsito e Mobilidade Urbana' }
-    },
-    'SEMDETTUR': {
-        membro: { nome: '  ', mat: 'Matrícula  ', cargo: 'Membro da CADSMEP - SEMDETTUR' },
-        secretario: { nome: 'Mário Pereira Lopes', mat: 'Matrícula 60/734.017', cargo: 'Secretário Municipal de Desenvolvimento Econômico, Trabalho e Turismo' }
-    },
-    'SEMEF': {
-        membro: { nome: 'João Carlos de Moraes', mat: 'Matrícula 60/734.048-2', cargo: 'Membro da CADSMEP - SEMEF' },
-        secretario: { nome: 'Evandro Gonçalves de Almeida', mat: 'Matrícula 60/734.018-5', cargo: 'Secretário Municipal de Fazenda e Fiscalização Tributária' }
     }
 };
 
