@@ -32822,5 +32822,237 @@
     "data_exercicio": "",
     "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
     "lotacao": "GABINETE DO SECRETARIO"
+  },
+  {
+    "matricula": 711770,
+    "nome": "TATIANE RODRIGUES SOUZA",
+    "cargo": "PROFESSOR II",
+    "data_exercicio": "2012-09-21",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "E. M. PROF. PAULO FREIRE"
+  },
+  {
+    "matricula": 711564,
+    "nome": "GISELLE GOMES DA COSTA",
+    "cargo": "PROFESSOR II - ATEND. EDUC. ESP.",
+    "data_exercicio": "2012-09-27",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "E. M. SOUZA E MELLO"
+  },
+  {
+    "matricula": 711700,
+    "nome": "MARIA CRISTINA SANTOS GOMES",
+    "cargo": "AUXILIAR ADMINISTRATIVO",
+    "data_exercicio": "2012-09-27",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "E. M. MENINOS DE DEUS"
+  },
+  {
+    "matricula": 711709,
+    "nome": "SIMONE REZENDE DE MORAIS C DA COSTA",
+    "cargo": "PROFESSOR I - ITINERANTE EDUC. ESP.",
+    "data_exercicio": "2012-09-27",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "E. M. PROF. AIME CARREIRO FIGUEIREDO"
+  },
+  {
+    "matricula": 713832,
+    "nome": "BRUNA SILVA DOS SANTOS",
+    "cargo": "ASSISTENTE SOCIAL II",
+    "data_exercicio": "2014-01-06",
+    "secretaria": "SECRETARIA MUNICIPAL DE ASSISTENCIA SOCIAL",
+    "lotacao": "PROTECAO ESPECIA - CREAS"
+  },
+  {
+    "matricula": 714619,
+    "nome": "MICHELI DA SILVA FARIA",
+    "cargo": "PROFESSOR II",
+    "data_exercicio": "2015-04-07",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "E. M. PROF. THEREZINHA DA SILVA XAVIER"
+  },
+  {
+    "matricula": 715414,
+    "nome": "JAQUELINE DE MORAIS LEMOS",
+    "cargo": "AGENTE ADMINISTRATIVO",
+    "data_exercicio": "2016-09-21",
+    "secretaria": "SECRETARIA MUNICIPAL DE PLANEJ, FINANÇAS E GESTÃO",
+    "lotacao": "GABINETE"
+  },
+  {
+    "matricula": 715993,
+    "nome": "ANGELICA DOS SANTOS MARQUES BARBOSA",
+    "cargo": "PROFESSOR II",
+    "data_exercicio": "2017-03-29",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "E. M. PROF. ENILZA BARROS S. CHICONELLI"
+  },
+  {
+    "matricula": 731903,
+    "nome": "CIBELLY BARBOSA DE ARAUJO",
+    "cargo": "PROFESSOR II",
+    "data_exercicio": "2024-07-29",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "ESC. MUN. PROF.CREUZA ALARCAO SOBRAL"
+  },
+  {
+    "matricula": 732201,
+    "nome": "DAIANA MENDES DOS SANTOS",
+    "cargo": "PROFESSOR III",
+    "data_exercicio": "2024-07-30",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "CRECHE MUNIC. DENISE FERNANDES DA SILVA PAULINO"
+  },
+  {
+    "matricula": 732272,
+    "nome": "THAMIRES VELARDO DA SILVA CORREA",
+    "cargo": "PROFESSOR III",
+    "data_exercicio": "2024-07-30",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "E. M. PROFESSOR EMÍLIO LUIZ PEDROSO ARAÚJO"
+  },
+  {
+    "matricula": 732251,
+    "nome": "FERNANDA DA SILVA LIRA",
+    "cargo": "PROFESSOR II - LIBRAS",
+    "data_exercicio": "2024-08-06",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "E. M. PROF. LUCIA VIANA CAPELI"
+  },
+  {
+    "matricula": 732532,
+    "nome": "DAIANE ROSA ROCHA GOMES MARCOS",
+    "cargo": "PROFESSOR II - ATEND. EDUC. ESP.",
+    "data_exercicio": "2024-08-06",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "E. M. PROF. HAULER DA SILVA FERREIRA"
+  },
+  {
+    "matricula": 732275,
+    "nome": "MARIANA DAS CHAGAS DOS SANTOS BRAGANTE",
+    "cargo": "ESTIMULADOR MATERNO INFANTIL II",
+    "data_exercicio": "2024-08-16",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "CENT MUN DE EDUC PAUL HARRIS"
+  },
+  {
+    "matricula": 732828,
+    "nome": "LAIRA CRISTINA DE DEUS CORECHA",
+    "cargo": "ESTIMULADOR MATERNO INFANTIL II",
+    "data_exercicio": "2024-08-16",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "E. M. PERA FLOR"
+  },
+  {
+    "matricula": 732634,
+    "nome": "MICHELE SILVA DE SOUZA RIOS",
+    "cargo": "AGENTE DE APOIO A INCLUSAO",
+    "data_exercicio": "2024-08-20",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "E. M. MONTEIRO LOBATO"
+  },
+  {
+    "matricula": 732495,
+    "nome": "DEBORA PERENZIN MARQUES DE PAULA",
+    "cargo": "ASSISTENTE SOCIAL III",
+    "data_exercicio": "2024-08-23",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "DEPARTAMENTO DE EDUCACAO"
+  },
+  {
+    "matricula": 733353,
+    "nome": "PAMELA RODRIGUES DE OLIVEIRA SILVA",
+    "cargo": "PROFESSOR II",
+    "data_exercicio": "2024-10-03",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "E.M JOSE PACÍFICO"
+  },
+  {
+    "matricula": 733589,
+    "nome": "ARLENE SAMPAIO DE SOUZA",
+    "cargo": "SECRETARIO ESCOLAR III",
+    "data_exercicio": "2024-11-01",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "E. M. PROF. AMAZOR VIEIRA BORGES"
+  },
+  {
+    "matricula": 735194,
+    "nome": "OSEIAS MARTINS MAGALHAES",
+    "cargo": "PROFESSOR I - CIENCIAS",
+    "data_exercicio": "2025-04-10",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "E. M. LUIZ DE LEMOS"
+  },
+  {
+    "matricula": 735763,
+    "nome": "VANESSA FERRAZ MOURAO",
+    "cargo": "PROFESSOR II",
+    "data_exercicio": "2025-05-21",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "E. M. MANOEL JOAO GONCALVES"
+  },
+  {
+    "matricula": 736074,
+    "nome": "LETICIA FELIX SIEBRA",
+    "cargo": "PROFESSOR II - ATEND. EDUC. ESP.",
+    "data_exercicio": "2025-05-21",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "E. M. MARCILIO DIAS"
+  },
+  {
+    "matricula": 735803,
+    "nome": "ALESSANDRA NAVARRO BORGES EDRA",
+    "cargo": "PROFESSOR II",
+    "data_exercicio": "2025-06-06",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "E.M. EDIVALDO BARROS DE OLIVEIRA"
+  },
+  {
+    "matricula": 736039,
+    "nome": "WELBER MIRANDA SILVA",
+    "cargo": "ORIENTADOR PEDAGOGICO III",
+    "data_exercicio": "2025-07-09",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "E. M. WALFREDO DA SILVA LESSA"
+  },
+  {
+    "matricula": 736184,
+    "nome": "RAPHAEL GREI BARROCO",
+    "cargo": "PROFESSOR I - LINGUA ESTRANG. (INGLES)",
+    "data_exercicio": "2025-07-28",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "ESCOLA MUNICIPAL PROFESSORA ELIANA DE SOUZA PAPALEO MOURA"
+  },
+  {
+    "matricula": 736433,
+    "nome": "CAROLINA CHARLES DA SILVA",
+    "cargo": "PROFESSOR II",
+    "data_exercicio": "2025-08-11",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "E. M. PROF. LEONARDO C. DE ALMEIDA"
+  },
+  {
+    "matricula": 737670,
+    "nome": "MARINA MACHADO NOVAES DA SILVA",
+    "cargo": "PROFESSOR II",
+    "data_exercicio": "2025-11-06",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "E.M JOSE PACÍFICO"
+  },
+  {
+    "matricula": 737756,
+    "nome": "NUBIA SAMPAIO GRACA",
+    "cargo": "ORIENTADOR EDUCACIONAL III",
+    "data_exercicio": "2025-12-15",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "E. M. MARECHAL MASCARENHAS DE MORAES"
+  },
+  {
+    "matricula": 737792,
+    "nome": "GISLANE NOBLAT DA SILVA SANTOS ALMEIDA",
+    "cargo": "ORIENTADOR PEDAGOGICO III",
+    "data_exercicio": "2026-01-30",
+    "secretaria": "SECRETARIA MUNICIPAL DE EDUCACAO",
+    "lotacao": "CRECHE MUNICIPAL PROFESSORA ANA CLÁUDIA MARTINS DE SOUZA"
   }
 ]
