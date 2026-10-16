@@ -40,6 +40,69 @@
 
 <form onsubmit="event.preventDefault(); prepararImpressao();">
     <main>
+
+<!-- Bloco Retrátil de Instruções (Oculto na Impressão) -->
+<section class="instrucoes-container no-print">
+  <details class="instrucoes-card">
+    <summary class="instrucoes-header">
+      <span class="instrucoes-titulo">
+        <svg class="instrucoes-icone" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+        </svg>
+        Instruções e Fluxo de Preenchimento (Clique para ver o passo a passo)
+      </span>
+      <span class="instrucoes-badge">Ajuda</span>
+    </summary>
+
+    <div class="instrucoes-corpo">
+      <div class="passos-grid">
+        <div class="passo-item">
+          <div class="passo-numero">1</div>
+          <div class="passo-conteudo">
+            <strong>Identificação</strong>
+            <p>Informe apenas os 6 dígitos após o prefixo da matrícula para autocompletar os dados.<br><br> 
+                Ex: 13/123.456-7, preencha apenas <b>123456</b>. <br><br>
+                Ao escolher o número da avaliação, conferir se a <em>Data da Avaliação</em> corresponde ao período avaliado.</p>
+          </div>
+        </div>
+
+        <div class="passo-item">
+          <div class="passo-numero">2</div>
+          <div class="passo-conteudo">
+            <strong>Atribuição de Notas</strong>
+            <p>A chefia imediata deve pontuar todos os quesitos com os níveis 1, 3, 5 ou 7. <br><br>
+                Quesitos não preenchidos impedem a geração da avaliação. <br><br>
+                O resultado APTO ou INAPTO é calculado automaticamente em <em>Resumo da avaliação por quesitos</em> </p>
+          </div>
+        </div>
+
+        <div class="passo-item">
+          <div class="passo-numero">3</div>
+          <div class="passo-conteudo">
+            <strong>Informações Complementares</strong>
+            <p>Quaisquer observações sobre o servidor, como afastamentos, relotação, 
+                exercício de cargo em comissão ou função gratificada devem ser apontadas. <br><br>
+                Anexar junto a avaliação cópia de documento ou publicação referente à observação.</p>
+          </div>
+        </div>
+
+        <div class="passo-item">
+          <div class="passo-numero">4</div>
+          <div class="passo-conteudo">
+            <strong>Impressão e Ciência</strong>
+            <p>Clique em <em>Gerar Avaliação</em> para imprimir ou salvar em PDF para assinar digitalmente. <br><br>
+                Colha a assinatura física ou digital da chefia imediata, do Secretário da pasta e a ciência formal do servidor antes do envio ao RH da sua Secretaria.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="instrucoes-alerta">
+        ⚠️ <strong>Atenção:</strong> Não deixe quesitos sem nota para não afetar o cálculo ponderado final. Dúvidas: <code>cadsmep.semat@novaiguacu.rj.gov.br</code>.
+      </div>
+    </div>
+  </details>
+</section>
+
         <fieldset id="a-dados-servidor">
             <legend>Dados de identificação do Servidor Avaliado</legend>
 
@@ -72,8 +135,6 @@
 
                     </div>
                     
-
-
                     <div class="linha-label-input" id="linha-cargo">
 
                         <div class="d-label-input" id="cargo50">

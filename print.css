@@ -1,5 +1,11 @@
 @media print {
 
+  .no-print,
+  .instrucoes-container {
+    display: none !important;
+  }
+
+  
 *{ 
   font-size: 0.88rem;
   margin: 0;
