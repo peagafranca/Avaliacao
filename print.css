@@ -4,7 +4,6 @@
   .instrucoes-container {
     display: none !important;
   }
-
   
 *{ 
   font-size: 0.88rem;
@@ -97,7 +96,7 @@ form {
 main {
   gap: 0;
   padding: 0;
-        margin: 0;
+  margin: 0;
 }
 
 legend {
@@ -123,13 +122,12 @@ legend {
   background-color: white !important;
   color: black;
   border: 0;
-    width: 100% !important;
-    padding: 0;
-    margin: 0;
-    
-    padding-bottom: 0;
-    padding-top: 0.1rem;
-    gap: 0;
+  width: 100% !important;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 0;
+  padding-top: 0.1rem;
+  gap: 0;
 }
 .a-tabela{
   page-break-before: always;
@@ -138,13 +136,13 @@ legend {
 
 .b-dados-servidor {
   display: flex;
-    padding: 0;
-    gap: 0;
-    color: black;
-    width: 100%;
-    margin: 0;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
+  padding: 0;
+  gap: 0;
+  color: black;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
 }
 
 /*Parte de preenchimento do servidor*/
@@ -186,11 +184,11 @@ select {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-    background-color: white;
-    width: 80%;
-    margin: 0;
-    padding: 0;
-    padding-bottom: 0.1rem;
+  background-color: white;
+  width: 80%;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0.1rem;
 }
 
 .linha-label-input {
