@@ -272,9 +272,14 @@ const DADOS_SECRETARIAS = {
     }
 };
 
-const displayNomeMembro = document.getElementById('d-nome-membro');
-const displayMatMembro = document.getElementById('d-matricula-membro');
-const displayCargoMembro = document.getElementById('d-cargo-membro');
+// const displayNomeMembro = document.getElementById('d-nome-membro');
+// const displayMatMembro = document.getElementById('d-matricula-membro');
+// const displayCargoMembro = document.getElementById('d-cargo-membro');
+// const displayNomeSec = document.getElementById('d-nome-secretario');
+// const displayMatSec = document.getElementById('d-matricula-secretario');
+// const displayCargoSec = document.getElementById('d-cargo-secretario');
+// const displayDataSec = document.getElementById('exibir-data2');
+
 const displayNomeSec = document.getElementById('d-nome-secretario');
 const displayMatSec = document.getElementById('d-matricula-secretario');
 const displayCargoSec = document.getElementById('d-cargo-secretario');
@@ -284,16 +289,29 @@ document.getElementById('secretaria').addEventListener('change', function() {
     const selecao = this.value;
     const dados = DADOS_SECRETARIAS[selecao];
 
-    if (dados) {
-        displayNomeMembro.innerText = dados.membro.nome;
-        displayMatMembro.innerText = dados.membro.mat;
-        displayCargoMembro.innerText = dados.membro.cargo;
-        displayNomeSec.innerText = dados.secretario.nome;
-        displayMatSec.innerText = dados.secretario.mat;
-        displayCargoSec.innerText = dados.secretario.cargo;
+//    if (dados) {
+  //      displayNomeMembro.innerText = dados.membro.nome;
+    //    displayMatMembro.innerText = dados.membro.mat;
+      //  displayCargoMembro.innerText = dados.membro.cargo;
+        //displayNomeSec.innerText = dados.secretario.nome;
+        //displayMatSec.innerText = dados.secretario.mat;
+        //displayCargoSec.innerText = dados.secretario.cargo;
+        
+        //const dataPrincipal = document.getElementById('dataavaliacao').value;
+        //if (dataPrincipal) {
+        //    const [ano, mes, dia] = dataPrincipal.split('-');
+        //    displayDataSec.innerText = `${dia}/${mes}/${ano}`;
+        //}
+    //}
+//});
+
+if (dados && dados.secretario) {
+        if (displayNomeSec) displayNomeSec.innerText = dados.secretario.nome;
+        if (displayMatSec) displayMatSec.innerText = dados.secretario.mat;
+        if (displayCargoSec) displayCargoSec.innerText = dados.secretario.cargo;
         
         const dataPrincipal = document.getElementById('dataavaliacao').value;
-        if (dataPrincipal) {
+        if (dataPrincipal && displayDataSec) {
             const [ano, mes, dia] = dataPrincipal.split('-');
             displayDataSec.innerText = `${dia}/${mes}/${ano}`;
         }
