@@ -461,6 +461,7 @@ button {
   flex-direction: column;
   gap: 0.5rem;
   width: 100%;
+  align-items: center;
 }
 
 .a-assinaturas{
@@ -470,6 +471,7 @@ button {
   border: 0;
     width: 100%;
     padding: 0.5rem;
+  
 }
 
 .b-assinaturas{
@@ -484,7 +486,7 @@ button {
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  width: 100%;
+  width: 90%;
   gap: 0rem;
   padding: 0rem;
   padding-top: 2rem;
@@ -563,9 +565,7 @@ button {
 #c-secretario{
   background-color: white;
   display: flex;
-  flex-direction: row;
-  align-items: start;
-  width: 100%;
+  width: 90%;
   gap: 0rem;
   padding-top: 3rem;
   border-radius: 3px;
@@ -591,51 +591,38 @@ button {
 #c-concordo {
   background-color: white;
   display: flex;
-  justify-content: left;
-  align-items: baseline;
-  width: 100%;
+  width: 90%;
   gap: 0rem;
   padding: 0rem;
-  padding-top: 2rem;
-  padding-left: 2rem;
-
+  padding-left: 1rem;
 }
 #carimbo-data-ciencia{
-  width: 50%;
+  width: auto;
   text-align: left;
-}
-#linha-concordo{
-  display: flex;
-  width: 100%;
-}
-#d-concordo{
-  background-color: white;
-  padding: 0rem;
-  text-align: left;
-  width: 100%;
 }
 
 #carimbo-concordo{
-  width: 40%;
+  width: auto;
+  text-align: left;
+  font-size: 0.8rem;
 }
 
 #c-justifique{
   background-color: white;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   gap: 0rem;
   padding: 0rem;
+  padding-left: 1rem;
   border-radius: 3px;
 }
 #data-justifique{
   display: block;
   text-align: left;
-  width: 100%;
-  padding-left: 3rem;
+  width: 90%;
 }
 #carimbo-justifique{
-  display: block;
   width: 100%;
   padding-left: 0rem;
 }

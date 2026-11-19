@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="print.css" media="print">
     
     <title>Avaliação de Estágio Probatório</title>
+    <link rel="icon" type="image/png" href="https://itbi.novaiguacu.rj.gov.br/img/brasao.png">
+    <link rel="apple-touch-icon" href="https://itbi.novaiguacu.rj.gov.br/img/brasao.png">
+</head>
 </head>
 <body>
 <header>
@@ -43,7 +46,7 @@
     <summary class="instrucoes-header">
       <span class="instrucoes-titulo">
         <svg class="instrucoes-icone" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
         </svg>
         Instruções e Fluxo de Preenchimento (Clique para ver o passo a passo)
       </span>
@@ -99,62 +102,62 @@
   </details>
 </section>
 
-        <fieldset id="a-dados-servidor">
-            <legend>Dados de identificação do Servidor Avaliado</legend>
-                <div class="b-dados-servidor">
-                    <div class="linha-label-input" id="linha-matricula">
-                        <div class="d-label-input" id="d-matricula">
-                            <label for="input-matriculaservidor">Matrícula: </label>
-                            <input  type="text" 
-                                    name="matriculaservidor" 
-                                    id="input-matriculaservidor"
-                                    maxlength="6">
-                                    <p><span id="prefixo"> (Apenas 6 dígitos sem prefixo)</span></p>
-                        </div>
-                    </div>
-                    <div class="linha-label-input" id="linha-nome">
-                        <div class="d-label-input" id="d-nome">
-                            <label for="nomeservidor" id="nomeservidor">Nome: </label>
-                            <input type="text" 
-                                    id="input-nomeservidor" 
-                                    name="nomeservidor"
-                                    maxlength="50">
-                        </div>
-                    </div>
-                    <div class="linha-label-input" id="linha-cargo">
-                        <div class="d-label-input" id="cargo50">
-                            <label for="cargoservidor">Cargo: </label>
-                            <input type="text" name="cargoservidor" id="cargoservidor"
-                                        maxlength="50">
-                        </div>
-                    </div>
-                     <div class="linha-label-input" id="linha-secretaria">
-                        <div class="d-label-input" id="secretaria50">
-                                <label for="secretariaservidor">Secretaria: </label>
-                                <select name="secretaria" id="secretaria" onchange="atualizarResumoFinal()"> 
-                                <option value="" disabled selected hidden>Selecione...</option>
-                                <option value="SECRETARIA MUNICIPAL DE ADMINISTRACAO">SECRETARIA MUNICIPAL DE ADMINISTRAÇÃO</option>
-                                <option value="SECRETARIA MUNICIPAL DE AGRICULTURA E MEIO AMBIENTE">SECRETARIA MUNICIPAL DE AGRICULTURA E MEIO AMBIENTE</option>
-                                <option value="SECRETARIA MUNICIPAL DE ASSISTENCIA SOCIAL">SECRETARIA MUNICIPAL DE ASSISTÊNCIA SOCIAL</option>
-                                <option value="SECRETARIA MUNICIPAL ATENDIMENTO GERAL E OUVIDORIA">SECRETARIA MUNICIPAL DE ATENDIMENTO GERAL E OUVIDORIA</option>
-                                <option value="SECRETARIA MUNICIPAL DE CONTROLE GERAL">SECRETARIA MUNICIPAL DE CONTROLE GERAL</option>
-                                <option value="SECRETARIA MUNICIPAL DE DESENV. EC. TRABALHO E TURISMO">SECRETARIA MUNICIPAL DE DESENVOLVIMENTO ECONÔMICO, TRABALHO E TURISMO</option>
-                                <option value="SECRETARIA MUNICIPAL DE EDUCACAO">SECRETARIA MUNICIPAL DE EDUCAÇÃO</option>
-                                <option value="SECRETARIA MUNICIPAL DE FAZENDA E FISC TRIBUTARIA">SECRETARIA MUNICIPAL DE FAZENDA E FISCALIZAÇÃO TRIBUTÁRIA</option>
-                                <option value="SECRETARIA MUNICIPAL DE GOVERNO">SECRETARIA MUNICIPAL DE GOVERNO</option>
-                                <option value="SECRETARIA MUNICIPAL DE ORDEM PUBLICA">SECRETARIA MUNICIPAL DE ORDEM PÚBLICA</option>
-                                <option value="SECRETARIA MUNICIPAL DE SAUDE">SECRETARIA MUNICIPAL DE SAÚDE</option>
-                                <option value="SEMTMU">SECRETARIA MUNICIPAL DE TRANSPORTE, TRÂNSITO E MOBILIDADE URBANA</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="linha-label-input" id="linha-lotacao">
-                        <div class="d-label-input" id="lotacao50">
-                                <label for="lotacaoservidor">Lotação: </label>
-                                <input type="text" name="lotacao" id="lotacaoservidor"
-                                        maxlength="50">
-                        </div>
-                    </div>
+<fieldset id="a-dados-servidor">
+    <legend>Dados de identificação do Servidor Avaliado</legend>
+        <div class="b-dados-servidor">
+            <div class="linha-label-input" id="linha-matricula">
+                <div class="d-label-input" id="d-matricula">
+                    <label for="input-matriculaservidor">Matrícula: </label>
+                        <input  type="text" 
+                            name="matriculaservidor" 
+                            id="input-matriculaservidor"
+                            maxlength="6">
+                                <p><span id="prefixo"> (Apenas 6 dígitos sem prefixo)</span></p>
+                </div>
+            </div>
+        <div class="linha-label-input" id="linha-nome">
+            <div class="d-label-input" id="d-nome">
+                <label for="nomeservidor" id="nomeservidor">Nome: </label>
+                    <input type="text" 
+                        id="input-nomeservidor" 
+                        name="nomeservidor"
+                        maxlength="50">
+            </div>
+        </div>
+        <div class="linha-label-input" id="linha-cargo">
+            <div class="d-label-input" id="cargo50">
+                <label for="cargoservidor">Cargo: </label>
+                    <input type="text" name="cargoservidor" id="cargoservidor"
+                        maxlength="50">
+            </div>
+        </div>
+        <div class="linha-label-input" id="linha-secretaria">
+            <div class="d-label-input" id="secretaria50">
+                <label for="secretariaservidor">Secretaria: </label>
+                     <select name="secretaria" id="secretaria" onchange="atualizarResumoFinal()"> 
+                        <option value="" disabled selected hidden>Selecione...</option>
+                        <option value="SECRETARIA MUNICIPAL DE ADMINISTRACAO">SECRETARIA MUNICIPAL DE ADMINISTRAÇÃO</option>
+                        <option value="SECRETARIA MUNICIPAL DE AGRICULTURA E MEIO AMBIENTE">SECRETARIA MUNICIPAL DE AGRICULTURA E MEIO AMBIENTE</option>
+                        <option value="SECRETARIA MUNICIPAL DE ASSISTENCIA SOCIAL">SECRETARIA MUNICIPAL DE ASSISTÊNCIA SOCIAL</option>
+                        <option value="SECRETARIA MUNICIPAL ATENDIMENTO GERAL E OUVIDORIA">SECRETARIA MUNICIPAL DE ATENDIMENTO GERAL E OUVIDORIA</option>
+                        <option value="SECRETARIA MUNICIPAL DE CONTROLE GERAL">SECRETARIA MUNICIPAL DE CONTROLE GERAL</option>
+                        <option value="SECRETARIA MUNICIPAL DE DESENV. EC. TRABALHO E TURISMO">SECRETARIA MUNICIPAL DE DESENVOLVIMENTO ECONÔMICO, TRABALHO E TURISMO</option>
+                        <option value="SECRETARIA MUNICIPAL DE EDUCACAO">SECRETARIA MUNICIPAL DE EDUCAÇÃO</option>
+                        <option value="SECRETARIA MUNICIPAL DE FAZENDA E FISC TRIBUTARIA">SECRETARIA MUNICIPAL DE FAZENDA E FISCALIZAÇÃO TRIBUTÁRIA</option>
+                        <option value="SECRETARIA MUNICIPAL DE GOVERNO">SECRETARIA MUNICIPAL DE GOVERNO</option>
+                        <option value="SECRETARIA MUNICIPAL DE ORDEM PUBLICA">SECRETARIA MUNICIPAL DE ORDEM PÚBLICA</option>
+                        <option value="SECRETARIA MUNICIPAL DE SAUDE">SECRETARIA MUNICIPAL DE SAÚDE</option>
+                        <option value="SEMTMU">SECRETARIA MUNICIPAL DE TRANSPORTE, TRÂNSITO E MOBILIDADE URBANA</option>
+                    </select>
+            </div>
+        </div>
+        <div class="linha-label-input" id="linha-lotacao">
+            <div class="d-label-input" id="lotacao50">
+                <label for="lotacaoservidor">Lotação: </label>
+                    <input type="text" name="lotacao" id="lotacaoservidor"
+                        maxlength="50">
+            </div>
+        </div>
                     <div class="linha-label-input" id="linha-dataexercicio">   
                             <div class="d-label-input" id="dataexercicio50">        
                                 <label 
@@ -767,67 +770,59 @@
             </div>
             </fieldset>  
 
-            <fieldset class="a-assinaturas">
-                <legend id="legend-chefeimediato">
-                    Dados do Avaliador (Chefe Imediato)
-                </legend>
+<fieldset class="a-assinaturas">
+    <legend id="legend-chefeimediato">
+        Dados do Avaliador (Chefe Imediato)
+    </legend>
 
-                    <div class="b-assinaturas">
-                        <div class="c-bloco-assinatura" id="bloco-chefe">
+    <div class="b-assinaturas">
 
-                            <div class="data-carimbo">
-                                <p>Data:  <span id="datadehoje"> 00/00/0000 </span></p>
-                            </div>
+        <div class="c-bloco-assinatura" id="bloco-chefe">
+            <div class="data-carimbo">
+                <p>Data: _____/_____/_____</p>
+            </div>
                             
-                            <div class="carimbo" id="carimbo-chefe">
-                                
-                                <div class="linha-label-input-ass" id="linha-underline-chefe">
-                                        __________________________________________________________________
-                                </div>
-                                <div class="linha-label-input-ass" id="linha-nome-chefe">
-                                    
-                                        <label for="nomechefe">
-                                            Nome: 
-                                        </label>
-                                        <input type="text" name="nomechefe" id="input-nomechefe"
-                                                maxlength="50">
-                                    
-                                </div>
-                                <div class="linha-label-input-ass" id="linha-matricula-chefe">
-                                    
-                                        <label for="matriculachefe" id="label-matriculachefe">
-                                            Matricula: 
-                                        </label>
+            <div class="carimbo" id="carimbo-chefe">
+                <div class="linha-label-input-ass" id="linha-underline-chefe">
+                    __________________________________________________________________
+                </div>
+                
+                <div class="linha-label-input-ass" id="linha-nome-chefe">
+                    <label for="nomechefe">
+                        Nome: 
+                    </label>
+                    <input type="text" name="nomechefe" id="input-nomechefe"
+                        maxlength="50">
+                </div>
+
+                <div class="linha-label-input-ass" id="linha-matricula-chefe"> 
+                    <label for="matriculachefe" id="label-matriculachefe">
+                        Matricula:
+                    </label>
                                         
-                                        <input type="text" 
-                                        name="matriculachefe" 
-                                        id="input-matriculachefe"
-                                        maxlength="12">
-                                    
-                                </div>
-                                <div class="linha-label-input-ass" id="linha-cargo-chefe">
-                                    
-                                        <label for="cargochefe">
-                                            Cargo: 
-                                        </label>
-                                        <input type="text" name="cargochefe" id="input-cargochefe"
-                                                maxlength="50">
-                                    
-                                </div>
-                            </div>
-                        </div><!--Bloco Chefe-->
-                        
+                    <input type="text" 
+                        name="matriculachefe" 
+                        id="input-matriculachefe"
+                        maxlength="12">
+                </div>
 
-                        <div id="bloco-que-some"> 
-
+                <div class="linha-label-input-ass" id="linha-cargo-chefe">
+                    <label for="cargochefe">
+                        Cargo: 
+                    </label>
+                    <input type="text" name="cargochefe" id="input-cargochefe"
+                        maxlength="50">
+                    </div>
+            </div>
+        </div><!--Bloco Chefe-->
+                        <div id="bloco-que-some"> <!-- Bloco que some da principa mas vai para impressão-->
+                            
                             <div class="c-bloco-assinatura" id="c-secretario">
-
                                 <div class="data-carimbo">
                                     <p>Data: _____/_____/_____</p>
                                 </div>
                                 
-                                <div class="carimbo">
-
+                                <div class="carimbo" id="carimbo-secretario">
                                         <div class="linha-label-input-ass" id="linha-underline-secretario">
                                             <div class="d-label-input-ass" id="d-ass-secretario">
                                                 __________________________________________________________________
@@ -849,17 +844,14 @@
                                             </div>
                                         </div>
                                 </div>
-                            </div><!--C-Secretário tá escondido-->
+                            </div><!--C-Secretário escondido-->
                             <div class="c-bloco-assinatura" id="c-concordo">
                                 <div class="data-carimbo" id="carimbo-data-ciencia">
                                     Ciência do servidor avaliado: 
                                 </div>
                                 <div class="carimbo" id="carimbo-concordo">
-                                    <div class="linha-label-input-ass" id="linha-concordo">
-                                        <div class="d-label-input-ass" id="d-concordo">
                                             (___)Concordo com a avaliação <br> (___)Discordo da Avaliação
-                                        </div>
-                                    </div>
+                                        
                                 </div>
                             </div><!--C-Concordo-->
                             <div class="c-bloco-assinatura" id="c-justifique">
@@ -890,7 +882,7 @@
                                     <div class="linha-label-input-ass" id="linha-nome-servidor">
                                         <div class="d-label-input-ass" id="d-servidor">
                                         </div>
-                                    </div>                                
+                                    </div>
                                 </div>
                             </div><!--C-Servidor-->
                             <div class="c-bloco-assinatura" id="ass-comissao">
@@ -943,7 +935,7 @@
                                         </div>
                                     </div>
                             </div><!--Bloco da Comissão-->
-                        </div><!--bloco que some-->
+                        </div><!-- Bloco que some da principa mas vai para impressão-->
                     </div><!--b-assinaturas-->
             </fieldset>    
             <div class="a-botao">

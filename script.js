@@ -420,16 +420,25 @@ window.addEventListener('load', () => {
 // Adiciona o monitor de digitação no campo de matrícula
 document.getElementById('input-matriculaservidor').addEventListener('input', buscarPorNucleo);
 
-// Atualiza o nome do servidor avaliado no bloco de assinatura correspondente
+// Atualiza o nome e a matrícula do servidor avaliado no bloco de assinatura correspondente
 function atualizarAssinaturaServidor() {
     const nomeServidorInput = document.getElementById('input-nomeservidor');
+    const matriculaServidorInput = document.getElementById('input-matriculaservidor');
     const displayAssServidor = document.getElementById('d-servidor');
-    
+
     if (displayAssServidor) {
-        const nomeValor = nomeServidorInput.value.trim();
-        // Se estiver preenchido, mostra o nome; caso contrário, deixa em branco
-        displayAssServidor.innerText = nomeValor !== "" ? nomeValor : "";
+        const nomeValor = nomeServidorInput ? nomeServidorInput.value.trim() : "";
+        const matriculaValor = matriculaServidorInput ? matriculaServidorInput.value.trim() : "";
+
+        if (nomeValor !== "" && matriculaValor !== "") {
+            displayAssServidor.innerText = `${nomeValor}\nMatrícula: ${matriculaValor}`;
+        } else if (nomeValor !== "") {
+            displayAssServidor.innerText = nomeValor;
+        } else {
+            displayAssServidor.innerText = "";
+        }
     }
 }
-document.getElementById('input-nomeservidor').addEventListener('input', atualizarAssinaturaServidor);
 
+document.getElementById('input-nomeservidor').addEventListener('input', atualizarAssinaturaServidor);
+document.getElementById('input-matriculaservidor').addEventListener('input', atualizarAssinaturaServidor);
