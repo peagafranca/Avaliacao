@@ -596,6 +596,7 @@ button {
   padding: 0rem;
   padding-left: 1rem;
 }
+
 #carimbo-data-ciencia{
   width: auto;
   text-align: left;
@@ -605,6 +606,7 @@ button {
   width: auto;
   text-align: left;
   font-size: 0.8rem;
+  margin-top: 3rem;
 }
 
 #c-justifique{
